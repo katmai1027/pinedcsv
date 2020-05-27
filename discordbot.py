@@ -438,13 +438,13 @@ async def on_message(message):
                 await message.channel.send('名称:i7-7700T   \nマイクロアーキテクチャ:Kaby Lake \nソケット名:LGA1151  \nコア数/スレッド数:4/8  \nベース:2.9GHz\nTB時:3.8GHz')
                 return
             if '7740X.' in message.content or 'SR3FP' in message.content:
-                await message.channel.send('名称:   \nマイクロアーキテクチャ:Kaby Lake \nソケット名:LGA2066  \nコア数/スレッド数:4/8  \nベース:4.3GHz\nTB時:4.5GHz')
+                await message.channel.send('名称:i7-7740X   \nマイクロアーキテクチャ:Kaby Lake \nソケット名:LGA2066  \nコア数/スレッド数:4/8  \nベース:4.3GHz\nTB時:4.5GHz')
                 return
             if '7800X.' in message.content or 'SR3L4' in message.content:
-                await message.channel.send('名称:   \nマイクロアーキテクチャ:Skylake \nソケット名:LGA2066  \nコア数/スレッド数:6/12  \nベース:3.5GHz\nTB時:4GHz')
+                await message.channel.send('名称:i7-7800X   \nマイクロアーキテクチャ:Skylake \nソケット名:LGA2066  \nコア数/スレッド数:6/12  \nベース:3.5GHz\nTB時:4GHz')
                 return
             if '7820X.' in message.content or 'SR3L5' in message.content:
-                await message.channel.send('名称:   \nマイクロアーキテクチャ:Skylake \nソケット名:LGA2066  \nコア数/スレッド数8/16:  \nベース:3.6GHz\nTB時:4.3GHz')
+                await message.channel.send('名称:i7-7820X   \nマイクロアーキテクチャ:Skylake \nソケット名:LGA2066  \nコア数/スレッド数8/16:  \nベース:3.6GHz\nTB時:4.3GHz')
                 return
 
             
