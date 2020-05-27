@@ -17,21 +17,21 @@ async def on_ready():
 async def on_message(message):
     if message.author.bot:
         return
-    au = message.author
-    na = message.channel
-    co = message.content
+    #au = message.author
+    #na = message.channel
+    #co = message.content
     
-    print(au,":",co,"at",na)
+    #print(au,":",co,"at",na)
 
-    if '@' in message.content:
-        if message.content.startswith('>'):
-            pass
-
-        else:
+    #if '@' in message.content:
+     #   if message.content.startswith('>'):
+      #      pass
+#
+ #       else:
             #await message.delete()
             #await message.channel.send('引用以外のメンションは禁止されています。')
             #return
-            pass
+  #          pass
 
 
 # ===ここから会話===
@@ -649,14 +649,91 @@ async def on_message(message):
 
 
 
+            if 'i5' in message.content and '5675C.' in message.content or 'SR2FX' in message.content:
+                await message.channel.send('名称:Core i5-5675C   \nマイクロアーキテクチャ:Broadwell \nソケット名:LGA1150  \nコア数/スレッド数:4/4  \nベース:3.1GHz\nTB時:3.6GHz')
+                return
+            if 'i5' in message.content and '5675R.' in message.content or 'SR2AJ' in message.content:
+                await message.channel.send('名称:Core i5-5675R   \nマイクロアーキテクチャ:Broadwell \nソケット名:BGA1364  \nコア数/スレッド数:4/4  \nベース:3.1GHz\nTB時:3.6GHz')  
+                return
+            if 'i5' in message.content and '5575R.' in message.content or 'SR2AK' in message.content:
+                await message.channel.send('名称:Core i5-5575R   \nマイクロアーキテクチャ:Broadwell \nソケット名:BGA1364  \nコア数/スレッド数:4/4  \nベース:2.8GHz\nTB時:3.3GHz')
+                return
 
 
 
 
-
-
-
-
+            if 'i5' in message.content and '4690K.' in message.content or 'SR21A' in message.content:
+                await message.channel.send('名称:Core i5-4690K   \nマイクロアーキテクチャ:Haswell \nソケット名:LGA1150  \nコア数/スレッド数:4/4  \nベース:3.5GHz\nTB時:3.9GHz') 
+                return
+            if 'i5' in message.content and '4690.' in message.content or 'SR19H' in message.content:
+                await message.channel.send('名称:Core i5-4690   \nマイクロアーキテクチャ:Haswell \nソケット名:LGA1150  \nコア数/スレッド数:4/4  \nベース:3.5GHz\nTB時:3.9GHz') 
+                return
+            if 'i5' in message.content and '4690S.' in message.content or 'SR1QP' in message.content:
+                await message.channel.send('名称:Core i5-4690S   \nマイクロアーキテクチャ:Haswell \nソケット名:LGA1150  \nコア数/スレッド数:4/4  \nベース:3.2GHz\nTB時:3.9GHz') 
+                return
+            if 'i5' in message.content and '4690T.' in message.content or 'SR1QT' in message.content:
+                await message.channel.send('名称:Core i5-4690T   \nマイクロアーキテクチャ:Haswell \nソケット名:LGA1150  \nコア数/スレッド数:4/4  \nベース:2.5GHz\nTB時:3.5GHz') 
+                return
+            if 'i5' in message.content and '4670K.' in message.content or 'SR14A' in message.content:
+                await message.channel.send('名称:Core i5-4670K   \nマイクロアーキテクチャ:Haswell \nソケット名:LGA1150  \nコア数/スレッド数:4/4  \nベース:3.4GHz\nTB時:3.8GHz') 
+                return
+            if 'i5' in message.content and '4670.' in message.content or 'SR14D' in message.content:
+                await message.channel.send('名称:Core i5-4670   \nマイクロアーキテクチャ:Haswell \nソケット名:LGA1150  \nコア数/スレッド数:4/4  \nベース:3.4GHz\nTB時:3.8GHz') 
+                return
+            if 'i5' in message.content and '4670S.' in message.content or 'SR14K' in message.content:
+                await message.channel.send('名称:Core i5-4670S   \nマイクロアーキテクチャ:Haswell \nソケット名:LGA1150  \nコア数/スレッド数:4/4  \nベース:3.4GHz\nTB時:3.8GHz') 
+                return
+            if 'i5' in message.content and '4670R.' in message.content or 'SR18M' in message.content:
+                await message.channel.send('名称:Core i5-4670R   \nマイクロアーキテクチャ:Haswell \nソケット名:BGA1364  \nコア数/スレッド数:4/4  \nベース:3.0GHz\nTB時:3.7GHz') 
+                return
+            if 'i5' in message.content and '4670T.' in message.content or 'SR14P' in message.content:
+                await message.channel.send('名称:Core i5-4670T   \nマイクロアーキテクチャ:Haswell \nソケット名:LGA1150  \nコア数/スレッド数:4/4  \nベース:2.3GHz\nTB時:3.3GHz') 
+                return
+            if 'i5' in message.content and '4590.' in message.content or 'SR1QJ' in message.content:
+                await message.channel.send('名称:Core i5-4590   \nマイクロアーキテクチャ:Haswell \nソケット名:LGA1150  \nコア数/スレッド数:4/4  \nベース:3.3GHz\nTB時:3.7GHz') 
+                return
+            if 'i5' in message.content and '4590S.' in message.content or 'SR1QN' in message.content:
+                await message.channel.send('名称:Core i5-4590S   \nマイクロアーキテクチャ:Haswell \nソケット名:LGA1150  \nコア数/スレッド数:4/4  \nベース:3.0GHz\nTB時:3.7GHz') 
+                return
+            if 'i5' in message.content and '4590T.' in message.content or 'SR1S6' in message.content:
+                await message.channel.send('名称:Core i5-4590T   \nマイクロアーキテクチャ:Haswell \nソケット名:LGA1150  \nコア数/スレッド数:4/4  \nベース:2.0GHz\nTB時:3.0GHz')
+                return
+            if 'i5' in message.content and '4570.' in message.content or 'SR14E' in message.content:
+                await message.channel.send('名称:Core i5-4570   \nマイクロアーキテクチャ:Haswell \nソケット名:LGA1150  \nコア数/スレッド数:4/4  \nベース:3.4GHz\nTB時:3.8GHz') 
+                return
+            if 'i5' in message.content and '4570S.' in message.content or 'SR14J' in message.content:
+                await message.channel.send('名称:Core i5-4570S   \nマイクロアーキテクチャ:Haswell \nソケット名:LGA1150  \nコア数/スレッド数:4/4  \nベース:2.9GHz\nTB時:3.6GHz')  
+                return
+            if 'i5' in message.content and '4570R.' in message.content or 'SR18P' in message.content:
+                await message.channel.send('名称:Core i5-4570R   \nマイクロアーキテクチャ:Haswell \nソケット名:BGA1364  \nコア数/スレッド数:4/4  \nベース:2.7GHz\nTB時:3.2GHz') 
+                return
+            if 'i5' in message.content and '4570T.' in message.content or 'SR1CA' in message.content:
+                await message.channel.send('名称:Core i5-4570T   \nマイクロアーキテクチャ:Haswell \nソケット名:LGA1150  \nコア数/スレッド数:2/4  \nベース:2.9GHz\nTB時:3.6GHz') 
+                return
+            if 'i5' in message.content and '4570TE.' in message.content or 'SR17Z' in message.content:
+                await message.channel.send('名称:Core i5-4570TE   \nマイクロアーキテクチャ:Haswell \nソケット名:LGA1150  \nコア数/スレッド数:2/4  \nベース:2.7GHz\nTB時:3.3GHz') 
+                return
+            if 'i5' in message.content and '4460.' in message.content or 'SR1QK' in message.content:
+                await message.channel.send('名称:Core i5-4460   \nマイクロアーキテクチャ:Haswell \nソケット名:LGA1150  \nコア数/スレッド数:4/4  \nベース:3.2GHz\nTB時:3.4GHz')  
+                return
+            if 'i5' in message.content and '4460S.' in message.content or 'SR1QQ' in message.content:
+                await message.channel.send('名称:Core i5-4460S   \nマイクロアーキテクチャ:Haswell \nソケット名:LGA1150  \nコア数/スレッド数:4/4  \nベース:2.9GHz\nTB時:3.4GHz')  
+                return
+            if 'i5' in message.content and '4460T.' in message.content or 'SR1S7' in message.content:
+                await message.channel.send('名称:Core i5-4460T   \nマイクロアーキテクチャ:Haswell \nソケット名:LGA1150  \nコア数/スレッド数:4/4  \nベース:1.9GHz\nTB時:2.7GHz')  
+                return
+            if 'i5' in message.content and '4440.' in message.content or 'SR14F' in message.content:
+                await message.channel.send('名称:Core i5-4440   \nマイクロアーキテクチャ:Haswell \nソケット名:LGA1150  \nコア数/スレッド数:4/4  \nベース:3.1GHz\nTB時:3.3GHz') 
+                return
+            if 'i5' in message.content and '4440S.' in message.content or 'SR14L' in message.content:
+                await message.channel.send('名称:Core i5-4440S   \nマイクロアーキテクチャ:Haswell \nソケット名:LGA1150  \nコア数/スレッド数:4/4  \nベース:2.8GHz\nTB時:3.3GHz')  
+                return
+            if 'i5' in message.content and '4430.' in message.content or 'SR14G' in message.content:
+                await message.channel.send('名称:Core i5-4430   \nマイクロアーキテクチャ:Haswell \nソケット名:LGA1150  \nコア数/スレッド数:4/4  \nベース:3.0GHz\nTB時:3.2GHz') 
+                return
+            if 'i5' in message.content and '4430S.' in message.content or 'SR14M' in message.content:
+                await message.channel.send('名称:Core i5-4430S   \nマイクロアーキテクチャ:Haswell \nソケット名:LGA1150  \nコア数/スレッド数:4/4  \nベース:2.7GHz\nTB時:3.2GHz')
+                return
 
 
 
