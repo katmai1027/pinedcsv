@@ -1030,6 +1030,7 @@ async def on_message(message):
                await message.channel.send('名称:Core i3-4130   \nマイクロアーキテクチャ:Haswell \nソケット名:LGA1150  \nコア数/スレッド数:2/4  \nベース:3.4GHz')
                return
 
+
             if 'i3' in message.content and '6300.' in message.content or 'SR2HA' in message.content:
                await message.channel.send('名称:Core i3-6300   \nマイクロアーキテクチャ:Skylake \nソケット名:LGA1151  \nコア数/スレッド数:2/4  \nベース:3.8GHz')
                return
@@ -1047,12 +1048,33 @@ async def on_message(message):
                return
             if 'i3' in message.content and '6098P.' in message.content or 'SR2NN' in message.content:
                await message.channel.send('名称:Core i3-6098P   \nマイクロアーキテクチャ:Skylake \nソケット名:LGA1151  \nコア数/スレッド数:2/4  \nベース:3.6GHz')
-               return
-
-    
+               return 
 
 
-
+            if 'i3' in message.content and '7350K.' in message.content or 'SR35B' in message.content:
+                await message.channel.send('名称:Core i3-7350K   \nマイクロアーキテクチャ:Kaby Lake \nソケット名:LGA1151  \nコア数/スレッド数:2/4  \nベース:4.2GHz') 
+                return
+            if 'i3' in message.content and '7320.' in message.content or 'SR358' in message.content:
+                await message.channel.send('名称:Core i3-7320   \nマイクロアーキテクチャ:Kaby Lake \nソケット名:LGA1151  \nコア数/スレッド数:2/4  \nベース:4.1GHz') 
+                return
+            if 'i3' in message.content and '7300.' in message.content or 'SR359' in message.content:
+                await message.channel.send('名称:Core i3-7300   \nマイクロアーキテクチャ:Kaby Lake \nソケット名:LGA1151  \nコア数/スレッド数:2/4  \nベース:4.0GHz') 
+                return
+            if 'i3' in message.content and '7300T.' in message.content or 'SR35M' in message.content:
+                await message.channel.send('名称:Core i3-7300T   \nマイクロアーキテクチャ:Kaby Lake \nソケット名:LGA1151  \nコア数/スレッド数:2/4  \nベース:3.5GHz') 
+                return
+            if 'i3' in message.content and '7101E.' in message.content or 'SR32Z' in message.content:
+                await message.channel.send('名称:Core i3-7101E   \nマイクロアーキテクチャ:Kaby Lake \nソケット名:LGA1151  \nコア数/スレッド数:2/4  \nベース:3.9GHz') 
+                return
+            if 'i3' in message.content and '7101TE.' in message.content or 'SR374' in message.content:
+                await message.channel.send('名称:Core i3-7101TE   \nマイクロアーキテクチャ:Kaby Lake \nソケット名:LGA1151  \nコア数/スレッド数:2/4  \nベース:3.4GHz') 
+                return
+            if 'i3' in message.content and '7100T.' in message.content or 'SR35P' in message.content:
+                await message.channel.send('名称:Core i3-7100T   \nマイクロアーキテクチャ:Kaby Lake \nソケット名:LGA1151  \nコア数/スレッド数:2/4  \nベース:3.4GHz') 
+                return
+            if 'i3' in message.content and '7100.' in message.content or 'SR35C' in message.content:
+                await message.channel.send('名称:Core i3-7100   \nマイクロアーキテクチャ:Kaby Lake \nソケット名:LGA1151  \nコア数/スレッド数:2/4  \nベース:3.9GHz') 
+                return
 
 
 
