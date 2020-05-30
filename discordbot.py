@@ -246,6 +246,7 @@ async def on_message(message):
             elif 'CELERON' in message.content.upper():      
                 await message.channel.send('未実装です。')
             else:
+                pass
                 #全て表示
 
             
