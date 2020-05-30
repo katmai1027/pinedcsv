@@ -1136,7 +1136,124 @@ async def on_message(message):
             if 'i3' in message.content and '10100.' in message.content or 'SRH3N' in message.content:
                 await message.channel.send('名称:Core i3-10100   \nマイクロアーキテクチャ:Comet Lake \nソケット名:LGA1200  \nコア数/スレッド数:4/8  \nベース:3.6GHz\nTB時:4.3GHz') 
                 return
+
+
+
+#######################################
+
+
+            if 'I9' in message.content.upper() and '7980XE.' in message.content.upper() or 'SR3RS' in message.content.upper():
+                await message.channel.send('名称:Core i9-7980XE   \nマイクロアーキテクチャ:Skylake \nソケット名:LGA2066  \nコア数/スレッド数:18/36  \nベース:2.6GHz\nTB時:4.2GHz')
+                return
+            if 'I9' in message.content.upper() and '7960X.' in message.content.upper() or 'SR3RR' in message.content.upper():
+                await message.channel.send('名称:Core i9-7960X   \nマイクロアーキテクチャ:Skylake \nソケット名:LGA2066  \nコア数/スレッド数:16/32  \nベース:2.8GHz\nTB時:4.2GHz')
+                return
+            if 'I9' in message.content.upper() and '7940X.' in message.content.upper() or 'SR3RQ' in message.content.upper():
+                await message.channel.send('名称:Core i9-7940X   \nマイクロアーキテクチャ:Skylake \nソケット名:LGA2066  \nコア数/スレッド数:14/28  \nベース:3.1GHz\nTB時:4.3GHz')
+                return
+            if 'I9' in message.content.upper() and '7920X.' in message.content.upper() or 'SR3NG' in message.content.upper():
+                await message.channel.send('名称:Core i9-7920X   \nマイクロアーキテクチャ:Skylake \nソケット名:LGA2066  \nコア数/スレッド数:12/24  \nベース:2.9GHz\nTB時:4.3GHz')
+                return
+            if 'I9' in message.content.upper() and '7900X.' in message.content.upper() or 'SR3L2' in message.content.upper():
+                await message.channel.send('名称:Core i9-7900X   \nマイクロアーキテクチャ:Skylake \nソケット名:LGA2066  \nコア数/スレッド数:10/20  \nベース:3.3GHz\nTB時:4.3GHz')
+                return
+
+
+            if 'I9' in message.content.upper() and '9820X.' in message.content.upper() or 'SREZ8' in message.content.upper():
+                await message.channel.send('名称:Core i9-9820X   \nマイクロアーキテクチャ:Skylake \nソケット名:LGA2066  \nコア数/スレッド数:10/20  \nベース:3.3GHz\nTB時:4.4GHz')
+                return
+            if 'I9' in message.content.upper() and '9900X.' in message.content.upper() or 'SREZ7' in message.content.upper():
+                await message.channel.send('名称:Core i9-9900X   \nマイクロアーキテクチャ:Skylake \nソケット名:LGA2066  \nコア数/スレッド数:10/20  \nベース:3.5GHz\nTB時:4.4GHz')
+                return
+            if 'I9' in message.content.upper() and '9920X.' in message.content.upper() or 'SREZ6' in message.content.upper():
+                await message.channel.send('名称:Core i9-9920X   \nマイクロアーキテクチャ:Skylake \nソケット名:LGA2066  \nコア数/スレッド数:12/24  \nベース:3.5GHz\nTB時:4.4GHz')
+                return
+            if 'I9' in message.content.upper() and '9940X.' in message.content.upper() or 'SREZ5' in message.content.upper():
+                await message.channel.send('名称:Core i9-9940X   \nマイクロアーキテクチャ:Skylake \nソケット名:LGA2066  \nコア数/スレッド数:14/28  \nベース:3.3GHz\nTB時:4.4GHz')
+                return
+            if 'I9' in message.content.upper() and '9960X.' in message.content.upper() or 'SREZ4' in message.content.upper():
+                await message.channel.send('名称:Core i9-9960X   \nマイクロアーキテクチャ:Skylake \nソケット名:LGA2066  \nコア数/スレッド数:16/32  \nベース:3.1GHz\nTB時:4.4GHz')
+                return
+            if 'I9' in message.content.upper() and '9980XE.' in message.content.upper() or 'SREZ3' in message.content.upper():
+                await message.channel.send('名称:Core i9-9980XE   \nマイクロアーキテクチャ:Skylake \nソケット名:LGA2066  \nコア数/スレッド数:18/36  \nベース:3GHz\nTB時:4.1GHz')
+                return
         
+            if 'I9' in message.content.upper() and '9900K.' in message.content.upper() or 'SRELS' in message.content.upper() or 'サッカーボール' in message.content:
+                await message.channel.send('名称:Core i9-9900K   \nマイクロアーキテクチャ:Coffee Lake \nソケット名:LGA1151-2  \nコア数/スレッド数:8/16  \nベース:3.6GHz\nTB時:5GHz')
+                return
+            if 'I9' in message.content.upper() and '9900KF.' in message.content.upper() or 'SRFAA' in message.content.upper():
+                await message.channel.send('名称:Core i9-9900KF   \nマイクロアーキテクチャ:Coffee Lake \nソケット名:LGA1151-2  \nコア数/スレッド数:8/16  \nベース:3.6GHz\nTB時:5GHz')
+                return
+            if 'I9' in message.content.upper() and '9900KS.' in message.content.upper() or 'SRG1Q' in message.content.upper() or 'カス' in message.content:
+                await message.channel.send('名称:Core i9-9900KS   \nマイクロアーキテクチャ:Coffee Lake \nソケット名:LGA1151-2  \nコア数/スレッド数:8/16  \nベース:4GHz\nTB時:5GHz')
+                return
+            if 'I9' in message.content.upper() and '9900.' in message.content.upper() or 'SRG18' in message.content.upper() or 'アイマス' in message.content:
+                await message.channel.send('名称:Core i9-9900   \nマイクロアーキテクチャ:Coffee Lake \nソケット名:LGA1151-2  \nコア数/スレッド数:8/16  \nベース:3.1GHz\nTB時:5GHz')
+                return
+            if 'I9' in message.content.upper() and '9900T.' in message.content.upper() or 'SRG1B' in message.content.upper():
+                await message.channel.send('名称:Core i9-9900T   \nマイクロアーキテクチャ:Coffee Lake \nソケット名:LGA1151-2  \nコア数/スレッド数:8/16  \nベース:2.1GHz\nTB時:4.4GHz')
+                return
+
+
+            if 'I9' in message.content.upper() and '10900X.' in message.content.upper() or 'SRGV7' in message.content.upper():
+                await message.channel.send('名称:Core i9-10900X   \nマイクロアーキテクチャ:Cascade Lake \nソケット名:LGA2066  \nコア数/スレッド数:10/20  \nベース:3.7GHz\nTB時:4.5GHz')
+                return
+            if 'I9' in message.content.upper() and '10920X.' in message.content.upper() or 'SRGSJ' in message.content.upper():
+                await message.channel.send('名称:Core i9-10920X   \nマイクロアーキテクチャ:Cascade Lake \nソケット名:LGA2066  \nコア数/スレッド数:12/24  \nベース:3.5GHz\nTB時:4.6GHz')
+                return
+            if 'I9' in message.content.upper() and '10940X.' in message.content.upper() or 'SRGSH' in message.content.upper():
+                await message.channel.send('名称:Core i9-10940X   \nマイクロアーキテクチャ:Cascade Lake \nソケット名:LGA2066  \nコア数/スレッド数:14/28  \nベース:3.3GHz\nTB時:4.6GHz')
+                return
+            if 'I9' in message.content.upper() and '10980XE.' in message.content.upper() or 'SRGSG' in message.content.upper():
+                await message.channel.send('名称:Core i9-10980XE   \nマイクロアーキテクチャ:Cascade Lake \nソケット名:LGA2066  \nコア数/スレッド数:18/36  \nベース:3GHz\nTB時:4.6GHz')
+                return
+
+
+            if 'I9' in message.content.upper() and '10900T.' in message.content.upper() or 'SRH8Y' in message.content.upper():
+                await message.channel.send('名称:Core i9-10900T   \nマイクロアーキテクチャ:Comet Lake \nソケット名:LGA1200  \nコア数/スレッド数:10/20  \nベース:1.9GHz\nTB時:4.6GHz')
+                return
+            if 'I9' in message.content.upper() and '10900KF.' in message.content.upper() or 'SRH92' in message.content.upper():
+                await message.channel.send('名称:Core i9-10900KF   \nマイクロアーキテクチャ:Comet Lake \nソケット名:LGA1200  \nコア数/スレッド数:10/20  \nベース:3.7GHz\nTB時:5.3GHz')
+                return
+            if 'I9' in message.content.upper() and '10900K.' in message.content.upper() or 'SRH91' in message.content.upper():
+                await message.channel.send('名称:Core i9-10900K   \nマイクロアーキテクチャ:Comet Lake \nソケット名:LGA1200  \nコア数/スレッド数:10/20  \nベース:3.7GHz\nTB時:5.3GHz')
+                return
+            if 'I9' in message.content.upper() and '10900F.' in message.content.upper() or 'SRH90' in message.content.upper():
+                await message.channel.send('名称:Core i9-10900F   \nマイクロアーキテクチャ:Comet Lake \nソケット名:LGA1200  \nコア数/スレッド数:10/20  \nベース:2.8GHz\nTB時:5.2GHz')
+                return
+            if 'I9' in message.content.upper() and '10900.' in message.content.upper() or 'SRH8Z' in message.content.upper():
+                await message.channel.send('名称:Core i9-10900   \nマイクロアーキテクチャ:Comet Lake \nソケット名:LGA1200  \nコア数/スレッド数:10/20  \nベース:2.8GHz\nTB時:5.2GHz')
+                return
+            if 'I9' in message.content.upper() and '10900TE.' in message.content.upper() or 'SRJFC' in message.content.upper():
+                await message.channel.send('名称:Core i9-10900TE   \nマイクロアーキテクチャ:Comet Lake \nソケット名:LGA1200  \nコア数/スレッド数:10/20  \nベース:1.8GHz\nTB時:4.5GHz')
+                return
+            if 'I9' in message.content.upper() and '10900E.' in message.content.upper() or 'unknown' in message.content.upper():
+                await message.channel.send('名称:Core i9-10900E   \nマイクロアーキテクチャ:Comet Lake \nソケット名:LGA1200  \nコア数/スレッド数:10/20  \nベース:2.8GHz\nTB時:4.7GHz')
+                return
+
+            if 'I9' in message.content.upper() and '10885H.' in message.content.upper() or 'SRJ8J' in message.content.upper():
+                await message.channel.send('名称:Core i9-10885H   \nマイクロアーキテクチャ:Comet Lake \nソケット名:BGA1440  \nコア数/スレッド数:8/16  \nベース:2.4GHz\nTB時:5.3GHz')
+                return
+            if 'I9' in message.content.upper() and '10980HK.' in message.content.upper() or 'SRH8T' in message.content.upper():
+                await message.channel.send('名称:Core i9-10980HK   \nマイクロアーキテクチャ:Comet Lake \nソケット名:BGA1440  \nコア数/スレッド数:8/16  \nベース:2.4GHz\nTB時:5.1GHz')
+                return
+
+
+            if 'I9' in message.content.upper() and '9880H.' in message.content.upper() or 'SRFD1' in message.content.upper():
+                await message.channel.send('名称:Core i9-9880H   \nマイクロアーキテクチャ:Coffee Lake \nソケット名:BGA1440  \nコア数/スレッド数:8/16  \nベース:2.3GHz\nTB時:4.8GHz')
+                return
+            if 'I9' in message.content.upper() and '9980HK.' in message.content.upper() or 'SRFD0' in message.content.upper():
+                await message.channel.send('名称:Core i9-9980HK \nマイクロアーキテクチャ:Coffee Lake \nソケット名:BGA1440  \nコア数/スレッド数:8/16  \nベース:2.4GHz\nTB時:5GHz')
+                return
+
+
+            
+            if 'I9' in message.content.upper() and '8950HK.' in message.content.upper() or 'SRCKN' in message.content.upper():
+                await message.channel.send('名称:Core i9-8950HK   \nマイクロアーキテクチャ:Coffee Lake \nソケット名:BGA1440  \nコア数/スレッド数:8/16  \nベース:2.9GHz\nTB時:4.8GHz')
+                return
+
+
+
 
 
 
