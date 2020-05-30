@@ -35,6 +35,15 @@ async def on_message(message):
 
 
 # ===ここから会話===
+
+
+
+    if 'botの説明書' in message.content:
+        await message.channel.send('-<<鯖ァーンwww bot 説明書>>-\n\n反応するワード(一部)\nおはよ/おやすみ/あ/しねかぶった/ぶっ壊す/f**k/買った/ァーン/ンーァ/ぴえん/びえん/ひえん/ヴィーン/クソ/うるせぇ/ェーン/うっきー/ゴルァ')
+        
+        return
+
+
     if 'よっしゃ' in message.content or 'わーい' in message.content or 'やったぁ' in message.content or '嬉しい' in message.content:   
         num = random.randint(0, 2)
         if num == 0:
@@ -224,6 +233,31 @@ async def on_message(message):
     
     if message.content.startswith('$'):
 
+
+        if 'NEHALEM' in message.content.upper():
+            if 'I7' in message.content.upper():      
+                await message.channel.send('860-SLBJJ(LGA1156,4c8t,2.8-3.46GHz) \n860S-SLBLG(LGA1156,4c4\8t,2.53-3.46GHz) \n870-SLBJG(LGA1156,4c8t,2.93-3.6GHz) \n870S-SLBQ7(LGA1156,4c8t,2.66-3.6GHz)\n875K-SLBS2(LGA1156,4c8t,2.93-3.6GHz)\n880-SLBPS(LGA1156,4c8t,3.06-3.73GHz)\n920-SLBCH/SLBEJ(LGA1366,4c8t,2.66-2.93GHz)\n930-SLBKP(LGA1366,4c8t,2.7-3.06GHz)\n940-SLBCK(LGA1366,4c8t,2.93-3.2GHz)\n950-SLBEN(LGA1366,4c8t,3.06-3.33GHz)\n960-SLBEU(LGA1366,4c8t,3.2-3.46GHz)')
+            elif 'I5' in message.content.upper():      
+                await message.channel.send('760-SLBRP(LGA1156,4c4t,2.8-3.33GHz) \n750-SLBLC(LGA1156,4c4t,2.66-3.2GHz) \n750S-SLBLH(LGA1156,4c4t,2.4-3.2GHz)')
+            elif 'I3' in message.content.upper():      
+                await message.channel.send('560-SLBY2(LGA1156,2c4t,3.33GHz) \n550-SLBUD(LGA1156,2c4t,3.2GHz) \n540-SLBTD(LGA1156,2c4t,3.06GHz) \n530-SLBX7(LGA1156,2c4t,2.93GHz)')
+            elif 'PENTIUM' in message.content.upper():      
+                await message.channel.send('未実装です。')
+            elif 'CELERON' in message.content.upper():      
+                await message.channel.send('未実装です。')
+            else:
+                #全て表示
+
+            
+            return
+
+
+
+
+
+
+
+
         if 'tanium' in message.content and '733' in message.content or 'SL4LT' in message.content or 'SL5VS' in message.content or 'SL4LS' in message.content or 'SL5VT' in message.content:
             await message.channel.send('名称:Itanium 733MHz   \nマイクロアーキテクチャ:Itanium \nソケット名:PAC418  \nコア数/スレッド数:1/1  \nベース:733MHz')
             return
@@ -265,22 +299,22 @@ async def on_message(message):
                 await message.channel.send('名称:Core i7-940   \nマイクロアーキテクチャ:Nehalem \nソケット名:LGA1366  \nコア数/スレッド数:4/8  \nベース:2.93GHz\nTB時:3.2GHz')
                 return
             if '950.' in message.content or 'SLBEN' in message.content.upper():
-                await message.channel.send('名称:Core i7-950   \nマイクロアーキテクチャ:Nehalem \nソケット名:LGA1366  \nコア数/スレッド数:4/8  \nベース:3/06GHz\nTB時:3.33GHz')
+                await message.channel.send('名称:Core i7-950   \nマイクロアーキテクチャ:Nehalem \nソケット名:LGA1366  \nコア数/スレッド数:4/8  \nベース:3.06GHz\nTB時:3.33GHz')
                 return
             if '960.' in message.content or 'SLBEU' in message.content.upper():
                 await message.channel.send('名称:Core i7-960   \nマイクロアーキテクチャ:Nehalem \nソケット名:LGA1366  \nコア数/スレッド数:4/8  \nベース:3.2GHz\nTB時:3.46GHz')
                 return
             if '970.' in message.content or 'SLBVF' in message.content.upper():
-                await message.channel.send('名称:Core i7-970   \nマイクロアーキテクチャ:Nehalem \nソケット名:LGA1366  \nコア数/スレッド数:6/12  \nベース:3.2GHz\nTB時:3.46GHz')
+                await message.channel.send('名称:Core i7-970   \nマイクロアーキテクチャ:Westmere \nソケット名:LGA1366  \nコア数/スレッド数:6/12  \nベース:3.2GHz\nTB時:3.46GHz')
                 return
             if '980.' in message.content or 'SLBEU' in message.content.upper():
-                await message.channel.send('名称:Core i7-980   \nマイクロアーキテクチャ:Nehalem \nソケット名:LGA1366  \nコア数/スレッド数:6/12  \nベース:3.33GHz\nTB時:3.6GHz')
+                await message.channel.send('名称:Core i7-980   \nマイクロアーキテクチャ:Westmere \nソケット名:LGA1366  \nコア数/スレッド数:6/12  \nベース:3.33GHz\nTB時:3.6GHz')
                 return
             if '980X.' in message.content.upper() or 'SLBUZ' in message.content.upper():
-                await message.channel.send('名称:Core i7-980X   \nマイクロアーキテクチャ:Nehalem \nソケット名:LGA1366  \nコア数/スレッド数:6/12  \nベース:3.33GHz\nTB時:3.6GHz')
+                await message.channel.send('名称:Core i7-980X   \nマイクロアーキテクチャ:Westmere \nソケット名:LGA1366  \nコア数/スレッド数:6/12  \nベース:3.33GHz\nTB時:3.6GHz')
                 return
             if '990X.' in message.content.upper() or 'SLBVZ' in message.content.upper():
-                await message.channel.send('名称:Core i7-990X   \nマイクロアーキテクチャ:Nehalem \nソケット名:LGA1366  \nコア数/スレッド数:6/12  \nベース:3.46GHz\nTB時:3.73GHz')
+                await message.channel.send('名称:Core i7-990X   \nマイクロアーキテクチャ:Westmere \nソケット名:LGA1366  \nコア数/スレッド数:6/12  \nベース:3.46GHz\nTB時:3.73GHz')
                 return
             if '965.' in message.content or 'SLBCJ' in message.content.upper():
                 await message.channel.send('名称:Core i7-965   \nマイクロアーキテクチャ:Nehalem \nソケット名:LGA1366  \nコア数/スレッド数:4/8  \nベース:3.2GHz\nTB時:3.46GHz')
@@ -399,114 +433,114 @@ async def on_message(message):
                 return
 
 
-            if '6700.' in message.content or 'SR2L2' in message.content or 'SR2BT' in message.content:
+            if '6700.' in message.content.upper() or 'SR2L2' in message.content.upper() or 'SR2BT' in message.content.upper():
                 await message.channel.send('名称:i7-6700   \nマイクロアーキテクチャ:Skylake \nソケット名:LGA1151  \nコア数/スレッド数:4/8  \nベース:3.4GHz\nTB時:4GHz')
                 return
-            if '6700K.' in message.content or 'SR2BR' in message.content or 'SR2L0' in message.content:
+            if '6700K.' in message.content.upper() or 'SR2BR' in message.content.upper() or 'SR2L0' in message.content.upper():
                 await message.channel.send('名称:i7-6700K  \nマイクロアーキテクチャ:Skylake \nソケット名:LGA1151  \nコア数/スレッド数:4/8  \nベース:4GHz\nTB時:4.2GHz')
                 return
-            if '6700T.' in message.content or 'SL2BU' in message.content or 'SR2L3' in message.content:
+            if '6700T.' in message.content.upper() or 'SL2BU' in message.content.upper() or 'SR2L3' in message.content.upper():
                 await message.channel.send('名称:i7-6700T   \nマイクロアーキテクチャ:Skylake \nソケット名:LGA1151  \nコア数/スレッド数:4/8  \nベース:2.8GHz\nTB時:3.6GHz')
                 return
-            if '6700TE.' in message.content or 'SR2LP' in message.content:
+            if '6700TE.' in message.content.upper() or 'SR2LP' in message.content.upper():
                 await message.channel.send('名称:i7-6700TE   \nマイクロアーキテクチャ:Skylake \nソケット名:LGA1151  \nコア数/スレッド数:4/8  \nベース:2.4GHz\nTB時:3.4GHz')
                 return
-            if '6785R.' in message.content or 'SR2U0' in message.content:
+            if '6785R.' in message.content.upper() or 'SR2U0' in message.content.upper():
                 await message.channel.send('名称:i7-6785R   \nマイクロアーキテクチャ:Skylake \nソケット名:BGA1440  \nコア数/スレッド数:4/8  \nベース:3.3GHz\nTB時:3.9GHz')
                 return
-            if '6800K.' in message.content or 'SR2PD' in message.content:
+            if '6800K.' in message.content.upper() or 'SR2PD' in message.content.upper():
                 await message.channel.send('名称:i7-6800K   \nマイクロアーキテクチャ:Broadwell \nソケット名:LGA2011-3  \nコア数/スレッド数:6/12  \nベース:3.4GHz\nTB時:3.6GHz')
                 return
-            if '6850K.' in message.content or 'SR2PC' in message.content:
+            if '6850K.' in message.content.upper() or 'SR2PC' in message.content.upper():
                 await message.channel.send('名称:i7-6850K   \nマイクロアーキテクチャ:Broadwell \nソケット名:LGA2011-3  \nコア数/スレッド数:6/12  \nベース:3.6GHz\nTB時:3.8GHz')
                 return
-            if '6900K.' in message.content or 'SR2PB' in message.content:
+            if '6900K.' in message.content.upper() or 'SR2PB' in message.content.upper():
                 await message.channel.send('名称:i7-6900K   \nマイクロアーキテクチャ:Broadwell \nソケット名:LGA2011-3  \nコア数/スレッド数:8/16  \nベース:3.2GHz\nTB時:3.7GHz')
                 return
-            if '6950X.' in message.content or 'SR2PA' in message.content:
+            if '6950X.' in message.content.upper() or 'SR2PA' in message.content.upper():
                 await message.channel.send('名称:i7-6950X   \nマイクロアーキテクチャ:Broadwell \nソケット名:LGA2011-3  \nコア数/スレッド数:10/20  \nベース:3GHz\nTB時:4GHz')
                 return
 
 
-            if '7700.' in message.content or 'SR338' in message.content:
+            if '7700.' in message.content.upper() or 'SR338' in message.content.upper():
                 await message.channel.send('名称:i7-7700   \nマイクロアーキテクチャ:Kaby Lake \nソケット名:LGA1151  \nコア数/スレッド数:4/8  \nベース:G3.6Hz\nTB時:4.2GHz')
                 return
-            if '7700K.' in message.content or 'SR33A' in message.content:
+            if '7700K.' in message.content.upper() or 'SR33A' in message.content.upper():
                 await message.channel.send('名称:i7-7700K   \nマイクロアーキテクチャ:Kaby Lake \nソケット名:LGA1151  \nコア数/スレッド数:4/8  \nベース:4.2GHz\nTB時:4.GHz')
                 return
-            if '7700T.' in message.content or 'SR339' in message.content:
+            if '7700T.' in message.content.upper() or 'SR339' in message.content.upper():
                 await message.channel.send('名称:i7-7700T   \nマイクロアーキテクチャ:Kaby Lake \nソケット名:LGA1151  \nコア数/スレッド数:4/8  \nベース:2.9GHz\nTB時:3.8GHz')
                 return
-            if '7740X.' in message.content or 'SR3FP' in message.content:
+            if '7740X.' in message.content.upper() or 'SR3FP' in message.content.upper():
                 await message.channel.send('名称:i7-7740X   \nマイクロアーキテクチャ:Kaby Lake \nソケット名:LGA2066  \nコア数/スレッド数:4/8  \nベース:4.3GHz\nTB時:4.5GHz')
                 return
-            if '7800X.' in message.content or 'SR3L4' in message.content:
+            if '7800X.' in message.content.upper() or 'SR3L4' in message.content.upper():
                 await message.channel.send('名称:i7-7800X   \nマイクロアーキテクチャ:Skylake \nソケット名:LGA2066  \nコア数/スレッド数:6/12  \nベース:3.5GHz\nTB時:4GHz')
                 return
-            if '7820X.' in message.content or 'SR3L5' in message.content:
+            if '7820X.' in message.content.upper() or 'SR3L5' in message.content.upper():
                 await message.channel.send('名称:i7-7820X   \nマイクロアーキテクチャ:Skylake \nソケット名:LGA2066  \nコア数/スレッド数8/16:  \nベース:3.6GHz\nTB時:4.3GHz')
                 return
 
             
-            if '8700K.' in message.content or 'SR3QR' in message.content:
+            if '8700K.' in message.content.upper() or 'SR3QR' in message.content.upper():
                 await message.channel.send('名称:i7-8700K   \nマイクロアーキテクチャ:Coffee Lake \nソケット名:LGA1151-2  \nコア数/スレッド数:6/12  \nベース:3.7GHz\nTB時:4.7GHz')
                 return
-            if '8700.' in message.content or 'SR3QS' in message.content:
+            if '8700.' in message.content.upper() or 'SR3QS' in message.content.upper():
                 await message.channel.send('名称:i7-8700   \nマイクロアーキテクチャ:Coffee Lake \nソケット名:LGA1151-2  \nコア数/スレッド数:6/12  \nベース:3.2GHz\nTB時:4.6GHz')
                 return
-            if '8700T.' in message.content or 'SR3WX' in message.content:
+            if '8700T.' in message.content.upper() or 'SR3WX' in message.content.upper():
                 await message.channel.send('名称:i7-8700T   \nマイクロアーキテクチャ:Coffee Lake \nソケット名:LGA1151-2  \nコア数/スレッド数:6/12  \nベース:2.4GHz\nTB時:4GHz')
                 return
-            if '8086K.' in message.content or 'SRCX5' in message.content:
+            if '8086K.' in message.content.upper() or 'SRCX5' in message.content.upper():
                 await message.channel.send('名称:i7-8086K   \nマイクロアーキテクチャ:Coffee Lake \nソケット名:LGA1151-2  \nコア数/スレッド数:6/12  \nベース:4GHz\nTB時:5GHz')
                 return
 
             
-            if '9700.' in message.content or 'SRG13' in message.content:
+            if '9700.' in message.content.upper() or 'SRG13' in message.content.upper():
                 await message.channel.send('名称:i7-9700   \nマイクロアーキテクチャ:Coffee Lake \nソケット名:LGA1151-2  \nコア数/スレッド数:8/8  \nベース:3GHz\nTB時:4.7GHz')
                 return
-            if '9700E.' in message.content or 'SRGDX' in message.content:
+            if '9700E.' in message.content.upper() or 'SRGDX' in message.content.upper():
                 await message.channel.send('名称:i7-9700E   \nマイクロアーキテクチャ:Coffee Lake \nソケット名:LGA1151-2  \nコア数/スレッド数:8/8  \nベース:2.6GHz\nTB時:4.4GHz')
                 return
-            if '9700F.' in message.content or 'SRG14' in message.content:
+            if '9700F.' in message.content.upper() or 'SRG14' in message.content.upper():
                 await message.channel.send('名称:i7-9700F   \nマイクロアーキテクチャ:Coffee Lake \nソケット名:LGA1151-2  \nコア数/スレッド数:8/8  \nベース:3GHz\nTB時:4.7GHz')
                 return
-            if '9700KF.' in message.content or 'SRFAC' in message.content or 'SRG16' in message.content:
+            if '9700KF.' in message.content.upper() or 'SRFAC' in message.content.upper() or 'SRG16' in message.content.upper():
                 await message.channel.send('名称:i7-9700KF   \nマイクロアーキテクチャ:Coffee Lake \nソケット名:LGA1151-2  \nコア数/スレッド数:8/8  \nベース:3.6GHz\nTB時:4.9GHz')
                 return
-            if '9700K.' in message.content or 'SRELT' in message.content or 'SRG15' in message.content:
+            if '9700K.' in message.content.upper() or 'SRELT' in message.content.upper() or 'SRG15' in message.content.upper():
                 await message.channel.send('名称:i7-9700K   \nマイクロアーキテクチャ:Coffee Lake \nソケット名:LGA1151-2  \nコア数/スレッド数:8/8  \nベース:3.6GHz\nTB時:4.9GHz')
                 return
-            if '9700T.' in message.content or 'SRG17' in message.content :
+            if '9700T.' in message.content.upper() or 'SRG17' in message.content :
                 await message.channel.send('名称:i7-9700T   \nマイクロアーキテクチャ:Coffee Lake \nソケット名:LGA1151-2  \nコア数/スレッド数:8/8  \nベース:2GHz\nTB時:4.3GHz')
                 return
-            if '9700TE.' in message.content or 'SRGE3' in message.content:
+            if '9700TE.' in message.content.upper() or 'SRGE3' in message.content:
                 await message.channel.send('名称:i7-9700TE   \nマイクロアーキテクチャ:Coffee Lake \nソケット名:LGA1151-2  \nコア数/スレッド数:8/8  \nベース:1.8GHz\nTB時:3.8GHz')
                 return
-            if '9800X.' in message.content or 'SREZ9' in message.content:
+            if '9800X.' in message.content.upper() or 'SREZ9' in message.content:
                 await message.channel.send('名称:i7-9800X   \nマイクロアーキテクチャ:Skylake \nソケット名:LGA2066  \nコア数/スレッド数:8/16  \nベース:3.8GHz\nTB時:4.4GHz')
                 return
 
 
-            if '10700.' in message.content or 'unknown' in message.content:
+            if '10700.' in message.content.upper() or 'unknown' in message.content:
                 await message.channel.send('名称:i7-10700   \nマイクロアーキテクチャ:Comet Lake \nソケット名:LGA1200  \nコア数/スレッド数:8/16  \nベース:2.9GHz\nTB時:4.8GHz')
                 return
-            if '10700E.' in message.content or 'unknown' in message.content:
+            if '10700E.' in message.content.upper() or 'unknown' in message.content:
                 await message.channel.send('名称:i7-10700E   \nマイクロアーキテクチャ:Comet Lake \nソケット名:LGA1200  \nコア数/スレッド数:8/16  \nベース:2.9GHz\nTB時:4.5GHz')
                 return
-            if '10700F.' in message.content or 'unknown' in message.content:
+            if '10700F.' in message.content.upper() or 'unknown' in message.content:
                 await message.channel.send('名称:i7-10700F   \nマイクロアーキテクチャ:Comet Lake \nソケット名:LGA1200  \nコア数/スレッド数:8/16  \nベース:2.9GHz\nTB時:4.8GHz')
                 return
-            if '10700K.' in message.content or 'unknown' in message.content:
+            if '10700K.' in message.content.upper() or 'unknown' in message.content:
                 await message.channel.send('名称:i7-10700K   \nマイクロアーキテクチャ:Comet Lake \nソケット名:LGA1200  \nコア数/スレッド数:8/16  \nベース:3.8GHz\nTB時:5.1GHz')
                 return
-            if '10700KF.' in message.content or 'unknown' in message.content:
+            if '10700KF.' in message.content.upper() or 'unknown' in message.content:
                 await message.channel.send('名称:i7-10700KF   \nマイクロアーキテクチャ:Comet Lake \nソケット名:LGA1200  \nコア数/スレッド数:8/16  \nベース:3.8GHz\nTB時:5.1GHz')
                 return
-            if '10700T.' in message.content or 'unknown' in message.content:
+            if '10700T.' in message.content.upper() or 'unknown' in message.content:
                 await message.channel.send('名称:i7-10700T   \nマイクロアーキテクチャ:Comet Lake \nソケット名:LGA1200  \nコア数/スレッド数:8/16  \nベース:2GHz\nTB時:4.5GHz')
                 return
-            if '10700TE.' in message.content or 'unknown' in message.content:
+            if '10700TE.' in message.content.upper() or 'unknown' in message.content:
                 await message.channel.send('名称:i7-10700TE   \nマイクロアーキテクチャ:Comet Lake \nソケット名:LGA1200  \nコア数/スレッド数:8/16  \nベース:2GHz\nTB時:4.4GHz')
                 return
 ###########ここからi5です#############
@@ -518,7 +552,7 @@ async def on_message(message):
             if 'i5' in message.content and '750.' in message.content or 'SLBLC' in message.content:
                 await message.channel.send('名称:Core i5-750   \nマイクロアーキテクチャ:Nehalem \nソケット名:LGA1156  \nコア数/スレッド数:4/4  \nベース:2.66GHz\nTB時:3.2GHz') 
                 return
-            if 'i5' in message.content and '750S.' in message.content or 'SLBRP' in message.content:
+            if 'i5' in message.content and '750S.' in message.content or 'SLBLH' in message.content:
                 await message.channel.send('名称:Core i5-750S   \nマイクロアーキテクチャ:Nehalem \nソケット名:LGA1156  \nコア数/スレッド数:4/4  \nベース:2.4GHz\nTB時:3.2GHz') 
                 return
             if 'i5' in message.content and '680.' in message.content or 'SLBTM' in message.content:
@@ -876,9 +910,157 @@ async def on_message(message):
 ##############################
 
 
+            if 'i3' in message.content and '560.' in message.content or 'SLBY2' in message.content:
+                await message.channel.send('名称:Core i3-560   \nマイクロアーキテクチャ:Westmere \nソケット名:LGA1156  \nコア数/スレッド数:2/4  \nベース:3.33GHz') 
+                return
+            if 'i3' in message.content and '550.' in message.content or 'SLBUD' in message.content:
+                await message.channel.send('名称:Core i3-550   \nマイクロアーキテクチャ:Westmere \nソケット名:LGA1156  \nコア数/スレッド数:2/4  \nベース:3.2GHz') 
+                return
+            if 'i3' in message.content and '540.' in message.content or 'SLBTD' in message.content:
+                await message.channel.send('名称:Core i3-540   \nマイクロアーキテクチャ:Westmere \nソケット名:LGA1156  \nコア数/スレッド数:2/4  \nベース:3.06GHz') 
+                return
+            if 'i3' in message.content and '530.' in message.content or 'SLBX7' in message.content:
+                await message.channel.send('名称:Core i3-530   \nマイクロアーキテクチャ:Westmere \nソケット名:LGA1156  \nコア数/スレッド数:2/4  \nベース:2.93GHz') 
+                return
+
+            if 'i3' in message.content and '2130.' in message.content or 'SR05W' in message.content:
+                await message.channel.send('名称:Core i3-2130   \nマイクロアーキテクチャ:Sandy Bridge \nソケット名:LGA1155  \nコア数/スレッド数:2/4  \nベース:3.4GHz') 
+                return
+            if 'i3' in message.content and '2125.' in message.content or 'SR0AY' in message.content:
+                await message.channel.send('名称:Core i3-2125   \nマイクロアーキテクチャ:Sandy Bridge \nソケット名:LGA1155  \nコア数/スレッド数:2/4  \nベース:3.3GHz') 
+                return
+            if 'i3' in message.content and '2120T.' in message.content or 'SR060' in message.content:
+                await message.channel.send('名称:Core i3-2120T   \nマイクロアーキテクチャ:Sandy Bridge \nソケット名:LGA1155  \nコア数/スレッド数:2/4  \nベース:2.6GHz') 
+                return
+            if 'i3' in message.content and '2120.' in message.content or 'SR05Y' in message.content:
+                await message.channel.send('名称:Core i3-2120   \nマイクロアーキテクチャ:Sandy Bridge \nソケット名:LGA1155  \nコア数/スレッド数:2/4  \nベース:3.3GHz') 
+                return
+            if 'i3' in message.content and '2105.' in message.content or 'SR0AY' in message.content:
+                await message.channel.send('名称:Core i3-2105   \nマイクロアーキテクチャ:Sandy Bridge \nソケット名:LGA1155  \nコア数/スレッド数:2/4  \nベース:3.3GHz') 
+                return
+            if 'i3' in message.content and '2102.' in message.content or 'SR05D' in message.content:
+                await message.channel.send('名称:Core i3-2102   \nマイクロアーキテクチャ:Sandy Bridge \nソケット名:LGA1155  \nコア数/スレッド数:2/4  \nベース:3.1GHz') 
+                return
+            if 'i3' in message.content and '2100T.' in message.content or 'SR052' in message.content:
+                await message.channel.send('名称:Core i3-2100T   \nマイクロアーキテクチャ:Sandy Bridge \nソケット名:LGA1155  \nコア数/スレッド数:2/4  \nベース:2.5GHz') 
+                return
+            if 'i3' in message.content and '2100.' in message.content or 'SR05C' in message.content:
+                await message.channel.send('名称:Core i3-2100   \nマイクロアーキテクチャ:Sandy Bridge \nソケット名:LGA1155  \nコア数/スレッド数:2/4  \nベース:3.1GHz') 
+                return
+
+            if 'i3' in message.content and '3250T.' in message.content or 'SR0YW' in message.content:
+                await message.channel.send('名称:Core i3-3250T   \nマイクロアーキテクチャ:Ivy Bridge \nソケット名:LGA1155  \nコア数/スレッド数:2/4  \nベース:3.0GHz')
+                return
+            if 'i3' in message.content and '3250.' in message.content or 'SR0YX' in message.content:
+                await message.channel.send('名称:Core i3-3250   \nマイクロアーキテクチャ:Ivy Bridge \nソケット名:LGA1155  \nコア数/スレッド数:2/4  \nベース:3.5GHz')
+                return
+            if 'i3' in message.content and '3245.' in message.content or 'SR0YL' in message.content:
+                await message.channel.send('名称:Core i3-3245   \nマイクロアーキテクチャ:Ivy Bridge \nソケット名:LGA1155  \nコア数/スレッド数:2/4  \nベース:3.4GHz')
+                return
+            if 'i3' in message.content and '3240T.' in message.content or 'SR0RK' in message.content:
+                await message.channel.send('名称:Core i3-3240T   \nマイクロアーキテクチャ:Ivy Bridge \nソケット名:LGA1155  \nコア数/スレッド数:2/4  \nベース:2.9GHz')
+                return
+            if 'i3' in message.content and '3240.' in message.content or 'SR0RH' in message.content:
+                await message.channel.send('名称:Core i3-3240   \nマイクロアーキテクチャ:Ivy Bridge \nソケット名:LGA1155  \nコア数/スレッド数:2/4  \nベース:3.4GHz')
+                return
+            if 'i3' in message.content and '3225.' in message.content or 'SR0RF' in message.content:
+                await message.channel.send('名称:Core i3-3225   \nマイクロアーキテクチャ:Ivy Bridge \nソケット名:LGA1155  \nコア数/スレッド数:2/4  \nベース:3.3GHz')
+                return
+            if 'i3' in message.content and '3220T.' in message.content or 'SR0RE' in message.content:
+                await message.channel.send('名称:Core i3-3220T   \nマイクロアーキテクチャ:Ivy Bridge \nソケット名:LGA1155  \nコア数/スレッド数:2/4  \nベース:2.8GHz')
+                return
+            if 'i3' in message.content and '3220.' in message.content or 'SR0RG' in message.content:
+                await message.channel.send('名称:Core i3-3220   \nマイクロアーキテクチャ:Ivy Bridge \nソケット名:LGA1155  \nコア数/スレッド数:2/4  \nベース:3.3GHz')
+                return
+            if 'i3' in message.content and '3210.' in message.content or 'SR0YY' in message.content:
+                await message.channel.send('名称:Core i3-3210   \nマイクロアーキテクチャ:Ivy Bridge \nソケット名:LGA1155  \nコア数/スレッド数:2/4  \nベース:3.2GHz')
+                return
+
+
+            if 'i3' in message.content and '4330.' in message.content or 'SR1NM' in message.content:
+               await message.channel.send('名称:Core i3-4330   \nマイクロアーキテクチャ:Haswell \nソケット名:LGA1150  \nコア数/スレッド数:2/4  \nベース:3.5GHz')
+               return
+            if 'i3' in message.content and '4330T.' in message.content or 'SR1NK' in message.content:
+               await message.channel.send('名称:Core i3-4330T   \nマイクロアーキテクチャ:Haswell \nソケット名:LGA1150  \nコア数/スレッド数:2/4  \nベース:3.0GHz')
+               return
+            if 'i3' in message.content and '4340.' in message.content or 'SR1NL' in message.content:
+               await message.channel.send('名称:Core i3-4340   \nマイクロアーキテクチャ:Haswell \nソケット名:LGA1150  \nコア数/スレッド数:2/4  \nベース:3.6GHz')
+               return
+            if 'i3' in message.content and '4350.' in message.content or 'SR1PF' in message.content:
+               await message.channel.send('名称:Core i3-4350   \nマイクロアーキテクチャ:Haswell \nソケット名:LGA1150  \nコア数/スレッド数:2/4  \nベース:3.6GHz')
+               return
+            if 'i3' in message.content and '4350T.' in message.content or 'SR1PA' in message.content:
+               await message.channel.send('名称:Core i3-4350T   \nマイクロアーキテクチャ:Haswell \nソケット名:LGA1150  \nコア数/スレッド数:2/4  \nベース:3.5GHz')
+               return
+            if 'i3' in message.content and '4360.' in message.content or 'SR1PC' in message.content:
+               await message.channel.send('名称:Core i3-4360   \nマイクロアーキテクチャ:Haswell \nソケット名:LGA1150  \nコア数/スレッド数:2/4  \nベース:3.7GHz')
+               return
+            if 'i3' in message.content and '4360T.' in message.content or 'SR1PB' in message.content:
+               await message.channel.send('名称:Core i3-4360T   \nマイクロアーキテクチャ:Haswell \nソケット名:LGA1150  \nコア数/スレッド数:2/4  \nベース:3.2GHz')
+               return
+            if 'i3' in message.content and '4370.' in message.content or 'SR1PD' in message.content:
+               await message.channel.send('名称:Core i3-4370   \nマイクロアーキテクチャ:Haswell \nソケット名:LGA1150  \nコア数/スレッド数:2/4  \nベース:3.8GHz')
+               return
+            if 'i3' in message.content and '4370T.' in message.content or 'SR1TB' in message.content:
+               await message.channel.send('名称:Core i3-4370T   \nマイクロアーキテクチャ:Haswell \nソケット名:LGA1150  \nコア数/スレッド数:2/4  \nベース:3.3GHz')
+               return
+            if 'i3' in message.content and '4170T.' in message.content or 'SR1TC' in message.content:
+               await message.channel.send('名称:Core i3-4170T   \nマイクロアーキテクチャ:Haswell \nソケット名:LGA1150  \nコア数/スレッド数:2/4  \nベース:3.2GHz')
+               return
+            if 'i3' in message.content and '4170.' in message.content or 'SR1PL' in message.content:
+               await message.channel.send('名称:Core i3-4170   \nマイクロアーキテクチャ:Haswell \nソケット名:LGA1150  \nコア数/スレッド数:2/4  \nベース:3.7GHz')
+               return
+            if 'i3' in message.content and '4160T.' in message.content or 'SR1PH' in message.content:
+               await message.channel.send('名称:Core i3-4160T   \nマイクロアーキテクチャ:Haswell \nソケット名:LGA1150  \nコア数/スレッド数:2/4  \nベース:3.1GHz')
+               return
+            if 'i3' in message.content and '4160.' in message.content or 'SR1PK' in message.content:
+               await message.channel.send('名称:Core i3-4160   \nマイクロアーキテクチャ:Haswell \nソケット名:LGA1150  \nコア数/スレッド数:2/4  \nベース:3.6GHz')
+               return
+            if 'i3' in message.content and '4150T.' in message.content or 'SR1PG' in message.content:
+               await message.channel.send('名称:Core i3-4150T   \nマイクロアーキテクチャ:Haswell \nソケット名:LGA1150  \nコア数/スレッド数:2/4  \nベース:3.0GHz')
+               return
+            if 'i3' in message.content and '4150.' in message.content or 'SR1PJ' in message.content:
+               await message.channel.send('名称:Core i3-4150   \nマイクロアーキテクチャ:Haswell \nソケット名:LGA1150  \nコア数/スレッド数:2/4  \nベース:3.5GHz')
+               return
+            if 'i3' in message.content and '4130T.' in message.content or 'SR1NN' in message.content:
+               await message.channel.send('名称:Core i3-4130T   \nマイクロアーキテクチャ:Haswell \nソケット名:LGA1150  \nコア数/スレッド数:2/4  \nベース:3.5GHz')
+               return
+            if 'i3' in message.content and '4130.' in message.content or 'SR1NP' in message.content:
+               await message.channel.send('名称:Core i3-4130   \nマイクロアーキテクチャ:Haswell \nソケット名:LGA1150  \nコア数/スレッド数:2/4  \nベース:3.4GHz')
+               return
+
+            if 'i3' in message.content and '6300.' in message.content or 'SR2HA' in message.content:
+               await message.channel.send('名称:Core i3-6300   \nマイクロアーキテクチャ:Skylake \nソケット名:LGA1151  \nコア数/スレッド数:2/4  \nベース:3.8GHz')
+               return
+            if 'i3' in message.content and '6300T.' in message.content or 'SR2HD' in message.content:
+               await message.channel.send('名称:Core i3-6300T   \nマイクロアーキテクチャ:Skylake \nソケット名:LGA1151  \nコア数/スレッド数:2/4  \nベース:3.3GHz')
+               return
+            if 'i3' in message.content and '6320.' in message.content or 'SR2H9' in message.content:
+               await message.channel.send('名称:Core i3-6320   \nマイクロアーキテクチャ:Skylake \nソケット名:LGA1151  \nコア数/スレッド数:2/4  \nベース:3.9GHz')
+               return
+            if 'i3' in message.content and '6100.' in message.content or 'SR2HG' in message.content:
+               await message.channel.send('名称:Core i3-6100   \nマイクロアーキテクチャ:Skylake \nソケット名:LGA1151  \nコア数/スレッド数:2/4  \nベース:3.7GHz')
+               return
+            if 'i3' in message.content and '6100T.' in message.content or 'SR2HE' in message.content:
+               await message.channel.send('名称:Core i3-6100T   \nマイクロアーキテクチャ:Skylake \nソケット名:LGA1151  \nコア数/スレッド数:2/4  \nベース:3.2GHz')
+               return
+            if 'i3' in message.content and '6098P.' in message.content or 'SR2NN' in message.content:
+               await message.channel.send('名称:Core i3-6098P   \nマイクロアーキテクチャ:Skylake \nソケット名:LGA1151  \nコア数/スレッド数:2/4  \nベース:3.6GHz')
+               return
+
+    
 
 
 
+
+
+
+
+
+
+
+
+#############################
         if '$' in message.content:
             
 
