@@ -37,7 +37,7 @@ async def on_message(message):
 # ===ここから会話===
 
 
-    if '707131346375409735'in message.content:
+    if '706481838553825280'in message.content:
         await message.channel.send('?')
 
 
