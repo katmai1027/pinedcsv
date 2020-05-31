@@ -215,8 +215,8 @@ async def on_message(message):
             await message.channel.send(file=discord.File('pic/tanbo1.jpg'))
         else:
             await message.channel.send('２に決まってんだろ！botをなめてんのか？（マジレス）')
-    if "さなだむし"  in message.content or "サナダムシ" in message.content:
-        await message.channel.send(file=discord.File('pic/sanada.png'))    
+    #if "さなだむし"  in message.content or "サナダムシ" in message.content:
+     #   await message.channel.send(file=discord.File('pic/sanada.png'))    
 
 
 
