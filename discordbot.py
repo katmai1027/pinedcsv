@@ -40,8 +40,9 @@ async def on_message(message):
     if '706481838553825280'in message.content:
         await message.channel.send('?')
 
-
-
+    if 'おはまんこ'in message.content or '🤔' in message.content:   
+        
+        await message.add_reaction('🤔')
 
         
     if 'botの説明書' in message.content:
