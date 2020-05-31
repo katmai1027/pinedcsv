@@ -17,9 +17,9 @@ async def on_ready():
 async def on_message(message):
     if message.author.bot:
         return
-    #au = message.author
-    #na = message.channel
-    #co = message.content
+    au = message.author
+    na = message.channel
+    co = message.content
     
     #print(au,":",co,"at",na)
 
@@ -37,7 +37,13 @@ async def on_message(message):
 # ===ここから会話===
 
 
+    if '707131346375409735'in message.content:
+        await message.channel.send('?')
 
+
+
+
+        
     if 'botの説明書' in message.content:
         await message.channel.send('-<<鯖ァーンwww bot 説明書>>-\n\n反応するワード(一部)\nおはよ/おやすみ/あ/しねかぶった/ぶっ壊す/f**k/買った/ァーン/ンーァ/ぴえん/びえん/ひえん/ヴィーン/クソ/うるせぇ/ェーン/うっきー/ゴルァ')
         
