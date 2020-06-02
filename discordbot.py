@@ -40,8 +40,7 @@ async def on_message(message):
     if '706481838553825280'in message.content:
         await message.channel.send('?')
 
-    if 'おはまんこ'in message.content or '🤔' in message.content:   
-        
+    if 'おはまんこ'in message.content or '🤔'in message.content or 'おふぱこ'in message.content:      
         await message.add_reaction('🤔')
 
         
@@ -129,10 +128,10 @@ async def on_message(message):
     if 'ぶっ壊す' in message.content or 'ぶっこわす' in message.content or 'ぶっこわ～す' in message.content:
         await message.channel.send('ぶっ壊す？今からお前んち焼きにいくわ')
         return
-    if 'クソ' in message.content or 'くそ' in message.content or '糞' in message.content or 'poop' in message.content or 'うんち' in message.content or 'うんこ' in message.content or 'んんこ' in message.content or 'ウンチ' in message.content or 'ゆゆうた' in message.content or 'ウンコ' in message.content:
+    if 'クソ' in message.content or 'くそ' in message.content or '糞' in message.content or 'poop' in message.content or 'うんち' in message.content or 'うんこ' in message.content or 'んんこ' in message.content or 'ウンチ' in message.content or 'ゆゆうた' in message.content or 'ウンコ' in message.content or '💩' in message.content:
         await message.channel.send("（っ’-‘)╮ =͟͟͞:poop:ﾌﾞｫﾝ")
         return
-    if 'ｸｿ' in message.content or 'ぅんち' in message.content or 'ぅんこ' in message.content or 'ｳﾝﾁ' in message.content or 'ｳﾝｺ' in message.content or 'うンこ' in message.content or 'ウんこ'  in message.content or 'ウんち' in message.content or 'Poop' in message.content or 'POOP' in message.content:
+    if 'ｸｿ' in message.content or 'ぅんち' in message.content or 'ぅんこ' in message.content or 'ｳﾝﾁ' in message.content or 'ｳﾝｺ' in message.content or 'うンこ' in message.content or 'ウんこ'  in message.content or 'ウんち' in message.content or 'Poop' in message.content or 'POOP' in message.content or '唐沢貴洋' in message.content:
         await message.channel.send("（っ’-‘)╮ =͟͟͞:poop:ﾌﾞｫﾝ")
         return
     if 'うるせ' in message.content or 'うるさい' in message.content or '黙れ' in message.content or 'だまれ' in message.content:
@@ -220,11 +219,16 @@ async def on_message(message):
 
 
 
-
-
-
-
+    if '1000円' in message.content or '1k' in message.content:
+        await message.channel.send(file=discord.File('pic/bird/illuminatiparrot.gif'))
+        return
+    if 'bird' in message.content or '鳥' in message.content or 'とり' in message.content or 'トリ' in message.content or '🐦' in message.content or '🦢' in message.content or '🐓' in message.content or '🐤' in message.content or '🐣' in message.content or '🐥' in message.content or '🦆' in message.content or '🦅' in message.content or '🦉' in message.content or '🐔' in message.content or '🐧' in message.content or '🦇' in message.content:
+        numb = random.randint(0, 19)
+        birdfile = 'pic/bird/%s.gif'% (numb)
+        await message.channel.send(file=discord.File(birdfile))
+        return
     
+
         
     if message.content == "あ":
         await message.channel.send('い\nう\nえ\nお')
