@@ -62,7 +62,7 @@ async def on_message(message):
         if 'よっしゃ' in message.content or 'わーい' in message.content or 'やったぁ' in message.content or '嬉しい' in message.content:   
             num = random.randint(0, 2)
             if num == 0:
-            await message.channel.send('おおおおおお！')
+                await message.channel.send('おおおおおお！')
             elif num == 1:
                 await message.channel.send('おめでと！！')
             else:
@@ -193,7 +193,7 @@ async def on_message(message):
         if 'おやすみ' in message.content:
             num = random.randint(0, 2)
             if num == 0:
-            await message.channel.send('おやすみぃ！おねしょすんなよ？')
+                await message.channel.send('おやすみぃ！おねしょすんなよ？')
             elif num == 1:
                 await message.channel.send('ナニィ？お化けが怖くて寝れないのか？')
             else:
