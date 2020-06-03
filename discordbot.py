@@ -45,99 +45,99 @@ async def on_message(message):
 
 # ===ここから会話===
 
+    if '$' not in message.content:
+        if '706481838553825280'in message.content:
+            await message.channel.send('?')
 
-    if '706481838553825280'in message.content:
-        await message.channel.send('?')
-
-    if 'おはまんこ'in message.content or '🤔'in message.content or 'おふぱこ'in message.content:      
-        await message.add_reaction('🤔')
+        if 'おはまんこ'in message.content or '🤔'in message.content or 'おふぱこ'in message.content:      
+            await message.add_reaction('🤔')
 
         
-    if 'botの説明書' in message.content:
-        await message.channel.send('-<<鯖ァーンwww bot 説明書>>-\n\n反応するワード(一部)\nおはよ/おやすみ/あ/しねかぶった/ぶっ壊す/f**k/買った/ァーン/ンーァ/ぴえん/びえん/ひえん/ヴィーン/クソ/うるせぇ/ェーン/うっきー/ゴルァ')
+        if 'botの説明書' in message.content:
+            await message.channel.send('-<<鯖ァーンwww bot 説明書>>-\n\n反応するワード(一部)\nおはよ/おやすみ/あ/しねかぶった/ぶっ壊す/f**k/買った/ァーン/ンーァ/ぴえん/びえん/ひえん/ヴィーン/クソ/うるせぇ/ェーン/うっきー/ゴルァ')
         
-        return
-
-
-    if 'よっしゃ' in message.content or 'わーい' in message.content or 'やったぁ' in message.content or '嬉しい' in message.content:   
-        num = random.randint(0, 2)
-        if num == 0:
-            await message.channel.send('おおおおおお！')
-        elif num == 1:
-            await message.channel.send('おめでと！！')
-        else:
-            await message.channel.send('いいねぇ')
-        return
-    if '喜' in message.content or '楽し' in message.content or 'よろこ' in message.content or 'うれし' in message.content:
-        num = random.randint(0, 2)
-        if num == 0:
-            await message.channel.send('ひゃっはぁー！')
-        elif num == 1:
-            await message.channel.send('そりゃいいなぁ')
-        else:
-            await message.channel.send(file=discord.File('(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)イヒーwwwwwwwwwwwイヒヒヒヒヒヒヒヒヒヒヒwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww'))
             return
-    if 'たのし' in message.content or 'ハッピー' in message.content or 'happy' in message.content or 'glad' in message.content:
-        num = random.randint(0, 2)
-        if num == 0:
-            await message.channel.send('フーンよかったじゃん（←むかつくやつ）')
-        elif num == 1:
-            await message.channel.send('おめでとさん！！')
-        else:
-            await message.channel.send('(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)イヒーwwwwwwwwwwwイヒヒヒヒヒヒヒヒヒヒヒwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww')
-        return
 
-    if '完成' in message.content or 'ひゃっは' in message.content or '勝った' in message.content or 'いえーい' in message.content:
-        num = random.randint(0, 2)
-        if num == 0:
-            await message.channel.send('わーお')
-        elif num == 1:
-            await message.channel.send('すっげぇや')
-        else:
-            await message.channel.send('(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)イヒーwwwwwwwwwwwイヒヒヒヒヒヒヒヒヒヒヒwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww')
-        return
 
-    if '買った' in message.content or '購入' in message.content or '買いました' in message.content or '買ってきた' in message.content:  
-        num = random.randint(0, 2)
-        if num == 0:
-            await message.channel.send('ちゃりーん！散財完了！')
-        elif num == 1:
-            await message.channel.send('おーええやん')
-        else:
-            await message.channel.send('それを買う金をワシによこせ')
-        return
+        if 'よっしゃ' in message.content or 'わーい' in message.content or 'やったぁ' in message.content or '嬉しい' in message.content:   
+            num = random.randint(0, 2)
+            if num == 0:
+            await message.channel.send('おおおおおお！')
+            elif num == 1:
+                await message.channel.send('おめでと！！')
+            else:
+                await message.channel.send('いいねぇ')
+            return
+        if '喜' in message.content or '楽し' in message.content or 'よろこ' in message.content or 'うれし' in message.content:
+            num = random.randint(0, 2)
+            if num == 0:
+                await message.channel.send('ひゃっはぁー！')
+            elif num == 1:
+                await message.channel.send('そりゃいいなぁ')
+            else:
+                await message.channel.send(file=discord.File('(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)イヒーwwwwwwwwwwwイヒヒヒヒヒヒヒヒヒヒヒwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww'))
+                return
+        if 'たのし' in message.content or 'ハッピー' in message.content or 'happy' in message.content or 'glad' in message.content:
+            num = random.randint(0, 2)
+            if num == 0:
+                await message.channel.send('フーンよかったじゃん（←むかつくやつ）')
+            elif num == 1:
+                await message.channel.send('おめでとさん！！')
+            else:
+                await message.channel.send('(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)イヒーwwwwwwwwwwwイヒヒヒヒヒヒヒヒヒヒヒwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww')
+            return
+
+        if '完成' in message.content or 'ひゃっは' in message.content or '勝った' in message.content or 'いえーい' in message.content:
+            num = random.randint(0, 2)
+            if num == 0:
+                await message.channel.send('わーお')
+            elif num == 1:
+                await message.channel.send('すっげぇや')
+            else:
+                await message.channel.send('(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)イヒーwwwwwwwwwwwイヒヒヒヒヒヒヒヒヒヒヒwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww')
+            return
+
+        if '買った' in message.content or '購入' in message.content or '買いました' in message.content or '買ってきた' in message.content:  
+            num = random.randint(0, 2)
+            if num == 0:
+                await message.channel.send('ちゃりーん！散財完了！')
+            elif num == 1:
+                await message.channel.send('おーええやん')
+            else:
+                await message.channel.send('それを買う金をワシによこせ')
+            return
     
 
 
 
 
-    if '鯖ァーン' in message.content:
-        await message.channel.send('鯖ァーンｗｗｗ')
-        return
-    if 'ァーン' in message.content:
-        await message.channel.send('喘ぐな気持ち悪い')
-        return
-    if 'ぴえん' in message.content or 'ピエン' in message.content or 'ぴゑん' in message.content or 'ピヱン' in message.content:
-        await message.channel.send(':pleading_face:')
-        return
-    if 'びえん' in message.content or 'ビエン' in message.content or '鼻炎' in message.content or 'びゑん' in message.content or 'ビヱン' in message.content:
-         
-        await message.channel.send(':sneeze:')
-        return
+        if '鯖ァーン' in message.content:
+            await message.channel.send('鯖ァーンｗｗｗ')
+            return
+        if 'ァーン' in message.content:
+            await message.channel.send('喘ぐな気持ち悪い')
+            return
+        if 'ぴえん' in message.content or 'ピエン' in message.content or 'ぴゑん' in message.content or 'ピヱン' in message.content:
+            await message.channel.send(':pleading_face:')
+            return
+        if 'びえん' in message.content or 'ビエン' in message.content or '鼻炎' in message.content or 'びゑん' in message.content or 'ビヱン' in message.content:
+             
+            await message.channel.send(':sneeze:')
+            return
     
-    if 'ンーァ' in message.content:
-        await message.channel.send('ァーンァーンｗｗｗ')
-        return
-    if 'おはよ' in message.content:
-        await message.channel.send('やぁ、おはよう！')
-        return
-    if 'ヴィーン' in message.content:
-        await message.channel.send('ヴィーンヴィーンｗｗｗ')
-        return
-    if 'ぶっ壊す' in message.content or 'ぶっこわす' in message.content or 'ぶっこわ～す' in message.content:
-        await message.channel.send('ぶっ壊す？今からお前んち焼きにいくわ')
-        return
-    if '$'not in message.content:
+        if 'ンーァ' in message.content:
+            await message.channel.send('ァーンァーンｗｗｗ')
+            return
+        if 'おはよ' in message.content:
+            await message.channel.send('やぁ、おはよう！')
+            return
+        if 'ヴィーン' in message.content:
+            await message.channel.send('ヴィーンヴィーンｗｗｗ')
+            return
+        if 'ぶっ壊す' in message.content or 'ぶっこわす' in message.content or 'ぶっこわ～す' in message.content:
+            await message.channel.send('ぶっ壊す？今からお前んち焼きにいくわ')
+            return
+
         
         if 'クソ' in message.content or 'くそ' in message.content or '糞' in message.content or 'poop' in message.content or 'うんち' in message.content or 'うんこ' in message.content or 'んんこ' in message.content or 'ウンチ' in message.content or 'ゆゆうた' in message.content or 'ウンコ' in message.content or '💩' in message.content:
             await message.channel.send("（っ’-‘)╮ =͟͟͞:poop:ﾌﾞｫﾝ")
@@ -145,59 +145,59 @@ async def on_message(message):
         if 'ｸｿ' in message.content or 'ぅんち' in message.content or 'ぅんこ' in message.content or 'ｳﾝﾁ' in message.content or 'ｳﾝｺ' in message.content or 'うンこ' in message.content or 'ウんこ'  in message.content or 'ウんち' in message.content or 'Poop' in message.content or 'POOP' in message.content or '唐沢貴洋' in message.content:
             await message.channel.send("（っ’-‘)╮ =͟͟͞:poop:ﾌﾞｫﾝ")
         
-    if 'うるせ' in message.content or 'うるさい' in message.content or '黙れ' in message.content or 'だまれ' in message.content:
-        await message.channel.send("お前のほうがうるさい！")
-        return
-    if 'ェーン' in message.content:
-        await message.channel.send('やーい泣き虫！')
-        return
-    if 'F***' in message.content or 'f***' in message.content or 'FUCK' in message.content or 'fuck' in message.content or 'Fuck' in message.content:
-        await message.channel.send('Fuck you motherfucker!')
-        return
-    if 'F**k' in message.content or 'F**K' in message.content or 'f**k' in message.content or 'fuc*' in message.content or 'Fuc*' in message.content:
-        await message.channel.send('Fuck you!')
-        return
-    if '倒すぞ' in message.content or '殺すぞ' in message.content:
-        await message.channel.send('負ける気がしまへんがな')
-        return
-    if '喧嘩売って' in message.content or 'けんか売って' in message.content or 'けんかうって' in message.content:
-        await message.channel.send('やんのかゴラァ')
-        return
-    if 'ゴラァ' in message.content or 'ゴルァ' in message.content:
-        await message.channel.send('あ？負ける気しないぞ？おい？かかってこいや')
-        return
-    if '暇' in message.content or 'ヒマ' in message.content or 'ひま' in message.content:
-        await message.channel.send('勉強したらどうだ？')
-        return
-    if 'Botに死はない' in message.content or '不死身のBot' in message.content:
-        await message.channel.send('（正論）')
-        return
-    if 'そうだよ' in message.content or 'そーだよ' in message.content:
-        await message.channel.send('ソーダよ（瓶状）')
-        return
-    if 'うっき' in message.content or 'うきゃ' in message.content or 'ウッキ' in message.content or 'ウキャ' in message.content or 'ウキー' in message.content or 'うきー' in message.content:
-        await message.channel.send('しねサル')
-        return
-    if 'ｲｷｷｲｲｲｲ' in message.content or 'ﾋﾞﾊﾞﾋﾊｧｲｸｩ' in message.content:
-        await message.channel.send('ｲｷｷｲｲｲｲｲｲｲwwwwｲｯﾋﾋﾋﾋﾋﾊﾊﾞﾋﾞﾊﾞﾋﾊｧｲｸｩ!!!!wwwwwwww')
-        return
-    if 'ひえん' in message.content or 'ヒエン' in message.content:
-        await message.channel.send(':hot_face:')
-        return
-    if '喘ぐな気持ち悪い' in message.content:
-        await message.channel.send('俺のセリフ真似してんじゃねぇよゴルァ')
-        return
-    if '草' in message.content and '余談' not in message.content and 'めんど'not in message.content and 'たくさん'not in message.content or 'くさ' in message.content and '余談' not in message.content and 'めんど'not in message.content and 'たくさん'not in message.content or 'ｸｯｻ' in message.content and '余談' not in message.content and 'めんど'not in message.content and 'たくさん'not in message.content or 'kusa' in message.content and '余談' not in message.content and 'めんど'not in message.content and 'たくさん'not in message.content or 'ｸｻ' in message.content and '余談' not in message.content and 'めんど'not in message.content and 'たくさん'not in message.content:
-        await message.channel.send('~~ 草 ~~ \n余談ですが草を生やしたように面白うございますので草を生やさせていただきます候')
+        if 'うるせ' in message.content or 'うるさい' in message.content or '黙れ' in message.content or 'だまれ' in message.content:
+            await message.channel.send("お前のほうがうるさい！")
+            return
+        if 'ェーン' in message.content:
+            await message.channel.send('やーい泣き虫！')
+            return
+        if 'F***' in message.content or 'f***' in message.content or 'FUCK' in message.content or 'fuck' in message.content or 'Fuck' in message.content:
+            await message.channel.send('Fuck you motherfucker!')
+            return
+        if 'F**k' in message.content or 'F**K' in message.content or 'f**k' in message.content or 'fuc*' in message.content or 'Fuc*' in message.content:
+            await message.channel.send('Fuck you!')
+            return
+        if '倒すぞ' in message.content or '殺すぞ' in message.content:
+            await message.channel.send('負ける気がしまへんがな')
+            return
+        if '喧嘩売って' in message.content or 'けんか売って' in message.content or 'けんかうって' in message.content:
+            await message.channel.send('やんのかゴラァ')
+            return
+        if 'ゴラァ' in message.content or 'ゴルァ' in message.content:
+            await message.channel.send('あ？負ける気しないぞ？おい？かかってこいや')
+            return
+        if '暇' in message.content or 'ヒマ' in message.content or 'ひま' in message.content:
+            await message.channel.send('勉強したらどうだ？')
+            return
+        if 'Botに死はない' in message.content or '不死身のBot' in message.content:
+            await message.channel.send('（正論）')
+            return
+        if 'そうだよ' in message.content or 'そーだよ' in message.content:
+            await message.channel.send('ソーダよ（瓶状）')
+            return
+        if 'うっき' in message.content or 'うきゃ' in message.content or 'ウッキ' in message.content or 'ウキャ' in message.content or 'ウキー' in message.content or 'うきー' in message.content:
+            await message.channel.send('しねサル')
+            return
+        if 'ｲｷｷｲｲｲｲ' in message.content or 'ﾋﾞﾊﾞﾋﾊｧｲｸｩ' in message.content:
+            await message.channel.send('ｲｷｷｲｲｲｲｲｲｲwwwwｲｯﾋﾋﾋﾋﾋﾊﾊﾞﾋﾞﾊﾞﾋﾊｧｲｸｩ!!!!wwwwwwww')
+            return
+        if 'ひえん' in message.content or 'ヒエン' in message.content:
+            await message.channel.send(':hot_face:')
+            return
+        if '喘ぐな気持ち悪い' in message.content:
+            await message.channel.send('俺のセリフ真似してんじゃねぇよゴルァ')
+            return
+        if '草' in message.content and '余談' not in message.content and 'めんど'not in message.content and 'たくさん'not in message.content or 'くさ' in message.content and '余談' not in message.content and 'めんど'not in message.content and 'たくさん'not in message.content or 'ｸｯｻ' in message.content and '余談' not in message.content and 'めんど'not in message.content and 'たくさん'not in message.content or 'kusa' in message.content and '余談' not in message.content and 'めんど'not in message.content and 'たくさん'not in message.content or 'ｸｻ' in message.content and '余談' not in message.content and 'めんど'not in message.content and 'たくさん'not in message.content:
+            await message.channel.send('~~ 草 ~~ \n余談ですが草を生やしたように面白うございますので草を生やさせていただきます候')
         
-    if 'おやすみ' in message.content:
-        num = random.randint(0, 2)
-        if num == 0:
+        if 'おやすみ' in message.content:
+            num = random.randint(0, 2)
+            if num == 0:
             await message.channel.send('おやすみぃ！おねしょすんなよ？')
-        elif num == 1:
-            await message.channel.send('ナニィ？お化けが怖くて寝れないのか？')
-        else:
-            await message.channel.send('まだだ。まだ甘い。寝てはいけない。')
+            elif num == 1:
+                await message.channel.send('ナニィ？お化けが怖くて寝れないのか？')
+            else:
+                await message.channel.send('まだだ。まだ甘い。寝てはいけない。')
         
 
 
@@ -205,48 +205,48 @@ async def on_message(message):
 
 
         
-    if message.content == "thinkpad" or message.content == "Thinkpad" or message.content == "ThinkPad" or message.content == "thinkPad":
-        pad = random.randint(0, 2)
-        if pad == 0:
-            await message.channel.send(file=discord.File('pic/think.png'))
-        elif pad == 1:
-            await message.channel.send(file=discord.File('pic/thick.png'))
-        else:
-            await message.channel.send(file=discord.File('pic/thin.png'))
-    if message.content == "PentiumIII" or message.content == "pentium3" or message.content == "pentiumIII" or message.content == "pen3" or message.content == "Pentium3":
-        await message.channel.send(file=discord.File('pic/katmai.png'))
-    if message.content == "よし" or message.content == "ヨシ" or message.content == "よし！" or message.content == "ヨシ！" or message.content == "よしっ" or message.content == "ヨシッ":
-        await message.channel.send(file=discord.File('pic/yoshi.jpg'))
-    if message.content == "1+1=" or message.content == "1+1" or message.content == "１＋１" or message.content == "１＋１＝" or message.content == "１+１=":
-        pad = random.randint(0, 2)
-        if pad == 0:
-            await message.channel.send(file=discord.File('pic/win.png'))
-        elif pad == 1:
-            await message.channel.send(file=discord.File('pic/tanbo1.jpg'))
-        else:
-            await message.channel.send('２に決まってんだろ！botをなめてんのか？（マジレス）')
+        if message.content == "thinkpad" or message.content == "Thinkpad" or message.content == "ThinkPad" or message.content == "thinkPad":
+            pad = random.randint(0, 2)
+            if pad == 0:
+                await message.channel.send(file=discord.File('pic/think.png'))
+            elif pad == 1:
+                await message.channel.send(file=discord.File('pic/thick.png'))
+            else:
+                await message.channel.send(file=discord.File('pic/thin.png'))
+        if message.content == "PentiumIII" or message.content == "pentium3" or message.content == "pentiumIII" or message.content == "pen3" or message.content == "Pentium3":
+            await message.channel.send(file=discord.File('pic/katmai.png'))
+        if message.content == "よし" or message.content == "ヨシ" or message.content == "よし！" or message.content == "ヨシ！" or message.content == "よしっ" or message.content == "ヨシッ":
+            await message.channel.send(file=discord.File('pic/yoshi.jpg'))
+        if message.content == "1+1=" or message.content == "1+1" or message.content == "１＋１" or message.content == "１＋１＝" or message.content == "１+１=":
+            pad = random.randint(0, 2)
+            if pad == 0:
+                await message.channel.send(file=discord.File('pic/win.png'))
+            elif pad == 1:
+                await message.channel.send(file=discord.File('pic/tanbo1.jpg'))
+            else:
+                await message.channel.send('２に決まってんだろ！botをなめてんのか？（マジレス）')
     #if "さなだむし"  in message.content or "サナダムシ" in message.content:
      #   await message.channel.send(file=discord.File('pic/sanada.png'))    
 
 
 
-    if '1000円' in message.content or '1k' in message.content:
-        await message.channel.send(file=discord.File('pic/bird/illuminatiparrot.gif'))
-        return
-    if 'bird' in message.content or '鳥' in message.content or 'TINTIN' in message.content.upper() or 'OPPAI' in message.content.upper() or 'ちんちん' in message.content or 'おっぱい' in message.content or 'とり' in message.content or 'トリ' in message.content or '🐦' in message.content or '🦢' in message.content or '🐓' in message.content or '🐤' in message.content or '🐣' in message.content or '🐥' in message.content or '🦆' in message.content or '🦅' in message.content or '🦉' in message.content or '🐔' in message.content or '🐧' in message.content or '🦇' in message.content:
-        numb = random.randint(0, 19)
-        birdfile = 'pic/bird/%s.gif'% (numb)
-        await message.channel.send(file=discord.File(birdfile))
-        return
+        if '1000円' in message.content or '1k' in message.content:
+            await message.channel.send(file=discord.File('pic/bird/illuminatiparrot.gif'))
+            return
+        if 'bird' in message.content or '鳥' in message.content or 'TINTIN' in message.content.upper() or 'OPPAI' in message.content.upper() or 'ちんちん' in message.content or 'おっぱい' in message.content or 'とり' in message.content or 'トリ' in message.content or '🐦' in message.content or '🦢' in message.content or '🐓' in message.content or '🐤' in message.content or '🐣' in message.content or '🐥' in message.content or '🦆' in message.content or '🦅' in message.content or '🦉' in message.content or '🐔' in message.content or '🐧' in message.content or '🦇' in message.content:
+            numb = random.randint(0, 19)
+            birdfile = 'pic/bird/%s.gif'% (numb)
+            await message.channel.send(file=discord.File(birdfile))
+            return
     
 
         
-    if message.content == "あ":
-        await message.channel.send('い\nう\nえ\nお')
-    if message.content == "しねかぶった":
-        await message.channel.send('ころす')
-    if message.content == "デジャヴ":
-        await message.channel.send('ここまでがテンプレ')
+        if message.content == "あ":
+            await message.channel.send('い\nう\nえ\nお')
+        if message.content == "しねかぶった":
+            await message.channel.send('ころす')
+        if message.content == "デジャヴ":
+            await message.channel.send('ここまでがテンプレ')
     
 # === ここからコマンド ===
         
