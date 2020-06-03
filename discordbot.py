@@ -2,18 +2,27 @@ import discord
 import random
 import os
 import re
+from discord.ext import commands
+
+bot = commands.Bot(command_prefix='$')
 
 TOKEN = 'NzA4ODYxOTYzMjE1Njk5OTg4.Xrdhig.d2znvPl9wMhogr1Logsb6BBH0SQ'
 pad = 0
 client = discord.Client()
 
-@client.event
+@bot.event
 async def on_ready():
     
     print('ログインしました')
 
 
-@client.event
+
+
+
+
+    
+@bot.event
+
 async def on_message(message):
     if message.author.bot:
         return
@@ -128,12 +137,14 @@ async def on_message(message):
     if 'ぶっ壊す' in message.content or 'ぶっこわす' in message.content or 'ぶっこわ～す' in message.content:
         await message.channel.send('ぶっ壊す？今からお前んち焼きにいくわ')
         return
-    if 'クソ' in message.content or 'くそ' in message.content or '糞' in message.content or 'poop' in message.content or 'うんち' in message.content or 'うんこ' in message.content or 'んんこ' in message.content or 'ウンチ' in message.content or 'ゆゆうた' in message.content or 'ウンコ' in message.content or '💩' in message.content:
-        await message.channel.send("（っ’-‘)╮ =͟͟͞:poop:ﾌﾞｫﾝ")
-        return
-    if 'ｸｿ' in message.content or 'ぅんち' in message.content or 'ぅんこ' in message.content or 'ｳﾝﾁ' in message.content or 'ｳﾝｺ' in message.content or 'うンこ' in message.content or 'ウんこ'  in message.content or 'ウんち' in message.content or 'Poop' in message.content or 'POOP' in message.content or '唐沢貴洋' in message.content:
-        await message.channel.send("（っ’-‘)╮ =͟͟͞:poop:ﾌﾞｫﾝ")
-        return
+    if '$'not in message.content:
+        
+        if 'クソ' in message.content or 'くそ' in message.content or '糞' in message.content or 'poop' in message.content or 'うんち' in message.content or 'うんこ' in message.content or 'んんこ' in message.content or 'ウンチ' in message.content or 'ゆゆうた' in message.content or 'ウンコ' in message.content or '💩' in message.content:
+            await message.channel.send("（っ’-‘)╮ =͟͟͞:poop:ﾌﾞｫﾝ")
+        
+        if 'ｸｿ' in message.content or 'ぅんち' in message.content or 'ぅんこ' in message.content or 'ｳﾝﾁ' in message.content or 'ｳﾝｺ' in message.content or 'うンこ' in message.content or 'ウんこ'  in message.content or 'ウんち' in message.content or 'Poop' in message.content or 'POOP' in message.content or '唐沢貴洋' in message.content:
+            await message.channel.send("（っ’-‘)╮ =͟͟͞:poop:ﾌﾞｫﾝ")
+        
     if 'うるせ' in message.content or 'うるさい' in message.content or '黙れ' in message.content or 'だまれ' in message.content:
         await message.channel.send("お前のほうがうるさい！")
         return
@@ -178,7 +189,7 @@ async def on_message(message):
         return
     if '草' in message.content and '余談' not in message.content and 'めんど'not in message.content and 'たくさん'not in message.content or 'くさ' in message.content and '余談' not in message.content and 'めんど'not in message.content and 'たくさん'not in message.content or 'ｸｯｻ' in message.content and '余談' not in message.content and 'めんど'not in message.content and 'たくさん'not in message.content or 'kusa' in message.content and '余談' not in message.content and 'めんど'not in message.content and 'たくさん'not in message.content or 'ｸｻ' in message.content and '余談' not in message.content and 'めんど'not in message.content and 'たくさん'not in message.content:
         await message.channel.send('~~ 草 ~~ \n余談ですが草を生やしたように面白うございますので草を生やさせていただきます候')
-        return
+        
     if 'おやすみ' in message.content:
         num = random.randint(0, 2)
         if num == 0:
@@ -187,7 +198,7 @@ async def on_message(message):
             await message.channel.send('ナニィ？お化けが怖くて寝れないのか？')
         else:
             await message.channel.send('まだだ。まだ甘い。寝てはいけない。')
-        return
+        
 
 
 
@@ -222,7 +233,7 @@ async def on_message(message):
     if '1000円' in message.content or '1k' in message.content:
         await message.channel.send(file=discord.File('pic/bird/illuminatiparrot.gif'))
         return
-    if 'bird' in message.content or '鳥' in message.content or 'とり' in message.content or 'トリ' in message.content or '🐦' in message.content or '🦢' in message.content or '🐓' in message.content or '🐤' in message.content or '🐣' in message.content or '🐥' in message.content or '🦆' in message.content or '🦅' in message.content or '🦉' in message.content or '🐔' in message.content or '🐧' in message.content or '🦇' in message.content:
+    if 'bird' in message.content or '鳥' in message.content or 'TINTIN' in message.content.upper() or 'OPPAI' in message.content.upper() or 'ちんちん' in message.content or 'おっぱい' in message.content or 'とり' in message.content or 'トリ' in message.content or '🐦' in message.content or '🦢' in message.content or '🐓' in message.content or '🐤' in message.content or '🐣' in message.content or '🐥' in message.content or '🦆' in message.content or '🦅' in message.content or '🦉' in message.content or '🐔' in message.content or '🐧' in message.content or '🦇' in message.content:
         numb = random.randint(0, 19)
         birdfile = 'pic/bird/%s.gif'% (numb)
         await message.channel.send(file=discord.File(birdfile))
@@ -239,9 +250,17 @@ async def on_message(message):
     
 # === ここからコマンド ===
         
-    if message.content == "//info":
-        await message.channel.send('鯖ァーンについて\n設立：令和2年1月\n命名者：もじゃたこ\n管理者：かとまい')
+
+
+
     
+
+
+
+
+
+
+
     if message.content.startswith('$'):
 
 
@@ -1688,7 +1707,14 @@ async def on_message(message):
 
 
         
-        await message.channel.send('登録されていない型番。次のことを確認してください\n＞ピリオドの打ち忘れ\n＞英語が小文字\n＞全角入力している')
+        #await message.channel.send('登録されていない型番。次のことを確認してください\n＞ピリオドの打ち忘れ\n＞英語が小文字\n＞全角入力している')
+    await bot.process_commands(message)
+
+@bot.command()
+async def poop(ctx,arg):
+    await ctx.send('%s、まじうんこ！！！！%sはガチでうんこ！！！普通のうんこを超えしエクストリームハイパーうんこ！！！スペシャルスーパーゴールデンうんこ！！！' % (arg,arg,))
 
 
-client.run(TOKEN)
+
+
+bot.run(TOKEN)
