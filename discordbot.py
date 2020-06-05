@@ -54,7 +54,7 @@ async def on_message(message):
 
         
         if 'botの説明書' in message.content:
-            await message.channel.send('-<<鯖ァーンwww bot 説明書>>-\n\n反応するワード(一部)\nおはよ/おやすみ/あ/しねかぶった/ぶっ壊す/f**k/買った/ァーン/ンーァ/ぴえん/びえん/ひえん/ヴィーン/クソ/うるせぇ/ェーン/うっきー/ゴルァ')
+            await message.channel.send('-<<鯖ァーンwww bot 説明書>>-\n\n反応するワード(一部)\nおはよ/おやすみ/あ/しねかぶった/ぶっ壊す/f**k/買った/ァーン/ンーァ/ぴえん/びえん/ひえん/ヴィーン/クソ/うるせぇ/ェーン/うっきー/ゴルァ\n\nコマンド\n$CPU型番を書く/$S-specを書く/$poop モノor人/$god モノor人/$custom モノor人 任意の言葉')
         
             return
 
@@ -1713,8 +1713,12 @@ async def on_message(message):
 @bot.command()
 async def poop(ctx,arg):
     await ctx.send('%s、まじうんこ！！！！%sはガチでうんこ！！！普通のうんこを超えしエクストリームハイパーうんこ！！！スペシャルスーパーゴールデンうんこ！！！' % (arg,arg,))
+@bot.command()
+async def god(ctx,arg):
+    await ctx.send('%s、まじ神！！！！%sはガチで神！！！普通のうんこを超えしエクストリームハイパー神！！！スペシャルスーパーゴールデン神！！！' % (arg,arg,))
+@bot.command()
 
-
-
+async def custom(ctx,arg1,arg2):
+    await ctx.send('%s、まじ%s！！！！%sはガチで%s！！！普通のうんこを超えしエクストリームハイパー%s！！！スペシャルスーパーゴールデン%s！！！' % (arg1,arg2,arg1,arg2,arg1,arg1,))
 
 bot.run(TOKEN)
