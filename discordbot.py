@@ -1715,10 +1715,10 @@ async def poop(ctx,arg):
     await ctx.send('%s、まじうんこ！！！！%sはガチでうんこ！！！普通のうんこを超えしエクストリームハイパーうんこ！！！スペシャルスーパーゴールデンうんこ！！！' % (arg,arg,))
 @bot.command()
 async def god(ctx,arg):
-    await ctx.send('%s、まじ神！！！！%sはガチで神！！！普通のうんこを超えしエクストリームハイパー神！！！スペシャルスーパーゴールデン神！！！' % (arg,arg,))
+    await ctx.send('%s、まじ神！！！！%sはガチで神！！！普通の神を超えしエクストリームハイパー神！！！スペシャルスーパーゴールデン神！！！' % (arg,arg,))
 @bot.command()
 
 async def custom(ctx,arg1,arg2):
-    await ctx.send('%s、まじ%s！！！！%sはガチで%s！！！普通のうんこを超えしエクストリームハイパー%s！！！スペシャルスーパーゴールデン%s！！！' % (arg1,arg2,arg1,arg2,arg1,arg1,))
+    await ctx.send('%s、まじ%s！！！！%sはガチで%s！！！普通の%sを超えしエクストリームハイパー%s！！！スペシャルスーパーゴールデン%s！！！' % (arg1,arg2,arg1,arg2,arg2,arg2,arg2,))
 
 bot.run(TOKEN)
