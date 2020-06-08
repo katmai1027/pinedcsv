@@ -235,7 +235,7 @@ async def on_message(message):
         if 'bird' in message.content or '鳥' in message.content or 'TINTIN' in message.content.upper() or 'OPPAI' in message.content.upper() or 'ちんちん' in message.content or 'おっぱい' in message.content or 'とり' in message.content or 'トリ' in message.content or '🐦' in message.content or '🦢' in message.content or '🐓' in message.content or '🐤' in message.content or '🐣' in message.content or '🐥' in message.content or '🦆' in message.content or '🦅' in message.content or '🦉' in message.content or '🐔' in message.content or '🐧' in message.content or '🦇' in message.content:
             
             s = message.content.upper()
-
+            bird00=(s.count('鳥'))
             bird01=(s.count('とり'))
             bird02=(s.count('トリ'))
             bird03=(s.count('BIRD'))
@@ -259,7 +259,7 @@ async def on_message(message):
 
 
 
-            birdcount=(bird01+bird02+bird03+bird04+bird05+bird06+bird07+bird08+bird09+bird10+bird11+bird12+bird13+bird14+bird15+bird16+bird17+bird18+bird19)
+            birdcount=(bird00+bird01+bird02+bird03+bird04+bird05+bird06+bird07+bird08+bird09+bird10+bird11+bird12+bird13+bird14+bird15+bird16+bird17+bird18+bird19)
 
 
             if birdcount > 5:
