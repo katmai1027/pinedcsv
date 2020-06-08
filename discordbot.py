@@ -48,10 +48,10 @@ async def on_message(message):
     if '$' not in message.content:
         if '706481838553825280'in message.content:
             await message.channel.send('?')
-
+            return
         if 'おはまんこ'in message.content or '🤔'in message.content or 'おふぱこ'in message.content:      
             await message.add_reaction('🤔')
-
+            return
         
         if 'botの説明書' in message.content:
             await message.channel.send('-<<鯖ァーンwww bot 説明書>>-\n\n反応するワード(一部)\nおはよ/おやすみ/あ/しねかぶった/ぶっ壊す/f**k/買った/ァーン/ンーァ/ぴえん/びえん/ひえん/ヴィーン/クソ/うるせぇ/ェーン/うっきー/ゴルァ\n\nコマンド\n$CPU型番を書く/$S-specを書く/$poop モノor人/$god モノor人/$custom モノor人 任意の言葉')
@@ -76,7 +76,7 @@ async def on_message(message):
                 await message.channel.send('そりゃいいなぁ')
             else:
                 await message.channel.send(file=discord.File('(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)(՞ةڼ◔)イヒーwwwwwwwwwwwイヒヒヒヒヒヒヒヒヒヒヒwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww'))
-                return
+            return
         if 'たのし' in message.content or 'ハッピー' in message.content or 'happy' in message.content or 'glad' in message.content:
             num = random.randint(0, 2)
             if num == 0:
@@ -237,7 +237,6 @@ async def on_message(message):
             numb = random.randint(0, 19)
             birdfile = 'pic/bird/%s.gif'% (numb)
             await message.channel.send(file=discord.File(birdfile))
-            return
     
 
         
