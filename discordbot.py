@@ -228,16 +228,50 @@ async def on_message(message):
     #if "さなだむし"  in message.content or "サナダムシ" in message.content:
      #   await message.channel.send(file=discord.File('pic/sanada.png'))    
 
-
-
+##################################################################################
         if '1000円' in message.content or '1k' in message.content:
             await message.channel.send(file=discord.File('pic/bird/illuminatiparrot.gif'))
             return
         if 'bird' in message.content or '鳥' in message.content or 'TINTIN' in message.content.upper() or 'OPPAI' in message.content.upper() or 'ちんちん' in message.content or 'おっぱい' in message.content or 'とり' in message.content or 'トリ' in message.content or '🐦' in message.content or '🦢' in message.content or '🐓' in message.content or '🐤' in message.content or '🐣' in message.content or '🐥' in message.content or '🦆' in message.content or '🦅' in message.content or '🦉' in message.content or '🐔' in message.content or '🐧' in message.content or '🦇' in message.content:
-            numb = random.randint(0, 19)
-            birdfile = 'pic/bird/%s.gif'% (numb)
-            await message.channel.send(file=discord.File(birdfile))
+            
+            s = message.content.upper()
+
+            bird01=(s.count('とり'))
+            bird02=(s.count('トリ'))
+            bird03=(s.count('BIRD'))
+            bird04=(s.count('TINTIN'))
+            bird05=(s.count('OPPAI'))
+            bird06=(s.count('ちんちん'))
+            bird07=(s.count('おっぱい'))
+            bird08=(s.count('🐦'))
+            bird09=(s.count('🦢'))
+            bird10=(s.count('🐓'))
+
+            bird11=(s.count('🐤'))
+            bird12=(s.count('🐣'))
+            bird13=(s.count('🐥'))
+            bird14=(s.count('🦆'))
+            bird15=(s.count('🦅'))
+            bird16=(s.count('🦉'))
+            bird17=(s.count('🐔'))
+            bird18=(s.count('🐧'))
+            bird19=(s.count('🦇'))
+
+
+
+            birdcount=(bird01+bird02+bird03+bird04+bird05+bird06+bird07+bird08+bird09+bird10+bird11+bird12+bird13+bird14+bird15+bird16+bird17+bird18+bird19)
+
+
+            if birdcount > 5:
+                birdcount = 5
+
+            for i in range(birdcount):
+
+                numb = random.randint(0, 19)
+                birdfile = 'pic/bird/%s.gif'% (numb)
+                await message.channel.send(file=discord.File(birdfile))
     
+##################################################################################
 
         
         if message.content == "あ":
