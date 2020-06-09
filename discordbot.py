@@ -2,6 +2,7 @@ import discord
 import random
 import os
 import re
+import twitter
 from discord.ext import commands
 
 bot = commands.Bot(command_prefix='$')
@@ -1753,5 +1754,31 @@ async def god(ctx,arg):
 
 async def custom(ctx,arg1,arg2):
     await ctx.send('%s、まじ%s！！！！%sはガチで%s！！！普通の%sを超えしエクストリームハイパー%s！！！スペシャルスーパーゴールデン%s！！！' % (arg1,arg2,arg1,arg2,arg2,arg2,arg2,))
+
+
+
+
+
+@bot.command()
+
+async def tweet(ctx,arg1):
+    await ctx.send('ツイートします')
+
+
+
+    auth = twitter.OAuth(consumer_key="1w57bXmGvoONFWBP9mLacPpGc",
+    consumer_secret="gNeuqqXU0fUeIluz6wXvVZSXV9XaQkm9lkqX2Hz0jh5Qab2sCY",
+    token="1142721964911448069-qo6GYxD9VIlAVYabd4WoPAqtYW1A2e",
+    token_secret="vz300H1HD1aI8hRjFEgI2tKGZQdwBMdIpr2A9B9giqTGI")
+    t = twitter.Twitter(auth=auth)
+    status=arg1 #投稿するツイート
+    t.statuses.update(status=status) #Twitterに投稿
+
+
+
+
+
+
+
 
 bot.run(TOKEN)
