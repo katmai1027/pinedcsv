@@ -1766,10 +1766,10 @@ async def tweet(ctx,arg1):
 
 
 
-    auth = twitter.OAuth(consumer_key="1w57bXmGvoONFWBP9mLacPpGc",
-    consumer_secret="gNeuqqXU0fUeIluz6wXvVZSXV9XaQkm9lkqX2Hz0jh5Qab2sCY",
-    token="1142721964911448069-qo6GYxD9VIlAVYabd4WoPAqtYW1A2e",
-    token_secret="vz300H1HD1aI8hRjFEgI2tKGZQdwBMdIpr2A9B9giqTGI")
+    auth = twitter.OAuth(consumer_key="8DJbuI9dUTBW9TObrPdAKKHfJ",
+    consumer_secret="Be5E7hM3xI3KRJMlwGFgvuxb3Lp0GJH9ZUKz4C6GtEDKBzl2O3",
+    token="1142721964911448069-LmvD4qv58swY0waZmqAzBHj8rAxlB4",
+    token_secret="yNO79K47d0MjzYzMqYTP54PPATIPt7EhEsYiX1ssHQG7D")
     t = twitter.Twitter(auth=auth)
     status=arg1 #投稿するツイート
     t.statuses.update(status=status) #Twitterに投稿
