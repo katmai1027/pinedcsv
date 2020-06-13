@@ -1798,9 +1798,9 @@ async def reply(ctx):
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(token, token_secret)
     api = tweepy.API(auth)
-    l = ["katmai_","pprn_227","C___llIlI","kuromochisan","okakimochipc","aiueokakimochi","Siraisi_Ch","IFG250455","Osatu_R_LFA10"]
+    l = ["katmai_","pprn_227","C___llIlI","kuromochisan","okakimochipc","aiueokakimochi","Siraisi_Ch","IFG250455","Osatu_R_LFA10","KumaAyasa"]
     idname = random.choice(l)
-    texts = ["やぁ！","リプしてもいいですか？","なんかdisco命令されたのでリプしてみよーっと！俺は悪くない！","ぷーぷ"]
+    texts = ["やぁ！","リプしてもいいですか？いいみたいですね、どうもありがとう。","なんかdiscoで命令されたのでリプしてみよーっと！俺は悪くない！","ぷーぷ"]
     reply_text = random.choice(texts)
 
     
