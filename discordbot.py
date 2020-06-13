@@ -1798,9 +1798,9 @@ async def reply(ctx):
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(token, token_secret)
     api = tweepy.API(auth)
-    l = ["katmai_","pprn_227","C___llIlI","kuromochisan","okakimochipc","aiueokakimochi","Siraisi_Ch","IFG250455","Osatu_R_LFA10","KumaAyasa"]
+    l = ["katmai_","pprn_227","kuromochisan","okakimochipc","aiueokakimochi","Siraisi_Ch","IFG250455","Osatu_R_LFA10","KumaAyasa"]
     idname = random.choice(l)
-    texts = ["やぁ！","リプしてもいいですか？いいみたいですね、どうもありがとう。","なんかdiscoで命令されたのでリプしてみよーっと！俺は悪くない！","ぷーぷ"]
+    texts = ["やぁ！","くぁｗせｄｒｆｔｇｙふじこｌｐ","なんかdiscoで命令されたのでリプしてみよーっと！俺は悪くない！","ぷーぷ","︎︎"]
     reply_text = random.choice(texts)
 
     
@@ -1815,7 +1815,7 @@ async def reply(ctx):
             rep_id = result.id
             tweet_rep = "@" + idname + " " + reply_text
             api.update_status(status=tweet_rep,in_reply_to_status_id=rep_id)
-            await ctx.send('はい、誰かにリプを飛ばしました。')
+            await ctx.send('@%sにリプを飛ばしました。'%(l))
     except:
         await ctx.send('俺が勝手に選んだ人の、最新ツイートはすでにリプ済みです。')
 bot.run(TOKEN)
