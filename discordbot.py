@@ -1818,7 +1818,7 @@ async def reply(ctx):
             id_list.append(result.id)
             if len(id_list) > 20:
                 del id_list[0]
-            await ctx.send('@%sにリプを飛ばしました。'%(rep_id))
+            await ctx.send('@%sにリプを飛ばしました。'%(idname))
         else:
             await ctx.send('俺が勝手に選んだ人の、最新ツイートはすでにリプ済みです。')
 bot.run(TOKEN)
