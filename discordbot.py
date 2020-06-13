@@ -2,7 +2,10 @@ import discord
 import random
 import os
 import re
-import twitter
+import requests
+import linecache
+import tweepy
+import json
 from discord.ext import commands
 
 bot = commands.Bot(command_prefix='$')
@@ -10,6 +13,8 @@ bot = commands.Bot(command_prefix='$')
 TOKEN = 'NzA4ODYxOTYzMjE1Njk5OTg4.Xrdhig.d2znvPl9wMhogr1Logsb6BBH0SQ'
 pad = 0
 client = discord.Client()
+status_id_list = []
+
 
 @bot.event
 async def on_ready():
@@ -1762,23 +1767,55 @@ async def custom(ctx,arg1,arg2):
 @bot.command()
 
 async def tweet(ctx,arg1):
-    await ctx.send('ツイートします')
-
-
-
-    auth = twitter.OAuth(consumer_key="8DJbuI9dUTBW9TObrPdAKKHfJ",
-    consumer_secret="Be5E7hM3xI3KRJMlwGFgvuxb3Lp0GJH9ZUKz4C6GtEDKBzl2O3",
-    token="1142721964911448069-LmvD4qv58swY0waZmqAzBHj8rAxlB4",
-    token_secret="yNO79K47d0MjzYzMqYTP54PPATIPt7EhEsYiX1ssHQG7D")
-    t = twitter.Twitter(auth=auth)
-    status=arg1 #投稿するツイート
-    t.statuses.update(status=status) #Twitterに投稿
 
 
 
 
+    consumer_key="8DJbuI9dUTBW9TObrPdAKKHfJ"
+    consumer_secret="Be5E7hM3xI3KRJMlwGFgvuxb3Lp0GJH9ZUKz4C6GtEDKBzl2O3"
+    token="1142721964911448069-LmvD4qv58swY0waZmqAzBHj8rAxlB4"
+    token_secret="yNO79K47d0MjzYzMqYTP54PPATIPt7EhEsYiX1ssHQG7D"
+    auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+    auth.set_access_token(token, token_secret)
+
+    api = tweepy.API(auth)
+    
+    api.update_status(arg1)
+    await ctx.send('---ツイートしました---\n')
+    await ctx.send(arg1)
+
+
+@bot.command()   
+async def reply(ctx):
 
 
 
 
+    consumer_key="8DJbuI9dUTBW9TObrPdAKKHfJ"
+    consumer_secret="Be5E7hM3xI3KRJMlwGFgvuxb3Lp0GJH9ZUKz4C6GtEDKBzl2O3"
+    token="1142721964911448069-LmvD4qv58swY0waZmqAzBHj8rAxlB4"
+    token_secret="yNO79K47d0MjzYzMqYTP54PPATIPt7EhEsYiX1ssHQG7D"
+    auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+    auth.set_access_token(token, token_secret)
+    api = tweepy.API(auth)
+    l = ["katmai_","pprn_227","C___llIlI","kuromochisan","okakimochipc","aiueokakimochi","Siraisi_Ch","IFG250455","Osatu_R_LFA10"]
+    idname = random.choice(l)
+    texts = ["やぁ！","リプしてもいいですか？","なんかdisco命令されたのでリプしてみよーっと！俺は悪くない！","ぷーぷ"]
+    reply_text = random.choice(texts)
+
+    
+    results = api.user_timeline(screen_name=idname, count=1,exclude_replies="true",include_rts="false")
+    try:
+        
+        for result in results:
+            print(result.id)
+            print(result.created_at)
+            print(result.text)
+            print()
+            rep_id = result.id
+            tweet_rep = "@" + idname + " " + reply_text
+            api.update_status(status=tweet_rep,in_reply_to_status_id=rep_id)
+            await ctx.send('はい、誰かにリプを飛ばしました。')
+    except:
+        await ctx.send('俺が勝手に選んだ人の、最新ツイートはすでにリプ済みです。')
 bot.run(TOKEN)
