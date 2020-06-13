@@ -13,7 +13,7 @@ bot = commands.Bot(command_prefix='$')
 TOKEN = 'NzA4ODYxOTYzMjE1Njk5OTg4.Xrdhig.d2znvPl9wMhogr1Logsb6BBH0SQ'
 pad = 0
 client = discord.Client()
-status_id_list = []
+id_list = []
 
 
 @bot.event
@@ -1805,9 +1805,9 @@ async def reply(ctx):
 
     
     results = api.user_timeline(screen_name=idname, count=1,exclude_replies="true",include_rts="false")
-    try:
-        
-        for result in results:
+
+    for result in results:
+        if result.id not in id_list:
             print(result.id)
             print(result.created_at)
             print(result.text)
@@ -1815,7 +1815,10 @@ async def reply(ctx):
             rep_id = result.id
             tweet_rep = "@" + idname + " " + reply_text
             api.update_status(status=tweet_rep,in_reply_to_status_id=rep_id)
+            id_list.append(result.id)
+            if len(id_list) > 20:
+                del id_list[0]
             await ctx.send('@%sにリプを飛ばしました。'%(l))
-    except:
-        await ctx.send('俺が勝手に選んだ人の、最新ツイートはすでにリプ済みです。')
+        else:
+            await ctx.send('俺が勝手に選んだ人の、最新ツイートはすでにリプ済みです。')
 bot.run(TOKEN)
