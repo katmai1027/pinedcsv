@@ -1842,6 +1842,9 @@ async def reply(ctx , arg1):
 async def pf(ctx , arg1):
     n = int(arg1)
     factor = []
+    if len(arg1) > 16:
+        await ctx.send('15桁以上はやめてクレメンス')
+        return
     #2から√n以下の数字で割っていく
     tmp = int(math.sqrt(n)) + 1
     for num in range(2,tmp):
