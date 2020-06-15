@@ -7,6 +7,7 @@ import linecache
 import tweepy
 import json
 from discord.ext import commands
+import math
 
 bot = commands.Bot(command_prefix='$')
 
@@ -60,7 +61,7 @@ async def on_message(message):
             return
         
         if 'botの説明書' in message.content:
-            await message.channel.send('-<<鯖ァーンwww bot 説明書>>-\n\n反応するワード(一部)\nおはよ/おやすみ/あ/しねかぶった/ぶっ壊す/f**k/買った/ァーン/ンーァ/ぴえん/びえん/ひえん/ヴィーン/クソ/うるせぇ/ェーン/うっきー/ゴルァ\n\nコマンド\n$CPU型番を書く/$S-specを書く/$poop モノor人/$god モノor人/$custom モノor人 任意の言葉')
+            await message.channel.send('-<<鯖ァーンwww bot 説明書>>-\n\n反応するワード(一部)\nおはよ/おやすみ/あ/しねかぶった/ぶっ壊す/f**k/買った/ァーン/ンーァ/ぴえん/びえん/ひえん/ヴィーン/クソ/うるせぇ/ェーン/うっきー/ゴルァ\n\nコマンド\n$CPU型番を書く/$S-specを書く/$poop モノor人/$god モノor人/$custom モノor人 任意の言葉 $tweet ツイート内容/$reply')
         
             return
 
@@ -172,7 +173,7 @@ async def on_message(message):
         if 'ゴラァ' in message.content or 'ゴルァ' in message.content:
             await message.channel.send('あ？負ける気しないぞ？おい？かかってこいや')
             return
-        if '暇' in message.content or 'ヒマ' in message.content or 'ひま' in message.content:
+        if ('暇' in message.content or 'ヒマ' in message.content or 'ひま' in message.content)and not ('ない' in message.content or 'ません' in message.content):
             await message.channel.send('勉強したらどうだ？')
             return
         if 'Botに死はない' in message.content or '不死身のBot' in message.content:
@@ -195,8 +196,11 @@ async def on_message(message):
             return
         if '草' in message.content and '余談' not in message.content and 'めんど'not in message.content and 'たくさん'not in message.content or 'くさ' in message.content and '余談' not in message.content and 'めんど'not in message.content and 'たくさん'not in message.content or 'ｸｯｻ' in message.content and '余談' not in message.content and 'めんど'not in message.content and 'たくさん'not in message.content or 'kusa' in message.content and '余談' not in message.content and 'めんど'not in message.content and 'たくさん'not in message.content or 'ｸｻ' in message.content and '余談' not in message.content and 'めんど'not in message.content and 'たくさん'not in message.content:
             await message.channel.send('~~ 草 ~~ \n余談ですが草を生やしたように面白うございますので草を生やさせていただきます候')
-        
-        if 'おやすみ' in message.content:
+            return
+        if '勉強' in message.content:
+            await message.channel.send('勉強？！俺、大っ嫌い！！')
+            return
+        if 'おやすみ' in message.content or '寝る' in message.content or '寝ます' in message.content:
             num = random.randint(0, 2)
             if num == 0:
                 await message.channel.send('おやすみぃ！おねしょすんなよ？')
@@ -204,6 +208,7 @@ async def on_message(message):
                 await message.channel.send('ナニィ？お化けが怖くて寝れないのか？')
             else:
                 await message.channel.send('まだだ。まだ甘い。寝てはいけない。')
+            return
         
 
 
@@ -1786,7 +1791,7 @@ async def tweet(ctx,arg1):
 
 
 @bot.command()   
-async def reply(ctx):
+async def reply(ctx , arg1):
 
 
 
@@ -1798,8 +1803,17 @@ async def reply(ctx):
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(token, token_secret)
     api = tweepy.API(auth)
+    
     l = ["katmai_","pprn_227","kuromochisan","okakimochipc","aiueokakimochi","Siraisi_Ch","IFG250455","Osatu_R_LFA10","KumaAyasa"]
-    idname = random.choice(l)
+    if arg1 == "random":
+        idname = random.choice(l)
+    else:
+        if arg1 in l:
+            idname = arg1
+        else:
+            await ctx.send('そのIDには送れません。作成者にリストに追加してもらってください。')
+            return
+        
     texts = ["やぁ！","くぁｗせｄｒｆｔｇｙふじこｌｐ","なんかdiscoで命令されたのでリプしてみよーっと！俺は悪くない！","ぷーぷ","︎︎"]
     reply_text = random.choice(texts)
 
@@ -1816,9 +1830,35 @@ async def reply(ctx):
             tweet_rep = "@" + idname + " " + reply_text
             api.update_status(status=tweet_rep,in_reply_to_status_id=rep_id)
             id_list.append(result.id)
-            if len(id_list) > 20:
+            if len(id_list) > 40:
                 del id_list[0]
             await ctx.send('@%sにリプを飛ばしました。'%(idname))
         else:
-            await ctx.send('俺が勝手に選んだ人の、最新ツイートはすでにリプ済みです。')
+            await ctx.send('@%sの最新ツイートはすでにリプ済みです。'%(idname))
+
+
+
+@bot.command()   
+async def pf(ctx , arg1):
+    n = int(arg1)
+    factor = []
+    #2から√n以下の数字で割っていく
+    tmp = int(math.sqrt(n)) + 1
+    for num in range(2,tmp):
+        while n % num == 0:
+            n //= num
+            factor.append(num)
+
+
+    if not factor:
+        await ctx.send('prime number')
+    else:
+        factor.append(n)
+        await ctx.send(factor) 
+
+#    c = collections.Counter(prime_factorize(arg1))
+#    await ctx.send(arr)    
+
+
+    
 bot.run(TOKEN)
