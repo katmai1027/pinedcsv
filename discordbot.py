@@ -66,7 +66,7 @@ async def on_message(message):
             return
 
 
-        if 'よっしゃ' in message.content or 'わーい' in message.content or 'やったぁ' in message.content or '嬉しい' in message.content:   
+        if ('よっしゃ' in message.content or 'わーい' in message.content or 'やったぁ' in message.content or '嬉しい' in message.content) and not ('ない' in message.content or 'ません' in message.content):   
             num = random.randint(0, 2)
             if num == 0:
                 await message.channel.send('おおおおおお！')
@@ -75,7 +75,7 @@ async def on_message(message):
             else:
                 await message.channel.send('いいねぇ')
             return
-        if '喜' in message.content or '楽し' in message.content or 'よろこ' in message.content or 'うれし' in message.content:
+        if ('喜' in message.content or '楽し' in message.content or 'よろこ' in message.content or 'うれし' in message.content) and not ('ない' in message.content or 'ません' in message.content):
             num = random.randint(0, 2)
             if num == 0:
                 await message.channel.send('ひゃっはぁー！')
@@ -200,6 +200,9 @@ async def on_message(message):
         if '勉強' in message.content:
             await message.channel.send('勉強？！俺、大っ嫌い！！')
             return
+
+
+
         if 'おやすみ' in message.content or '寝る' in message.content or '寝ます' in message.content:
             num = random.randint(0, 2)
             if num == 0:
@@ -207,7 +210,8 @@ async def on_message(message):
             elif num == 1:
                 await message.channel.send('ナニィ？お化けが怖くて寝れないのか？')
             else:
-                await message.channel.send('まだだ。まだ甘い。寝てはいけない。')
+                 arg1 = message.author
+                 await message.channel.send('こんばんわ～:night_with_stars:%sちゃんは、もう寝ちゃったかな:question:\n今日は、一日忙しくて、連絡できなかったヨ:cry:ごめんな:cry:\n明日も忙しいから、早く寝ないとネ(^^;):sweat_drops:\nじゃあ%sちゃんも、体調気をつけてね(^-)\nおやすみ～:sleeping::zzz:' % (arg1,arg1))
             return
         
 
@@ -1765,6 +1769,10 @@ async def god(ctx,arg):
 async def custom(ctx,arg1,arg2):
     await ctx.send('%s、まじ%s！！！！%sはガチで%s！！！普通の%sを超えしエクストリームハイパー%s！！！スペシャルスーパーゴールデン%s！！！' % (arg1,arg2,arg1,arg2,arg2,arg2,arg2,))
 
+@bot.command()
+
+async def sleep(ctx,arg1):
+    await ctx.send('こんばんわ～:night_with_stars:%sちゃんは、もう寝ちゃったかな:question:\n今日は、一日忙しくて、連絡できなかったヨ:cry:ごめんな:cry:\n明日も忙しいから、早く寝ないとネ(^^;):sweat_drops:\nじゃあ%sちゃんも、体調気をつけてね(^-)\nおやすみ～:sleeping::zzz:' % (arg1,arg1))
 
 
 
