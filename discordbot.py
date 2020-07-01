@@ -56,12 +56,17 @@ async def on_message(message):
         if '706481838553825280'in message.content:
             await message.channel.send('?')
             return
+        if 'よんだ'in message.content or 'ﾖﾝﾀﾞ'in message.content or '呼んだ'in message.content or '呼ばれた'in message.content or 'ﾖﾊﾞﾚﾀ'in message.content or 'よばれた'in message.content:
+            await message.channel.send('呼んでないよ？')
+            return
         if 'おはまんこ'in message.content or '🤔'in message.content or 'おふぱこ'in message.content:      
             await message.add_reaction('🤔')
             return
-        
+        if message.content == "たし":     
+            await message.add_reaction('🦀')
+            return    
         if 'botの説明書' in message.content:
-            await message.channel.send('-<<鯖ァーンwww bot 説明書>>-\n\n反応するワード(一部)\nおはよ/おやすみ/あ/しねかぶった/ぶっ壊す/f**k/買った/ァーン/ンーァ/ぴえん/びえん/ひえん/ヴィーン/クソ/うるせぇ/ェーン/うっきー/ゴルァ\n\nコマンド\n$CPU型番を書く/$S-specを書く/$poop モノor人/$god モノor人/$custom モノor人 任意の言葉 $tweet ツイート内容/$reply')
+            await message.channel.send('-<<鯖ァーンwww bot 説明書>>-\n\n反応するワード(一部)\nおはよ/おやすみ/あ/しねかぶった/ぶっ壊す/f**k/買った/ァーン/ンーァ/ぴえん/びえん/ひえん/ヴィーン/クソ/うるせぇ/ェーン/うっきー/ゴルァ/とり/おはまんこ/\n\nコマンド\n$CPU型番を書く/$S-specを書く/$poop モノor人/$god モノor人/$custom モノor人 任意の言葉 $tweet ツイート内容/$reply ID(@不要)')
         
             return
 
@@ -1493,11 +1498,11 @@ async def on_message(message):
             if 'eleron' in message.content and '1.3.' in message.content or 'eleron' in message.content and '1300.' in message.content or 'SL5VR' in message.content or 'SL5ZJ' in message.content or 'SL6C7' in message.content or 'SL6JT' in message.content:
                 await message.channel.send('名称:Celeron 1.3GHz   \nマイクロアーキテクチャ:P6(Tualatin-256) \nソケット名:socket370-2  \nコア数/スレッド数:1/1  \nベース:1.3GHz')
                 return
-            if 'eleron' in message.content and '1.4.' in message.content or 'eleron' in message.content and '1400.' in message.content or 'SL64V' in message.content or 'SL68G' in message.content or 'SL6C6' in message.content or 'SL6JU' in message.content:
+            if 'eleron' in message.content and '1.4.' in message.content or 'eleron' in message.content and '1400.' in message.content or 'SL64V' in message.content or 'SL68G' in message.content or 'SL6C6' in message.content or 'SL6JU' in message.content or 'SL6JV' in message.content:
                 await message.channel.send('名称:Celeron 1.4GHz   \nマイクロアーキテクチャ:P6(Tualatin-256) \nソケット名:socket370-2  \nコア数/スレッド数:1/1  \nベース:1.4GHz')
                 return
-            if 'eleron' in message.content and '1.5.' in message.content or 'eleron' in message.content and '1500.' in message.content or 'SL6C5' in message.content or 'SL6JV' in message.content:
-                await message.channel.send('名称:Celeron 1.5GHz   \nマイクロアーキテクチャ:P6(Tualatin-256) \nソケット名:socket370-2  \nコア数/スレッド数:1/1  \nベース:1.5GHz')
+            if 'eleron' in message.content and '1.5.' in message.content or 'eleron' in message.content and '1500.' in message.content or 'SL6C5' in message.content:
+                await message.channel.send('名称:Celeron 1.5GHz ※おそらく商品化されていない  \nマイクロアーキテクチャ:P6(Tualatin-256) \nソケット名:socket370-2  \nコア数/スレッド数:1/1  \nベース:1.5GHz')
                 return
 
             
