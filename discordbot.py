@@ -1875,6 +1875,11 @@ async def pf(ctx , arg1):
 #    c = collections.Counter(prime_factorize(arg1))
 #    await ctx.send(arr)    
 
+@bot.command()
+
+async def only(ctx):
+    user = ctx.author
+    await user.send('ONLY FOR YOU %s,\nhttps://www.youtube.com/channel/UCEm47WxN5E_YK6Jrrpxhf7g?sub_confirmation=1'%(user))
 
     
 bot.run(TOKEN)
