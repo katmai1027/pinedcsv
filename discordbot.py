@@ -1261,7 +1261,7 @@ async def on_message(message):
                 await message.channel.send('名称:Core i9-9980XE   \nマイクロアーキテクチャ:Skylake \nソケット名:LGA2066  \nコア数/スレッド数:18/36  \nベース:3GHz\nTB時:4.1GHz')
                 return
         
-            if 'I9' in message.content.upper() and '9900K.' in message.content.upper() or 'SRELS' in message.content.upper() or 'サッカーボール' in message.content:
+            if 'I9' in message.content.upper() and '9900K.' in message.content.upper() or 'SRELS' in message.content.upper() or 'SRG19' in message.content.upper() or 'サッカーボール' in message.content:
                 await message.channel.send('名称:Core i9-9900K   \nマイクロアーキテクチャ:Coffee Lake \nソケット名:LGA1151-2  \nコア数/スレッド数:8/16  \nベース:3.6GHz\nTB時:5GHz')
                 return
             if 'I9' in message.content.upper() and '9900KF.' in message.content.upper() or 'SRFAA' in message.content.upper():
