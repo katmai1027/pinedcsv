@@ -440,7 +440,7 @@ async def on_message(message):
                 await message.channel.send('名称:Core i7-3770T   \nマイクロアーキテクチャ:Ivy Bridge \nソケット名:LGA1155  \nコア数/スレッド数:4/8  \nベース:2.5GHz\nTB時:3.7GHz')
                 return
             if '3930K.' in message.content.upper() or 'SR0H9' in message.content.upper() or 'SR0KY' in message.content.upper():
-                await message.channel.send('名称:Core i7-3930K   \nマイクロアーキテクチャ:Sandy Bridge \nソケット名:LGA2011  \nコア数/スレッド数:4/8  \nベース:3.2GHz\nTB時:3.8GHz')
+                await message.channel.send('名称:Core i7-3930K   \nマイクロアーキテクチャ:Sandy Bridge \nソケット名:LGA2011  \nコア数/スレッド数:6/12  \nベース:3.2GHz\nTB時:3.8GHz')
                 return
             if '3960X.' in message.content.upper() or 'SR0KF' in message.content.upper() or 'SR0KY' in message.content.upper():
                 await message.channel.send('名称:Core i7-3960X   \nマイクロアーキテクチャ:Sandy Bridge \nソケット名:LGA2011  \nコア数/スレッド数:6/12  \nベース:3.3GHz\nTB時:3.9GHz')
