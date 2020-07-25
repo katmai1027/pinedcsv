@@ -36,6 +36,7 @@ async def on_message(message):
         return
 
 # ===ここから会話===
+    guild = None
     guild = message.guild
     if guild is None:
         await message.channel.send('❌Cannnot run the command in DM')
