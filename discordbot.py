@@ -31,30 +31,15 @@ async def on_ready():
 @bot.event
 
 async def on_message(message):
-    guild = message.guild 
-    member_count = guild.member_count
     if message.author.bot:
+        
         return
-    if int(member_count) < 3:
-        return
-    au = message.author
-    na = message.channel
-    co = message.content
-    
-    #print(au,":",co,"at",na)
-
-    #if '@' in message.content:
-     #   if message.content.startswith('>'):
-      #      pass
-#
- #       else:
-            #await message.delete()
-            #await message.channel.send('引用以外のメンションは禁止されています。')
-            #return
-  #          pass
-
 
 # ===ここから会話===
+    guild = message.guild
+    if guild is None:
+        await message.channel.send('❌Cannnot run the command in DM')
+        return
 
     if '$' not in message.content:
         if '706481838553825280'in message.content:
@@ -194,6 +179,7 @@ async def on_message(message):
         if 'うっき' in message.content or 'うきゃ' in message.content or 'ウッキ' in message.content or 'ウキャ' in message.content or 'ウキー' in message.content or 'うきー' in message.content:
             await message.channel.send('しねサル')
             return
+
         if 'ｲｷｷｲｲｲｲ' in message.content or 'ﾋﾞﾊﾞﾋﾊｧｲｸｩ' in message.content:
             await message.channel.send('ｲｷｷｲｲｲｲｲｲｲwwwwｲｯﾋﾋﾋﾋﾋﾊﾊﾞﾋﾞﾊﾞﾋﾊｧｲｸｩ!!!!wwwwwwww')
             return
@@ -444,7 +430,7 @@ async def on_message(message):
                 await message.channel.send('名称:Core i7-3770T   \nマイクロアーキテクチャ:Ivy Bridge \nソケット名:LGA1155  \nコア数/スレッド数:4/8  \nベース:2.5GHz\nTB時:3.7GHz')
                 return
             if '3930K.' in message.content.upper() or 'SR0H9' in message.content.upper() or 'SR0KY' in message.content.upper():
-                await message.channel.send('名称:Core i7-3930K   \nマイクロアーキテクチャ:Sandy Bridge \nソケット名:LGA2011  \nコア数/スレッド数:6/12  \nベース:3.2GHz\nTB時:3.8GHz')
+                await message.channel.send('名称:Core i7-3930K   \nマイクロアーキテクチャ:Sandy Bridge \nソケット名:LGA2011  \nコア数/スレッド数:4/8  \nベース:3.2GHz\nTB時:3.8GHz')
                 return
             if '3960X.' in message.content.upper() or 'SR0KF' in message.content.upper() or 'SR0KY' in message.content.upper():
                 await message.channel.send('名称:Core i7-3960X   \nマイクロアーキテクチャ:Sandy Bridge \nソケット名:LGA2011  \nコア数/スレッド数:6/12  \nベース:3.3GHz\nTB時:3.9GHz')
