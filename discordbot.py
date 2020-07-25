@@ -35,7 +35,7 @@ async def on_message(message):
     member_count = guild.member_count
     if message.author.bot:
         return
-    if member_count < 3:
+    if int(member_count) < 3:
         return
     au = message.author
     na = message.channel
