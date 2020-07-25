@@ -31,7 +31,11 @@ async def on_ready():
 @bot.event
 
 async def on_message(message):
+    guild = message.guild 
+    member_count = guild.member_count
     if message.author.bot:
+        return
+    if member_count < 3:
         return
     au = message.author
     na = message.channel
