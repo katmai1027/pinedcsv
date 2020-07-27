@@ -39,7 +39,7 @@ async def on_message(message):
     guild = None
     guild = message.guild
     if guild is None:
-        await message.channel.send('❌Cannnot run the command in DM')
+        await message.channel.send('🍉Cannnot run the command in DM')
         return
 
     if '$' not in message.content:
