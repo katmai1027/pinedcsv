@@ -39,21 +39,34 @@ async def on_message(message):
     guild = None
     guild = message.guild
     if guild is None:
-        await message.channel.send('🍉Cannnot run the command in DM')
+        await message.channel.send('❌Cannnot run the command in DM')
         return
 
     if '$' not in message.content:
         if '706481838553825280'in message.content:
             await message.channel.send('?')
             return
+        if 'いってら'== message.content:
+            await message.channel.send('1TB')
+            return
+        if 'みえたぞ'== message.content or "見えたぞ" == message.content:
+            await message.channel.send('気のせいだ')
+            return
+        if '()' == message.content:
+            await message.channel.send('ｲﾋｰ')
+            return
+
         if 'よんだ'in message.content or 'ﾖﾝﾀﾞ'in message.content or '呼んだ'in message.content or '呼ばれた'in message.content or 'ﾖﾊﾞﾚﾀ'in message.content or 'よばれた'in message.content:
             await message.channel.send('呼んでないよ？')
             return
-        if 'おはまんこ'in message.content or '🤔'in message.content or 'おふぱこ'in message.content:      
+        if 'おはまんこ'in message.content or '🤔'in message.content or 'おっぱい'in message.content:      
             await message.add_reaction('🤔')
             return
         if message.content == "たし":     
             await message.add_reaction('🦀')
+            return
+        if message.content == "ぱおん":     
+            await message.add_reaction('🐘')
             return    
         if 'botの説明書' in message.content:
             await message.channel.send('-<<鯖ァーンwww bot 説明書>>-\n\n反応するワード(一部)\nおはよ/おやすみ/あ/しねかぶった/ぶっ壊す/f**k/買った/ァーン/ンーァ/ぴえん/びえん/ひえん/ヴィーン/クソ/うるせぇ/ェーン/うっきー/ゴルァ/とり/おはまんこ/\n\nコマンド\n$CPU型番を書く/$S-specを書く/$poop モノor人/$god モノor人/$custom モノor人 任意の言葉 $tweet ツイート内容/$reply ID(@不要)')
@@ -162,11 +175,12 @@ async def on_message(message):
         if '倒すぞ' in message.content or '殺すぞ' in message.content:
             await message.channel.send('負ける気がしまへんがな')
             return
-        if '喧嘩売って' in message.content or 'けんか売って' in message.content or 'けんかうって' in message.content:
+        if '喧嘩' in message.content or 'けんか' in message.content or 'ｹﾝｶ' in message.content:
             await message.channel.send('やんのかゴラァ')
             return
-        if 'ゴラァ' in message.content or 'ゴルァ' in message.content:
-            await message.channel.send('あ？負ける気しないぞ？おい？かかってこいや')
+        if 'ｺﾞﾙｧ' in message.content or 'ゴルァ' in message.content:
+            gorua = random.choice('あ？負ける気しないぞ？おい？かかってこいや','俺に喧嘩売るとはいい度胸だな','俺に喧嘩売ってんじゃねえよｺﾞﾙｧ')
+            await message.channel.send(gorua)
             return
         if ('暇' in message.content or 'ヒマ' in message.content or 'ひま' in message.content)and not ('ない' in message.content or 'ません' in message.content):
             await message.channel.send('勉強したらどうだ？')
@@ -1761,9 +1775,11 @@ async def poop(ctx,arg):
 async def god(ctx,arg):
     await ctx.send('%s、まじ神！！！！%sはガチで神！！！普通の神を超えしエクストリームハイパー神！！！スペシャルスーパーゴールデン神！！！' % (arg,arg,))
 @bot.command()
-
 async def custom(ctx,arg1,arg2):
     await ctx.send('%s、まじ%s！！！！%sはガチで%s！！！普通の%sを超えしエクストリームハイパー%s！！！スペシャルスーパーゴールデン%s！！！' % (arg1,arg2,arg1,arg2,arg2,arg2,arg2,))
+@bot.command()
+async def fuck(ctx,arg):
+    await ctx.send('%s、まじFuck！！！！%sはガチでFuck！！！普通のFuckを超えしエクストリームハイパーFuck！！！スペシャルスーパーゴールデンうんこFuck！！！' % (arg,arg,))
 
 @bot.command()
 
@@ -1811,6 +1827,8 @@ async def reply(ctx , arg1):
     l = ["katmai_","pprn_227","kuromochisan","okakimochipc","aiueokakimochi","Siraisi_Ch","IFG250455","Osatu_R_LFA10","KumaAyasa","C___llIlI"]
     if arg1 == "random":
         idname = random.choice(l)
+    elif arg1 == "list":
+        await ctx.send('Replyできるユーザー : ["katmai_","pprn_227","kuromochisan","okakimochipc","aiueokakimochi","Siraisi_Ch","IFG250455","Osatu_R_LFA10","KumaAyasa","C___llIlI"]')
     else:
         if arg1 in l:
             idname = arg1
