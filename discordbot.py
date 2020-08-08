@@ -8,13 +8,25 @@ import tweepy
 import json
 from discord.ext import commands
 import math
+import csv
 
 bot = commands.Bot(command_prefix='$')
-
+file = 'test1.csv'
 TOKEN = 'NzA4ODYxOTYzMjE1Njk5OTg4.Xrdhig.d2znvPl9wMhogr1Logsb6BBH0SQ'
 pad = 0
 client = discord.Client()
 id_list = []
+
+say2 = "いや草"
+say1 = "めっちゃうんこじゃん！"
+def cpuinfo(info):
+    
+    with open('bot.csv') as f:
+        reader = csv.reader(f)
+        l = [row for row in reader]
+    cpunum = (l[int(info)])
+    print("名称:%s\nアーキテクチャ:%s\nソケット:%s\nコア/スレッド:%s\nクロック(-TB時):%s"% (cpunum[1],cpunum[2],cpunum[3],cpunum[4],cpunum[5]))
+    f.close()
 
 
 @bot.event
@@ -1715,15 +1727,105 @@ async def on_message(message):
                 return
 
 
+            if 'eleron' in message.content and '1610.' in message.content or 'SR10K' in message.content:
+                await message.channel.send('名称:Cereron G 1610   \nマイクロアーキテクチャ:Ivy Bridge  \nソケット名:LGA1155  \nコア数/スレッド数:2/2  \nクロック:2.6GHz') 
+                return
 
 
 
+            
+
+            
+
+############################Pentium###############################
 
 
+            if 'entium' in message.content and '450.' in message.content or 'SL38E' in message.content or 'SL360' in message.content or 'SL364' in message.content or 'SL3CC' in message.content or 'SL35D' in message.content or 'SL37C' in message.content:
+                cpuinfo(0)
+                return
+            if 'entium' in message.content and '500.' in message.content or 'SL38E' in message.content  or 'SL365' in message.content or 'SL3CD' in message.content or 'SL35E' in message.content or 'SL37C' in message.content:
+                cpuinfo(1)
+                return
+            if 'entium' in message.content and '533.' in message.content or 'SL3BN' in message.content  or 'SL3E9' in message.content:
+                cpuinfo(2)
+                return
+            if 'entium' in message.content and '550.' in message.content or 'SL3F7' in message.content  or 'SL3FJ' in message.content:
+                cpuinfo(3)
+                return
+            if 'entium' in message.content and '600.' in message.content or 'SL3JM' in message.content  or 'SL3JT' in message.content:
+                cpuinfo(4)
+                return
+            if 'entium' in message.content and '600B.' in message.content or 'SL3JP' in message.content  or 'SL3JU' in message.content:
+                cpuinfo(5) 
+                return
 
 
+            """
+##################先に書いてあるのがPGA370、次はslot1を埋めてね######################
+            if 'entium' in message.content and '500E.' in message.content or'SL3Q9' in message.content  or 'SL3R2' in message.content or 'SL444' in message.content or 'SL446' in message.content or 'SL45R' in message.content or'SL3N6' in message.content or'SL3SX' in message.content  or 'SL3XG' in message.content or 'SL44W' in message.content:
+                cpuinfo(6)
+                return
+            if 'entium' in message.content and '533EB.' in message.content or'SL3VA' in message.content  or 'SL3VF' in message.content or 'SL3XS' in message.content or 'SL45S' in message.content or'' in message.content or'' in message.content  or '' in message.content or '' in message.content or '' in message.content or '' in message.content:
+                cpuinfo(7)
+                return
+            if 'entium' in message.content and '550E.' in message.content or'SL3QA' in message.content  or 'SL3R3' in message.content or 'SL44G' in message.content or 'SL45T' in message.content or'' in message.content or'' in message.content  or '' in message.content or '' in message.content or '' in message.content or '' in message.content:
+                cpuinfo(8)
+                return
+            if 'entium' in message.content and '600E.' in message.content or'SL3NL' in message.content  or 'SL3VH' in message.content or 'SL3XU' in message.content or 'SL45U' in message.content or 'SL4CM' in message.content or'SL5BT' in message.content or'' in message.content or'' in message.content  or '' in message.content or '' in message.content or '' in message.content or '' in message.content:
+                cpuinfo(9)
+                return
+            if 'entium' in message.content and '600EB.' in message.content or'SL3VB' in message.content  or 'SL3VG' in message.content or 'SL3XT' in message.content or 'SL45V' in message.content or 'SL4CL' in message.content or'' in message.content or'' in message.content  or '' in message.content or '' in message.content or '' in message.content or '' in message.content:
+                cpuinfo(10)
+                return
+            if 'entium' in message.content and '650.' in message.content or'SL3NM' in message.content  or 'SL3VJ' in message.content or 'SL3XV' in message.content or 'SL45W' in message.content or 'SL4CK' in message.content or'' in message.content or'' in message.content  or '' in message.content or '' in message.content or '' in message.content or '' in message.content:
+                cpuinfo(11)
+                return
+            if 'entium' in message.content and '667.' in message.content or'SL3T2' in message.content  or 'SL3VK' in message.content or 'SL3XW' in message.content or 'SL45X' in message.content or 'SL4CJ' in message.content or'' in message.content or'' in message.content  or '' in message.content or '' in message.content or '' in message.content or '' in message.content:
+                cpuinfo(12)
+                return
+            if 'entium' in message.content and '700.' in message.content or'SL3T3' in message.content  or 'SL3VL' in message.content or 'SL3XX' in message.content or 'SL45Y' in message.content or 'SL4CH' in message.content or 'SL4M7' in message.content or 'SL4ZM' in message.content or'' in message.content or'' in message.content  or '' in message.content or '' in message.content or '' in message.content or '' in message.content:
+                cpuinfo(13)
+                return
+            if 'entium' in message.content and '733.' in message.content or'SL3T4' in message.content  or 'SL3VM' in message.content or 'SL3XY' in message.content or 'SL45Z' in message.content or 'SL4CG' in message.content or 'SL4M8' in message.content or 'SL4ZL' in message.content or'' in message.content or'' in message.content  or '' in message.content or '' in message.content or '' in message.content or '' in message.content:
+                cpuinfo(14)
+                return
+            if 'entium' in message.content and '750.' in message.content or'SL3VC' in message.content  or 'SL3VN' in message.content or 'SL3XZ' in message.content or 'SL462' in message.content or 'SL4M9' in message.content or 'SL4Z4' in message.content or 'SL4CF' in message.content or'' in message.content or'' in message.content  or '' in message.content or '' in message.content or '' in message.content or '' in message.content:
+                cpuinfo(15)
+                return
+#####################slot1##############            
+            if 'entium' in message.content and '800.' in message.content or'SL3V7' in message.content  or 'SL3Z6' in message.content or 'SL3XR' in message.content or 'SL457' in message.content or 'SL4BY' in message.content or 'SL4KF' in message.content:
+                cpuinfo(16)
+                return
+            if 'entium' in message.content and '800EB.' in message.content or'SL3V8' in message.content  or 'SL3WA' in message.content or 'SL3XQ' in message.content or 'SL458' in message.content or 'SL4BX' in message.content or 'SL4G7' in message.content or 'SL4KG' in message.content or 'SL45R' in message.content:
+                cpuinfo(17)
+                return
+            if 'entium' in message.content and '850.' in message.content or'SL43F' in message.content  or 'SL47M' in message.content or 'SL4BW' in message.content or 'SL4KH' in message.content:
+                cpuinfo(18)
+                return
+            if 'entium' in message.content and '866.' in message.content or'SL43G' in message.content  or 'SL47N' in message.content or 'SL47S' in message.content or 'SL4BV' in message.content or 'SL4KJ' in message.content:
+                cpuinfo(19)
+                return
+            if 'entium' in message.content and '900.' in message.content or'SL4SD' in message.content  or 'SL5BS' in message.content:
+                cpuinfo(20)##
+                return
+            if 'entium' in message.content and '933.' in message.content or'SL448' in message.content  or 'SL47Q' in message.content or 'SL4BT' in message.content or 'SL4KK' in message.content:
+                cpuinfo(21)
+                return
+            if 'entium' in message.content and '1000.' in message.content or'SL4BR' in message.content  or 'SL4KL' in message.content:
+                cpuinfo(22)
+                return
+            if 'entium' in message.content and '1000EB.' in message.content or'SL48S' in message.content  or 'SL4FP' in message.content or 'SL4BS' in message.content:
+                cpuinfo(23)
+                return
+            if 'entium' in message.content and '1100.' in message.content or'SL5QW' in message.content:
+                cpuinfo(24)
+                return
+            if 'entium' in message.content and '1133.' in message.content or'SL4HH' in message.content:
+                cpuinfo(25)##
+                return
+            
 
-
+            """
 
 
 
@@ -1755,9 +1857,7 @@ async def on_message(message):
                 await message.channel.send('名称:Pentium Gold G5620   \nマイクロアーキテクチャ:Coffee Lake \nソケット名:LGA1151-2  \nコア数/スレッド数:2/4 \nベース:4.00GHz')
                 return
 
-            if 'eleron' in message.content and '1610.' in message.content or 'SR10K' in message.content:
-                await message.channel.send('名称:Cereron G 1610   \nマイクロアーキテクチャ:Ivy Bridge  \nソケット名:LGA1155  \nコア数/スレッド数:2/2  \nクロック:2.6GHz') 
-                return
+
 
 
 
@@ -1890,5 +1990,12 @@ async def only(ctx):
     user = ctx.author
     await user.send('ONLY FOR YOU %s,\nhttps://www.youtube.com/channel/UCEm47WxN5E_YK6Jrrpxhf7g?sub_confirmation=1'%(user))
 
+@bot.command()
+
+async def say(ctx):
+    say3 = say2
+    say2 = say1
+    say1 = ctx  
+    await ctx.send(ctx)
     
 bot.run(TOKEN)
