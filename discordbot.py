@@ -1996,6 +1996,6 @@ async def say(ctx):
     say3 = say2
     say2 = say1
     say1 = ctx  
-    await ctx.send(ctx)
+    await ctx.send(say1)
     
 bot.run(TOKEN)
