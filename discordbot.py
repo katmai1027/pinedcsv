@@ -16,9 +16,9 @@ TOKEN = 'NzA4ODYxOTYzMjE1Njk5OTg4.Xrdhig.d2znvPl9wMhogr1Logsb6BBH0SQ'
 pad = 0
 client = discord.Client()
 id_list = []
-
-say2 = "いや草"
-say1 = "めっちゃうんこじゃん！"
+saytwo = "test"
+sayone = "first command"
+"""
 def cpuinfo(info):
     
     with open('bot.csv') as f:
@@ -27,7 +27,7 @@ def cpuinfo(info):
     cpunum = (l[int(info)])
     print("名称:%s\nアーキテクチャ:%s\nソケット:%s\nコア/スレッド:%s\nクロック(-TB時):%s"% (cpunum[1],cpunum[2],cpunum[3],cpunum[4],cpunum[5]))
     f.close()
-
+"""
 
 @bot.event
 async def on_ready():
@@ -1879,7 +1879,7 @@ async def custom(ctx,arg1,arg2):
     await ctx.send('%s、まじ%s！！！！%sはガチで%s！！！普通の%sを超えしエクストリームハイパー%s！！！スペシャルスーパーゴールデン%s！！！' % (arg1,arg2,arg1,arg2,arg2,arg2,arg2,))
 @bot.command()
 async def fuck(ctx,arg):
-    await ctx.send('%s、まじFuck！！！！%sはガチでFuck！！！普通のFuckを超えしエクストリームハイパーFuck！！！スペシャルスーパーゴールデンうんこFuck！！！' % (arg,arg,))
+    await ctx.send('%s、まじFuck！！！！%sはガチでFuck！！！普通のFuckを超えしエクストリームハイパーFuck！！！スペシャルスーパーゴールデンFuck！！！' % (arg,arg,))
 
 @bot.command()
 
@@ -1992,10 +1992,11 @@ async def only(ctx):
 
 @bot.command()
 
-async def say(ctx):
-    say3 = say2
-    say2 = say1
-    say1 = ctx  
-    await ctx.send(say3)
+async def say(ctx,arg1):
+    global sayone
+    global saytwo
+    saytwo = sayone
+    sayone = arg1  
+    await ctx.send(saytwo)
     
 bot.run(TOKEN)
