@@ -2000,7 +2000,7 @@ async def say(ctx,arg1):
     saythree = saytwo
     saytwo = sayone
     sayone = arg1
-    await client.delete_message(message)
+    ###await ctx.delete(ctx.message)   できねぇｗｗｗ
     await ctx.send(saytwo)
     
 bot.run(TOKEN)
