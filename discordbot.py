@@ -16,8 +16,9 @@ TOKEN = 'NzA4ODYxOTYzMjE1Njk5OTg4.Xrdhig.d2znvPl9wMhogr1Logsb6BBH0SQ'
 pad = 0
 client = discord.Client()
 id_list = []
-saytwo = "test"
-sayone = "first command"
+saythree = "やぁ！"
+saytwo = "こんにちわんこそば"
+sayone = "鯖ァーンァンァンァン"
 """
 def cpuinfo(info):
     
@@ -1993,10 +1994,13 @@ async def only(ctx):
 @bot.command()
 
 async def say(ctx,arg1):
+    global saythree
     global sayone
     global saytwo
+    saythree = saytwo
     saytwo = sayone
-    sayone = arg1  
+    sayone = arg1
+    await client.delete_message(message)
     await ctx.send(saytwo)
     
 bot.run(TOKEN)
