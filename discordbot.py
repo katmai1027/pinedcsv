@@ -1916,8 +1916,8 @@ async def tweet(ctx,arg1):
             tweet_id=status.id#ツイートidにアクセス
             if len(rt_list) > 60:
                 del rt_list[0]
-            if status.id not in rt_list:
-                rt_list.append(satus.id)
+            if tweet_id not in rt_list:
+                rt_list.append(tweet_id)
                 api.retweet(tweet_id)#RT
             else:
                 pass
