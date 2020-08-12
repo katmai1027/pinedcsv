@@ -16,6 +16,7 @@ TOKEN = 'NzA4ODYxOTYzMjE1Njk5OTg4.Xrdhig.d2znvPl9wMhogr1Logsb6BBH0SQ'
 pad = 0
 client = discord.Client()
 id_list = []
+rt_list = []
 saythree = "やぁ！"
 saytwo = "こんにちわんこそば"
 sayone = "鯖ァーンァンァンァン"
@@ -1906,16 +1907,19 @@ async def tweet(ctx,arg1):
     
     #########################
     
-    q_list=["@coppermine_"]
-    count=50#取得するツイート数
+    q_list=["to:@coppermine_"]
+    count=15#取得するツイート数
     for q in q_list:
         print("Now:QUERY-->>{}".format(q))
         search_results=api.search(q=q,count=count)#ツイートのデータであるstatusオブジェクトを取得
         for status in search_results:
             tweet_id=status.id#ツイートidにアクセス
-            try:
+            id_list.append(satus.id)
+            if len(rt_list) > 40:
+                del rt_list[0]
+            if status.id not in rt_list:
                 api.retweet(tweet_id)#RT
-            except:
+            else:
                 pass
     #################################
 
@@ -1958,10 +1962,6 @@ async def reply(ctx , arg1):
 
     for result in results:
         if result.id not in id_list:
-            print(result.id)
-            print(result.created_at)
-            print(result.text)
-            print()
             rep_id = result.id
             tweet_rep = "@" + idname + " " + reply_text
             api.update_status(status=tweet_rep,in_reply_to_status_id=rep_id)
