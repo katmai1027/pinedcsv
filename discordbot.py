@@ -1893,9 +1893,7 @@ async def sleep(ctx,arg1):
 @bot.command()
 
 async def tweet(ctx,arg1):
-
-
-
+    
 
     consumer_key="8DJbuI9dUTBW9TObrPdAKKHfJ"
     consumer_secret="Be5E7hM3xI3KRJMlwGFgvuxb3Lp0GJH9ZUKz4C6GtEDKBzl2O3"
@@ -1906,6 +1904,21 @@ async def tweet(ctx,arg1):
 
     api = tweepy.API(auth)
     
+    #########################
+    
+    q_list=["@coppermine_"]
+    count=50#取得するツイート数
+    for q in q_list:
+        print("Now:QUERY-->>{}".format(q))
+        search_results=api.search(q=q,count=count)#ツイートのデータであるstatusオブジェクトを取得
+        for status in search_results:
+            tweet_id=status.id#ツイートidにアクセス
+            try:
+                api.retweet(tweet_id)#RT
+            except:
+                pass
+    #################################
+
     api.update_status(arg1)
     await ctx.send('---ツイートしました---\n')
     await ctx.send(arg1)
