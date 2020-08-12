@@ -1906,7 +1906,7 @@ async def tweet(ctx,arg1):
     api = tweepy.API(auth)
     
     #########################
-    
+    """
     q_list=["to:@coppermine_"]
     count=10#取得するツイート数
     for q in q_list:
@@ -1921,6 +1921,7 @@ async def tweet(ctx,arg1):
                 api.retweet(tweet_id)#RT
             else:
                 pass
+     """
     #################################
 
     api.update_status(arg1)
