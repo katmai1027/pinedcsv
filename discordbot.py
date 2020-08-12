@@ -1908,14 +1908,14 @@ async def tweet(ctx,arg1):
     #########################
     
     q_list=["to:@coppermine_"]
-    count=15#取得するツイート数
+    count=10#取得するツイート数
     for q in q_list:
         print("Now:QUERY-->>{}".format(q))
         search_results=api.search(q=q,count=count)#ツイートのデータであるstatusオブジェクトを取得
         for status in search_results:
             tweet_id=status.id#ツイートidにアクセス
-            id_list.append(satus.id)
-            if len(rt_list) > 40:
+            rt_list.append(satus.id)
+            if len(rt_list) > 60:
                 del rt_list[0]
             if status.id not in rt_list:
                 api.retweet(tweet_id)#RT
