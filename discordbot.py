@@ -1914,10 +1914,10 @@ async def tweet(ctx,arg1):
         search_results=api.search(q=q,count=count)#ツイートのデータであるstatusオブジェクトを取得
         for status in search_results:
             tweet_id=status.id#ツイートidにアクセス
-            rt_list.append(satus.id)
             if len(rt_list) > 60:
                 del rt_list[0]
             if status.id not in rt_list:
+                rt_list.append(satus.id)
                 api.retweet(tweet_id)#RT
             else:
                 pass
