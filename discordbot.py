@@ -1888,9 +1888,33 @@ async def fuck(ctx,arg):
 async def sleep(ctx,arg1):
     await ctx.send('こんばんわ～:night_with_stars:%sちゃんは、もう寝ちゃったかな:question:\n今日は、一日忙しくて、連絡できなかったヨ:cry:ごめんな:cry:\n明日も忙しいから、早く寝ないとネ(^^;):sweat_drops:\nじゃあ%sちゃんも、体調気をつけてね(^-)\nおやすみ～:sleeping::zzz:' % (arg1,arg1))
 
+@bot.command()
 
-
-
+async def rt(ctx):
+    consumer_key="8DJbuI9dUTBW9TObrPdAKKHfJ"
+    consumer_secret="Be5E7hM3xI3KRJMlwGFgvuxb3Lp0GJH9ZUKz4C6GtEDKBzl2O3"
+    token="1142721964911448069-LmvD4qv58swY0waZmqAzBHj8rAxlB4"
+    token_secret="yNO79K47d0MjzYzMqYTP54PPATIPt7EhEsYiX1ssHQG7D"
+    auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+    auth.set_access_token(token, token_secret)
+    rt = 0
+    api = tweepy.API(auth)
+    q_list=["to:@coppermine_"]
+    count=20#取得するツイート数
+    for q in q_list:
+        print("Now:QUERY-->>{}".format(q))
+        search_results=api.search(q=q,count=count)#ツイートのデータであるstatusオブジェクトを取得
+        for status in search_results:
+            tweet_id=status.id#ツイートidにアクセス
+            if len(rt_list) > 60:
+                del rt_list[0]
+            if tweet_id not in rt_list:
+                rt_list.append(tweet_id)
+                api.retweet(tweet_id)#RT
+                rt = rt + 1
+            else:
+                pass
+    await ctx.send("%s件の返信をRTしました" % rt)
 @bot.command()
 
 async def tweet(ctx,arg1):
@@ -1906,20 +1930,7 @@ async def tweet(ctx,arg1):
     api = tweepy.API(auth)
     
     #########################
-    q_list=["to:@coppermine_"]
-    count=10#取得するツイート数
-    for q in q_list:
-        print("Now:QUERY-->>{}".format(q))
-        search_results=api.search(q=q,count=count)#ツイートのデータであるstatusオブジェクトを取得
-        for status in search_results:
-            tweet_id=status.id#ツイートidにアクセス
-            if len(rt_list) > 60:
-                del rt_list[0]
-            if tweet_id not in rt_list:
-                rt_list.append(tweet_id)
-                api.retweet(tweet_id)#RT
-            else:
-                pass
+
     #################################
 
     api.update_status(arg1)
