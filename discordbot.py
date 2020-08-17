@@ -1,14 +1,20 @@
+import csv
 import discord
-import random
+import json
+import linecache
+import math
 import os
+import pprint
+import random
 import re
 import requests
-import linecache
 import tweepy
-import json
+import time
+import urllib.error
+import urllib.request
+
 from discord.ext import commands
-import math
-import csv
+from urllib.request import urlopen
 
 bot = commands.Bot(command_prefix='$')
 file = 'test1.csv'
@@ -30,7 +36,20 @@ def cpuinfo(info):
     print("名称:%s\nアーキテクチャ:%s\nソケット:%s\nコア/スレッド:%s\nクロック(-TB時):%s"% (cpunum[1],cpunum[2],cpunum[3],cpunum[4],cpunum[5]))
     f.close()
 """
+def download_img(url, file_name):
+    try:
+        headers = {
+        "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:47.0) Gecko/20100101 Firefox/47.0"
+        }
+        request = urllib.request.Request(url, headers=headers)
+        web_file = urlopen(request)
+        data = web_file.read()
+        with open(file_name, mode='wb') as local_file:
+            local_file.write(data)
+    except urllib.error.URLError as e:
+        print(e)
 
+            
 @bot.event
 async def on_ready():
     
@@ -57,6 +76,7 @@ async def on_message(message):
         return
 
     if '$' not in message.content:
+        
         if '706481838553825280'in message.content:
             await message.channel.send('?')
             return
@@ -327,14 +347,18 @@ async def on_message(message):
 
     
 
+    """
 
 
-
-
-
-
+    if message.content.startswith('/pic'):
+        filename = message.attachments[0]['filename']
+        download_img(message.attachments[0]['url'], "image.png")
+        print("saved")
+        await message.channel.send(file=discord.File('image.png'))
+        return
+    """
+    
     if message.content.startswith('$'):
-
 
         if 'NEHALEM' in message.content.upper():
             if 'I7' in message.content.upper():      
@@ -1918,8 +1942,6 @@ async def rt(ctx):
 @bot.command()
 
 async def tweet(ctx,arg1):
-    
-
     consumer_key="8DJbuI9dUTBW9TObrPdAKKHfJ"
     consumer_secret="Be5E7hM3xI3KRJMlwGFgvuxb3Lp0GJH9ZUKz4C6GtEDKBzl2O3"
     token="1142721964911448069-LmvD4qv58swY0waZmqAzBHj8rAxlB4"
@@ -1928,15 +1950,24 @@ async def tweet(ctx,arg1):
     auth.set_access_token(token, token_secret)
 
     api = tweepy.API(auth)
-    
-    #########################
-
     #################################
 
-    api.update_status(arg1)
-    await ctx.send('---ツイートしました---\n')
-    await ctx.send(arg1)
-
+    if arg1.upper() == ("IMG" or "PIC" or "ING" or "IM" or "PI" or "I" or "P"):
+        imgname = ctx.message.attachments[0].filename
+        imglink = ctx.message.attachments[0].url
+        print(imglink)
+        download_img(ctx.message.attachments[0].url, "image.png")
+        print("save")
+        api.update_with_media(filename='image.png')        
+        await ctx.send('---ツイートしました---\n')
+        await ctx.send(file=discord.File('image.png'))
+        return
+        
+    #################################
+    else:
+        api.update_status(arg1)
+        await ctx.send('---ツイートしました---\n')
+        await ctx.send(arg1)
 
 @bot.command()   
 async def reply(ctx , arg1):
@@ -2025,5 +2056,15 @@ async def say(ctx,arg1):
     sayone = arg1
     ###await ctx.delete(ctx.message)   できねぇｗｗｗ
     await ctx.send(saytwo)
+    
+@bot.command()
+async def img(ctx):
+    imgname = ctx.message.attachments[0].filename
+    imglink = ctx.message.attachments[0].url
+    print(imglink)
+    download_img(ctx.message.attachments[0].url, "image.png")
+    print("save")
+    await ctx.send(file=discord.File('image.png'))
+    return
     
 bot.run(TOKEN)
