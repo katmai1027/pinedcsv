@@ -80,8 +80,14 @@ async def on_message(message):
         if '706481838553825280'in message.content:
             await message.channel.send('?')
             return
+        if '726383769866731630'in message.content:
+            await message.channel.send('ヤバイわよ！')
+            return
         if 'いってら'== message.content:
             await message.channel.send('1TB')
+            return
+        if '爆発しろ'== message.content:
+            await message.channel.send('バーン🤯')
             return
         if 'みえたぞ'== message.content or "見えたぞ" == message.content:
             await message.channel.send('気のせいだ')
@@ -1883,8 +1889,76 @@ async def on_message(message):
                 await message.channel.send('名称:Pentium Gold G5620   \nマイクロアーキテクチャ:Coffee Lake \nソケット名:LGA1151-2  \nコア数/スレッド数:2/4 \nベース:4.00GHz')
                 return
 
+#################################C2Q#############################
 
 
+            
+            if ('CORE2' in message.content.upper() or 'C2' in message.content.upper()) and 'Q6600' in message.content or 'SL9UM' in message.content or 'SLACR' in message.content:
+                await message.channel.send('名称:Core 2 Quad Q6600   \nマイクロアーキテクチャ:Core(Kentsfield) \nソケット名:LGA775  \nコア数/スレッド数:4/4 \nベース:2.4GHz\nFSB:1066')
+                return
+            if ('CORE2' in message.content.upper() or 'C2' in message.content.upper()) and 'Q6700' in message.content or 'SLACQ' in message.content:
+                await message.channel.send('名称:Core 2 Quad Q6700   \nマイクロアーキテクチャ:Core(Kentsfield) \nソケット名:LGA775  \nコア数/スレッド数:4/4 \nベース:2.66GHz\nFSB:1066')
+                return
+            if ('CORE2' in message.content.upper() or 'C2' in message.content.upper()) and 'QX6700' in message.content or 'SL9UL' in message.content:
+                await message.channel.send('名称:Core 2 Quad QX6700   \nマイクロアーキテクチャ:Core(Kentsfield) \nソケット名:LGA775  \nコア数/スレッド数:4/4 \nベース:2.66GHz\nFSB:1066')
+                return
+            if ('CORE2' in message.content.upper() or 'C2' in message.content.upper()) and 'QX6800' in message.content or 'SL9UK' in message.content or 'SLACP' in message.content:
+                await message.channel.send('名称:Core 2 Quad QX6800   \nマイクロアーキテクチャ:Core(Kentsfield) \nソケット名:LGA775  \nコア数/スレッド数:4/4 \nベース:2.93GHz\nFSB:1066')
+                return
+            if ('CORE2' in message.content.upper() or 'C2' in message.content.upper()) and 'QX6850' in message.content or 'SLAFN' in message.content:
+                await message.channel.send('名称:Core 2 Quad QX6850   \nマイクロアーキテクチャ:Core(Kentsfield) \nソケット名:LGA775  \nコア数/スレッド数:4/4 \nベース:3GHz\nFSB:1066')
+                return
+
+            ##########York########
+            
+            if ('CORE2' in message.content.upper() or 'C2' in message.content.upper()) and 'Q8200.' in message.content.upper() or 'SLB5M' in message.content or 'SLG9S' in message.content:
+                await message.channel.send('名称:Core 2 Quad Q8200   \nマイクロアーキテクチャ:Core(Yorkfield) \nソケット名:LGA775  \nコア数/スレッド数:4/4 \nベース:2.33GHz\nFSB:1066')
+                return
+            if ('CORE2' in message.content.upper() or 'C2' in message.content.upper()) and 'Q8200S.' in message.content.upper() or 'SLG9T' in message.content:
+                await message.channel.send('名称:Core 2 Quad Q8200s   \nマイクロアーキテクチャ:Core(Yorkfield) \nソケット名:LGA775  \nコア数/スレッド数:4/4 \nベース:2.33GHz\nFSB:1066')
+                return
+            if ('CORE2' in message.content.upper() or 'C2' in message.content.upper()) and 'Q8300.' in message.content.upper() or 'SLB5W' in message.content or 'SLGUR' in message.content:
+                await message.channel.send('名称:Core 2 Quad Q8300   \nマイクロアーキテクチャ:Core(Yorkfield) \nソケット名:LGA775  \nコア数/スレッド数:4/4 \nベース:2.5GHz\nFSB:1066')
+                return
+            if ('CORE2' in message.content.upper() or 'C2' in message.content.upper()) and 'Q8400.' in message.content.upper() or 'SLGT6' in message.content:
+                await message.channel.send('名称:Core 2 Quad Q8400   \nマイクロアーキテクチャ:Core(Yorkfield) \nソケット名:LGA775  \nコア数/スレッド数:4/4 \nベース:2.66GHz\nFSB:1066')
+                return
+            if ('CORE2' in message.content.upper() or 'C2' in message.content.upper()) and 'Q8400S.' in message.content.upper() or 'SLGT7' in message.content:
+                await message.channel.send('名称:Core 2 Quad Q8400s   \nマイクロアーキテクチャ:Core(Yorkfield) \nソケット名:LGA775  \nコア数/スレッド数:4/4 \nベース:2.66GHz\nFSB:1066')
+                return
+            if ('CORE2' in message.content.upper() or 'C2' in message.content.upper()) and 'Q9300.' in message.content.upper() or 'SLAWE' in message.content:
+                await message.channel.send('名称:Core 2 Quad Q9300   \nマイクロアーキテクチャ:Core(Yorkfield) \nソケット名:LGA775  \nコア数/スレッド数:4/4 \nベース:2.5GHz\nFSB:1333')
+                return
+            if ('CORE2' in message.content.upper() or 'C2' in message.content.upper()) and 'Q9400.' in message.content.upper() or 'SLB6B' in message.content:
+                await message.channel.send('名称:Core 2 Quad Q9400   \nマイクロアーキテクチャ:Core(Yorkfield) \nソケット名:LGA775  \nコア数/スレッド数:4/4 \nベース:2.66GHz\nFSB:1333')
+                return
+            if ('CORE2' in message.content.upper() or 'C2' in message.content.upper()) and 'Q9400S.' in message.content.upper() or 'SLG9U' in message.content:
+                await message.channel.send('名称:Core 2 Quad Q9400s   \nマイクロアーキテクチャ:Core(Yorkfield) \nソケット名:LGA775  \nコア数/スレッド数:4/4 \nベース:2.66GHz\nFSB:1333')
+                return
+            if ('CORE2' in message.content.upper() or 'C2' in message.content.upper()) and 'Q9450.' in message.content.upper() or 'SLAWR' in message.content:
+                await message.channel.send('名称:Core 2 Quad Q9450   \nマイクロアーキテクチャ:Core(Yorkfield) \nソケット名:LGA775  \nコア数/スレッド数:4/4 \nベース:2.66GHz\nFSB:1333')
+                return
+            if ('CORE2' in message.content.upper() or 'C2' in message.content.upper()) and 'Q9500.' in message.content.upper() or 'SLGZ4' in message.content:
+                await message.channel.send('名称:Core 2 Quad Q9500   \nマイクロアーキテクチャ:Core(Yorkfield) \nソケット名:LGA775  \nコア数/スレッド数:4/4 \nベース:2.83GHz\nFSB:1333')
+                return
+            if ('CORE2' in message.content.upper() or 'C2' in message.content.upper()) and 'Q9505.' in message.content.upper() or 'SLGYY' in message.content:
+                await message.channel.send('名称:Core 2 Quad Q9505   \nマイクロアーキテクチャ:Core(Yorkfield) \nソケット名:LGA775  \nコア数/スレッド数:4/4 \nベース:2.833GHz\nFSB:1333')
+                return
+            if ('CORE2' in message.content.upper() or 'C2' in message.content.upper()) and 'Q9505S.' in message.content.upper() or 'SLGYZ' in message.content:
+                await message.channel.send('名称:Core 2 Quad Q9505s   \nマイクロアーキテクチャ:Core(Yorkfield) \nソケット名:LGA775  \nコア数/スレッド数:4/4 \nベース:2.83GHz\nFSB:1333')
+                return
+            if ('CORE2' in message.content.upper() or 'C2' in message.content.upper()) and 'Q9550.' in message.content.upper() or 'SLAWQ' in message.content or 'SLB8V' in message.content:
+                await message.channel.send('名称:Core 2 Quad Q9550   \nマイクロアーキテクチャ:Core(Yorkfield) \nソケット名:LGA775  \nコア数/スレッド数:4/4 \nベース:2.83GHz\nFSB:1333')
+                return
+            if ('CORE2' in message.content.upper() or 'C2' in message.content.upper()) and 'Q9550S.' in message.content.upper() or 'SLGAE' in message.content:
+                await message.channel.send('名称:Core 2 Quad Q9550s   \nマイクロアーキテクチャ:Core(Yorkfield) \nソケット名:LGA775  \nコア数/スレッド数:4/4 \nベース:2.83GHz\nFSB:1333')
+                return
+            if ('CORE2' in message.content.upper() or 'C2' in message.content.upper()) and 'Q9650.' in message.content.upper() or 'SLB8W' in message.content:
+                await message.channel.send('名称:Core 2 Quad Q9650   \nマイクロアーキテクチャ:Core(Yorkfield) \nソケット名:LGA775  \nコア数/スレッド数:4/4 \nベース:3GHz\nFSB:1333')
+                return
+            #あとはYORKのXEを作る！！！
+
+            
 
 
 
@@ -1952,7 +2026,7 @@ async def tweet(ctx,arg1):
     api = tweepy.API(auth)
     #################################
 
-    if arg1.upper() == ("IMG" or "PIC" or "ING" or "IM" or "PI" or "I" or "P"):
+    if arg1.upper() == "IMG":
         imgname = ctx.message.attachments[0].filename
         imglink = ctx.message.attachments[0].url
         print(imglink)
@@ -1988,6 +2062,7 @@ async def reply(ctx , arg1):
         idname = random.choice(l)
     elif arg1 == "list":
         await ctx.send('Replyできるユーザー : ["katmai_","pprn_227","kuromochisan","okakimochipc","aiueokakimochi","Siraisi_Ch","IFG250455","Osatu_R_LFA10","KumaAyasa","C___llIlI"]')
+        return
     else:
         if arg1 in l:
             idname = arg1
@@ -2012,7 +2087,9 @@ async def reply(ctx , arg1):
             await ctx.send('@%sにリプを飛ばしました。'%(idname))
         else:
             await ctx.send('@%sの最新ツイートはすでにリプ済みです。'%(idname))
-
+@bot.command()   
+async def help(ctx):
+    await ctx.send('コマンド一覧：custom/fuck/god/help/img/only/pf/poop/reply/rt/say/sleep/tweet/CPU型番 \n----詳細----\n〇custom：\n＜使い方＞\n**$コマンド arg1 arg2 \n\n〇fuck/god/poop：＜使い方＞\n**$コマンド arg1 \nこの先はまだ作りかけだよ～んwww')
 
 
 @bot.command()   
@@ -2054,7 +2131,7 @@ async def say(ctx,arg1):
     saythree = saytwo
     saytwo = sayone
     sayone = arg1
-    ###await ctx.delete(ctx.message)   できねぇｗｗｗ
+    await ctx.message.delete()
     await ctx.send(saytwo)
     
 @bot.command()
