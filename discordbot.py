@@ -2087,10 +2087,11 @@ async def reply(ctx , arg1):
             await ctx.send('@%sにリプを飛ばしました。'%(idname))
         else:
             await ctx.send('@%sの最新ツイートはすでにリプ済みです。'%(idname))
+"""
 @bot.command()   
 async def help(ctx):
     await ctx.send('コマンド一覧：custom/fuck/god/help/img/only/pf/poop/reply/rt/say/sleep/tweet/CPU型番 \n----詳細----\n〇custom：\n＜使い方＞\n**$コマンド arg1 arg2 \n\n〇fuck/god/poop：＜使い方＞\n**$コマンド arg1 \nこの先はまだ作りかけだよ～んwww')
-
+"""
 
 @bot.command()   
 async def pf(ctx , arg1):
