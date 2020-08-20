@@ -5,6 +5,7 @@ import linecache
 import math
 import os
 import pprint
+import pya3rt
 import random
 import re
 import requests
@@ -36,6 +37,12 @@ def cpuinfo(info):
     print("名称:%s\nアーキテクチャ:%s\nソケット:%s\nコア/スレッド:%s\nクロック(-TB時):%s"% (cpunum[1],cpunum[2],cpunum[3],cpunum[4],cpunum[5]))
     f.close()
 """
+def send_message(message):
+    apikey = "DZZ6wBltwl6lIsGarfN5BzqXp8vpOjOS"
+    client = pya3rt.TalkClient(apikey)
+    reply_message = client.talk(message)
+    return reply_message['results'][0]['reply']
+
 def download_img(url, file_name):
     try:
         headers = {
@@ -353,16 +360,16 @@ async def on_message(message):
 
     
 
-    """
+    
 
 
-    if message.content.startswith('/pic'):
-        filename = message.attachments[0]['filename']
-        download_img(message.attachments[0]['url'], "image.png")
-        print("saved")
-        await message.channel.send(file=discord.File('image.png'))
+    if message.content.startswith('\'):
+        s = message.content
+        mes = s.replace('\', '')
+        rep = send_message(mes)
+        await message.channel.send(rep)
         return
-    """
+    
     
     if message.content.startswith('$'):
 
@@ -1893,19 +1900,19 @@ async def on_message(message):
 
 
             
-            if ('CORE2' in message.content.upper() or 'C2' in message.content.upper()) and 'Q6600' in message.content or 'SL9UM' in message.content or 'SLACR' in message.content:
+            if ('CORE2' in message.content.upper() or 'C2' in message.content.upper()) and 'Q6600.' in message.content or 'SL9UM' in message.content or 'SLACR' in message.content:
                 await message.channel.send('名称:Core 2 Quad Q6600   \nマイクロアーキテクチャ:Core(Kentsfield) \nソケット名:LGA775  \nコア数/スレッド数:4/4 \nベース:2.4GHz\nFSB:1066')
                 return
-            if ('CORE2' in message.content.upper() or 'C2' in message.content.upper()) and 'Q6700' in message.content or 'SLACQ' in message.content:
+            if ('CORE2' in message.content.upper() or 'C2' in message.content.upper()) and 'Q6700.' in message.content or 'SLACQ' in message.content:
                 await message.channel.send('名称:Core 2 Quad Q6700   \nマイクロアーキテクチャ:Core(Kentsfield) \nソケット名:LGA775  \nコア数/スレッド数:4/4 \nベース:2.66GHz\nFSB:1066')
                 return
-            if ('CORE2' in message.content.upper() or 'C2' in message.content.upper()) and 'QX6700' in message.content or 'SL9UL' in message.content:
+            if ('CORE2' in message.content.upper() or 'C2' in message.content.upper()) and 'QX6700.' in message.content or 'SL9UL' in message.content:
                 await message.channel.send('名称:Core 2 Quad QX6700   \nマイクロアーキテクチャ:Core(Kentsfield) \nソケット名:LGA775  \nコア数/スレッド数:4/4 \nベース:2.66GHz\nFSB:1066')
                 return
-            if ('CORE2' in message.content.upper() or 'C2' in message.content.upper()) and 'QX6800' in message.content or 'SL9UK' in message.content or 'SLACP' in message.content:
+            if ('CORE2' in message.content.upper() or 'C2' in message.content.upper()) and 'QX6800.' in message.content or 'SL9UK' in message.content or 'SLACP' in message.content:
                 await message.channel.send('名称:Core 2 Quad QX6800   \nマイクロアーキテクチャ:Core(Kentsfield) \nソケット名:LGA775  \nコア数/スレッド数:4/4 \nベース:2.93GHz\nFSB:1066')
                 return
-            if ('CORE2' in message.content.upper() or 'C2' in message.content.upper()) and 'QX6850' in message.content or 'SLAFN' in message.content:
+            if ('CORE2' in message.content.upper() or 'C2' in message.content.upper()) and 'QX6850.' in message.content or 'SLAFN' in message.content:
                 await message.channel.send('名称:Core 2 Quad QX6850   \nマイクロアーキテクチャ:Core(Kentsfield) \nソケット名:LGA775  \nコア数/スレッド数:4/4 \nベース:3GHz\nFSB:1066')
                 return
 
@@ -2045,9 +2052,6 @@ async def tweet(ctx,arg1):
 
 @bot.command()   
 async def reply(ctx , arg1):
-
-
-
 
     consumer_key="8DJbuI9dUTBW9TObrPdAKKHfJ"
     consumer_secret="Be5E7hM3xI3KRJMlwGFgvuxb3Lp0GJH9ZUKz4C6GtEDKBzl2O3"
