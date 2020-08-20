@@ -363,9 +363,9 @@ async def on_message(message):
     
 
 
-    if message.content.startswith('\'):
+    if message.content.startswith('?'):
         s = message.content
-        mes = s.replace('\', '')
+        mes = s.replace('?', '')
         rep = send_message(mes)
         await message.channel.send(rep)
         return
