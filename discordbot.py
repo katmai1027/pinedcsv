@@ -90,6 +90,9 @@ async def on_message(message):
         if '726383769866731630'in message.content:
             await message.channel.send('ヤバイわよ！')
             return
+        if '773091276336791553'in message.content:
+            await message.channel.send('ひゃっはぁー！')
+            return        
         if 'いってら'== message.content:
             await message.channel.send('1TB')
             return
@@ -116,7 +119,7 @@ async def on_message(message):
             await message.add_reaction('🐘')
             return    
         if 'botの説明書' in message.content:
-            await message.channel.send('-<<鯖ァーンwww bot 説明書>>-\n\n反応するワード(一部)\nおはよ/おやすみ/あ/しねかぶった/ぶっ壊す/f**k/買った/ァーン/ンーァ/ぴえん/びえん/ひえん/ヴィーン/クソ/うるせぇ/ェーン/うっきー/ゴルァ/とり/おはまんこ/\n\nコマンド\n$CPU型番を書く/$S-specを書く/$poop モノor人/$god モノor人/$custom モノor人 任意の言葉 $tweet ツイート内容/$reply ID(@不要)')
+            await message.channel.send('-<<鯖ァーンwww bot 説明書>>-\n\n反応するワード(一部)\nおはよ/おやすみ/あ/しねかぶった/ぶっ壊す/f**k/買った/ァーン/ンーァ/ぴえん/びえん/ひえん/ヴィーン/クソ/うるせぇ/ェーン/うっきー/ゴルァ/とり/おはまんこ/\n\nコマンド\n$CPU型番を書く/$S-specを書く/$poop モノor人/$god モノor人/$custom モノor人 任意の言葉 $tweet オプション[-i/-d] ツイート内容/$reply ID(@不要)/$rt')
         
             return
 
@@ -203,10 +206,10 @@ async def on_message(message):
         
         if 'クソ' in message.content or 'くそ' in message.content or '糞' in message.content or 'poop' in message.content or 'うんち' in message.content or 'うんこ' in message.content or 'んんこ' in message.content or 'ウンチ' in message.content or 'ゆゆうた' in message.content or 'ウンコ' in message.content or '💩' in message.content:
             await message.channel.send("（っ’-‘)╮ =͟͟͞:poop:ﾌﾞｫﾝ")
-        
+            return
         if 'ｸｿ' in message.content or 'ぅんち' in message.content or 'ぅんこ' in message.content or 'ｳﾝﾁ' in message.content or 'ｳﾝｺ' in message.content or 'うンこ' in message.content or 'ウんこ'  in message.content or 'ウんち' in message.content or 'Poop' in message.content or 'POOP' in message.content or '唐沢貴洋' in message.content:
             await message.channel.send("（っ’-‘)╮ =͟͟͞:poop:ﾌﾞｫﾝ")
-        
+            return
         if 'うるせ' in message.content or 'うるさい' in message.content or '黙れ' in message.content or 'だまれ' in message.content:
             await message.channel.send("お前のほうがうるさい！")
             return
@@ -348,10 +351,13 @@ async def on_message(message):
         
         if message.content == "あ":
             await message.channel.send('い\nう\nえ\nお')
+            return
         if message.content == "しねかぶった":
             await message.channel.send('ころす')
+            return
         if message.content == "デジャヴ":
             await message.channel.send('ここまでがテンプレ')
+            return
     
 # === ここからコマンド ===
         
@@ -1965,6 +1971,46 @@ async def on_message(message):
                 return
             #あとはYORKのXEを作る！！！
 
+
+
+
+
+            ################A####M#####D###################################
+            #AMD
+            #AMD
+            ###############################################################
+            
+            if 'RYZEN7' in message.content.upper() and '5800X.' in message.content.upper() or '100-000000063' in message.content.upper():
+                await message.channel.send('名称:Ryzen 7 5800X \nマイクロアーキテクチャ:Zen3 \nソケット名:SocketAM4  \nコア数/スレッド数:8/16  \nベース:3.8GHz  \nブースト時:4.7GHz')
+                return
+            if 'RYZEN7' in message.content.upper() and '3800XT.' in message.content.upper() or ' 100-100000279 ' in message.content.upper():
+                await message.channel.send('名称:Ryzen 7 3800XT \nマイクロアーキテクチャ:Zen2 \nソケット名:SocketAM4  \nコア数/スレッド数:8/16  \nベース:3.9GHz  \nブースト時:4.7GHz')
+                return
+            if 'RYZEN7' in message.content.upper() and '3800X.' in message.content.upper() or ' 100-000000025 ' in message.content.upper():
+                await message.channel.send('名称:Ryzen 7 3800X \nマイクロアーキテクチャ:Zen2 \nソケット名:SocketAM4  \nコア数/スレッド数:8/16  \nベース:3.9GHz  \nブースト時:4.5GHz')
+                return
+            if 'RYZEN7' in message.content.upper() and '3700X.' in message.content.upper() or ' 100-000000071 ' in message.content.upper():
+                await message.channel.send('名称:Ryzen 7 3700X \nマイクロアーキテクチャ:Zen2 \nソケット名:SocketAM4  \nコア数/スレッド数:8/16  \nベース:3.6GHz  \nブースト時:4.4GHz')
+                return
+            if 'RYZEN7' in message.content.upper() and '2700X.' in message.content.upper() or ' YD270XBGM88AF ' in message.content.upper():
+                await message.channel.send('名称:Ryzen 7 2700X \nマイクロアーキテクチャ:Zen+ \nソケット名:SocketAM4  \nコア数/スレッド数:8/16  \nベース:3.7GHz  \nブースト時:4.3GHz')
+                return
+            if 'RYZEN7' in message.content.upper() and '2700.' in message.content.upper() or ' YD2700BBM88AF ' in message.content.upper():
+                await message.channel.send('名称:Ryzen 7 2700 \nマイクロアーキテクチャ:Zen+ \nソケット名:SocketAM4  \nコア数/スレッド数:8/16  \nベース:3.2GHz  \nブースト時:4.1GHz')
+                return
+            if 'RYZEN7' in message.content.upper() and '2700E.' in message.content.upper() or ' YD270EBHM88AF ' in message.content.upper():
+                await message.channel.send('名称:Ryzen 7 2700E \nマイクロアーキテクチャ:Zen+ \nソケット名:SocketAM4  \nコア数/スレッド数:8/16  \nベース:2.8GHz  \nブースト時:4.0GHz')
+                return
+            if 'RYZEN7' in message.content.upper() and '1800X.' in message.content.upper() or ' YD180XBCM88AE ' in message.content.upper():
+                await message.channel.send('名称:Ryzen 7 1800X \nマイクロアーキテクチャ:Zen \nソケット名:SocketAM4  \nコア数/スレッド数:8/16  \nベース:3.6GHz  \nブースト時:4.0GHz')
+                return
+            if 'RYZEN7' in message.content.upper() and '1700X.' in message.content.upper() or ' YD170XBCM88AE ' in message.content.upper():
+                await message.channel.send('名称:Ryzen 7 1700X \nマイクロアーキテクチャ:Zen \nソケット名:SocketAM4  \nコア数/スレッド数:8/16  \nベース:3.4GHz  \nブースト時:3.8GHz')
+                return
+            if 'RYZEN7' in message.content.upper() and '1700.' in message.content.upper() or ' YD1700BBM88AE ' in message.content.upper():
+                await message.channel.send('名称:Ryzen 7 1700 \nマイクロアーキテクチャ:Zen \nソケット名:SocketAM4  \nコア数/スレッド数:8/16  \nベース:3.0GHz  \nブースト時:3.7GHz')
+                return
+
             
 
 
@@ -2020,9 +2066,20 @@ async def rt(ctx):
             else:
                 pass
     await ctx.send("%s件の返信をRTしました" % rt)
+
 @bot.command()
 
-async def tweet(ctx,arg1):
+
+
+#画像だけついーと。。。$tweet -i(画像も添付)-------1
+#文字だけついーと。。。$tweet 文字-----------------1
+#文字つい後、削除。。。$tweet -d 文字--------------2
+#画像つい後、削除。。。$tweet -i -d(画像も添付)---------2
+#文字付き画像つい。。。$tweet -i 文字（画像も添付-------2
+#文字画像後、削除。。。$tweet -i -d 文字(画像も添付)----3
+#投票？？？？？？
+
+async def tweet(ctx,*args):
     consumer_key="8DJbuI9dUTBW9TObrPdAKKHfJ"
     consumer_secret="Be5E7hM3xI3KRJMlwGFgvuxb3Lp0GJH9ZUKz4C6GtEDKBzl2O3"
     token="1142721964911448069-LmvD4qv58swY0waZmqAzBHj8rAxlB4"
@@ -2031,24 +2088,70 @@ async def tweet(ctx,arg1):
     auth.set_access_token(token, token_secret)
 
     api = tweepy.API(auth)
-    #################################
-
-    if arg1.upper() == "IMG":
-        imgname = ctx.message.attachments[0].filename
-        imglink = ctx.message.attachments[0].url
-        print(imglink)
-        download_img(ctx.message.attachments[0].url, "image.png")
-        print("save")
-        api.update_with_media(filename='image.png')        
-        await ctx.send('---ツイートしました---\n')
-        await ctx.send(file=discord.File('image.png'))
-        return
+    
+    if len(args)<1:
+        await ctx.send("構文：$tweet オプション 文章\n\n＜オプション＞\n-i →画像をツイート\n-d →あなたのコマンドを削除\n\n**文章に空白を含む場合には必ず''で囲むこと**")
         
-    #################################
     else:
-        api.update_status(arg1)
-        await ctx.send('---ツイートしました---\n')
-        await ctx.send(arg1)
+        
+        if len(args) ==1:
+            arg1 = args[0]
+            if arg1.upper() == "-I":  #画像だけついーと。。。$tweet -i(画像も添付)-------1
+                imgname = ctx.message.attachments[0].filename
+                imglink = ctx.message.attachments[0].url
+                print(imglink)
+                download_img(ctx.message.attachments[0].url, "image.png")
+                print("save")
+                api.update_with_media(filename='image.png')        
+                await ctx.send('---ツイートしました---\n')
+                await ctx.send(file=discord.File('image.png'))
+                return
+            else:#文字だけついーと。。。$tweet 文字-----------------1
+                api.update_status(arg1)
+                await ctx.send('---ツイートしました---\n')
+                await ctx.send(arg1)
+            
+            
+        if len(args) ==2:
+            if args[0].upper() == "-I":
+                imgname = ctx.message.attachments[0].filename
+                imglink = ctx.message.attachments[0].url
+                download_img(ctx.message.attachments[0].url, "image.png")
+
+                if args[1].upper()=="-D":#画像つい後、削除。。。$tweet -i -d(画像も添付)---------2
+                    await ctx.message.delete()
+                    api.update_with_media(filename='image.png')        
+                    await ctx.send('---ツイートしました---\n')
+                    await ctx.send(file=discord.File('image.png'))                    
+                else:#文字付き画像つい。。。$tweet -i 文字（画像も添付-------2
+                
+                    api.update_with_media(status= args[1],filename='image.png')    #ここのstatus=arg[2]で、付属する文章指定ｲﾋｰ    
+                    await ctx.send('---ツイートしました---\n')
+                    await ctx.send(args[1])
+                    await ctx.send(file=discord.File('image.png'))
+                
+            
+            if args[0].upper() == "-D":#文字つい後、削除。。。$tweet -d 文字--------------2
+                await ctx.message.delete()
+
+                api.update_status(args[1])
+                await ctx.send('---ツイートしました---\n')
+                await ctx.send(args[1])
+
+        if len(args)==3:
+            l = ["-d","-D","-i","-I"]
+            if args[0] in l:
+                if args[1] in l:
+                    imgname = ctx.message.attachments[0].filename
+                    imglink = ctx.message.attachments[0].url
+                    download_img(ctx.message.attachments[0].url, "image.png")
+                    await ctx.message.delete()
+
+                    api.update_with_media(status= args[2],filename='image.png')    #ここのstatus=arg[2]で、付属する文章指定ｲﾋｰ    
+                    await ctx.send('---ツイートしました---\n')
+                    await ctx.send(args[2])
+                    await ctx.send(file=discord.File('image.png'))
+                    
 
 @bot.command()   
 async def reply(ctx , arg1):
@@ -2061,11 +2164,11 @@ async def reply(ctx , arg1):
     auth.set_access_token(token, token_secret)
     api = tweepy.API(auth)
     
-    l = ["katmai_","pprn_227","kuromochisan","okakimochipc","aiueokakimochi","Siraisi_Ch","IFG250455","Osatu_R_LFA10","KumaAyasa","C___llIlI"]
+    l = ["katmai_","yt_rPGA988","kuromochisan","LGA1366daisuki","aiueokakimochi","Siraisi_Ch","IFG250455","Osatu_R_LFA10","kuromochisan","Truebe__"]
     if arg1 == "random":
         idname = random.choice(l)
     elif arg1 == "list":
-        await ctx.send('Replyできるユーザー : ["katmai_","pprn_227","kuromochisan","okakimochipc","aiueokakimochi","Siraisi_Ch","IFG250455","Osatu_R_LFA10","KumaAyasa","C___llIlI"]')
+        await ctx.send('Replyできるユーザー : ["katmai_","yt_rPGA988","kuromochisan","LGA1366daisuki","aiueokakimochi","Siraisi_Ch","IFG250455","Osatu_R_LFA10","kuromochisan","Truebe__"]')
         return
     else:
         if arg1 in l:
