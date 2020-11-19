@@ -206,10 +206,10 @@ async def on_message(message):
         
         if 'クソ' in message.content or 'くそ' in message.content or '糞' in message.content or 'poop' in message.content or 'うんち' in message.content or 'うんこ' in message.content or 'んんこ' in message.content or 'ウンチ' in message.content or 'ゆゆうた' in message.content or 'ウンコ' in message.content or '💩' in message.content:
             await message.channel.send("（っ’-‘)╮ =͟͟͞:poop:ﾌﾞｫﾝ")
-            return
+
         if 'ｸｿ' in message.content or 'ぅんち' in message.content or 'ぅんこ' in message.content or 'ｳﾝﾁ' in message.content or 'ｳﾝｺ' in message.content or 'うンこ' in message.content or 'ウんこ'  in message.content or 'ウんち' in message.content or 'Poop' in message.content or 'POOP' in message.content or '唐沢貴洋' in message.content:
             await message.channel.send("（っ’-‘)╮ =͟͟͞:poop:ﾌﾞｫﾝ")
-            return
+            
         if 'うるせ' in message.content or 'うるさい' in message.content or '黙れ' in message.content or 'だまれ' in message.content:
             await message.channel.send("お前のほうがうるさい！")
             return
@@ -229,7 +229,7 @@ async def on_message(message):
             await message.channel.send('やんのかゴラァ')
             return
         if 'ｺﾞﾙｧ' in message.content or 'ゴルァ' in message.content:
-            gorua = random.choice('あ？負ける気しないぞ？おい？かかってこいや','俺に喧嘩売るとはいい度胸だな','俺に喧嘩売ってんじゃねえよｺﾞﾙｧ')
+            gorua = random.choice('あ？負ける気しないぞ？おい？かかってこいや','俺に喧嘩売るとはいい度胸だな','喧嘩？値段によっては買う。')
             await message.channel.send(gorua)
             return
         if ('暇' in message.content or 'ヒマ' in message.content or 'ひま' in message.content)and not ('ない' in message.content or 'ません' in message.content):
@@ -2096,7 +2096,7 @@ async def tweet(ctx,*args):
         
         if len(args) ==1:
             arg1 = args[0]
-            if arg1.upper() == "-I":  #画像だけついーと。。。$tweet -i(画像も添付)-------1
+            if arg1.upper() == ("-I" or "IMG"):  #画像だけついーと。。。$tweet -i(画像も添付)-------1
                 imgname = ctx.message.attachments[0].filename
                 imglink = ctx.message.attachments[0].url
                 print(imglink)
@@ -2113,7 +2113,7 @@ async def tweet(ctx,*args):
             
             
         if len(args) ==2:
-            if args[0].upper() == "-I":
+            if args[0].upper() == ("-I" or "IMG"):
                 imgname = ctx.message.attachments[0].filename
                 imglink = ctx.message.attachments[0].url
                 download_img(ctx.message.attachments[0].url, "image.png")
@@ -2139,7 +2139,7 @@ async def tweet(ctx,*args):
                 await ctx.send(args[1])
 
         if len(args)==3:
-            l = ["-d","-D","-i","-I"]
+            l = ["-d","-D","-i","-I","img","IMG"]
             if args[0] in l:
                 if args[1] in l:
                     imgname = ctx.message.attachments[0].filename
