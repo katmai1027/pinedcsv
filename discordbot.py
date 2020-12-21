@@ -689,6 +689,7 @@ async def on_message(message):
             if '10700TE.' in message.content.upper() or 'unknown' in message.content:
                 await message.channel.send('名称:i7-10700TE   \nマイクロアーキテクチャ:Comet Lake \nソケット名:LGA1200  \nコア数/スレッド数:8/16  \nベース:2GHz\nTB時:4.4GHz')
                 return
+            
 ###########ここからi5です#############
 
 
@@ -1979,7 +1980,34 @@ async def on_message(message):
             #AMD
             #AMD
             ###############################################################
+
             
+            #Ryzen9
+            #4th generation
+            if 'RYZEN9' in message.content.upper() and '5950X.' in message.content.upper() or ' 100-000000059 ' in message.content.upper():
+                await message.channel.send('名称:Ryzen 9 5950X \nマイクロアーキテクチャ:Zen3 \nソケット名:SocketAM4  \nコア数/スレッド数:16/32  \nベース:3.4GHz  \nブースト時:4.9GHz')
+                return
+            if 'RYZEN9' in message.content.upper() and '5900X.' in message.content.upper() or ' 100-000000061 ' in message.content.upper():
+                await message.channel.send('名称:Ryzen 9 5900X \nマイクロアーキテクチャ:Zen3 \nソケット名:SocketAM4  \nコア数/スレッド数:12/24  \nベース:3.7GHz  \nブースト時:4.8GHz')
+                return
+            #3rd generation
+            if 'RYZEN9' in message.content.upper() and '3900XT.' in message.content.upper() or ' 100-100000277 ' in message.content.upper():
+                await message.channel.send('名称:Ryzen 9 3900XT \nマイクロアーキテクチャ:Zen2 \nソケット名:SocketAM4  \nコア数/スレッド数:12/24  \nベース:3.8GHz  \nブースト時:4.7GHz')
+                return
+            if 'RYZEN9' in message.content.upper() and '3950X.' in message.content.upper() or ' 100-000000051 ' in message.content.upper():
+                await message.channel.send('名称:Ryzen 9 3950X \nマイクロアーキテクチャ:Zen2 \nソケット名:SocketAM4  \nコア数/スレッド数:16/32  \nベース:3.5GHz  \nブースト時:4.7GHz')
+                return
+            if 'RYZEN9' in message.content.upper() and '3900X.' in message.content.upper() or ' 100-000000023 ' in message.content.upper():
+                await message.channel.send('名称:Ryzen 9 3900X \nマイクロアーキテクチャ:Zen2 \nソケット名:SocketAM4  \nコア数/スレッド数:12/24  \nベース:3.8GHz  \nブースト時:4.6GHz')
+                return
+            if 'RYZEN9' in message.content.upper() and '3900.' in message.content.upper() or ' 100-000000070 ' in message.content.upper():
+                await message.channel.send('名称:Ryzen 9 3900 \nマイクロアーキテクチャ:Zen2 \nソケット名:SocketAM4  \nコア数/スレッド数:12/24  \nベース:3.1GHz  \nブースト時:4.3GHz')
+                return
+
+
+
+
+            #Ryzen7
             if 'RYZEN7' in message.content.upper() and '5800X.' in message.content.upper() or '100-000000063' in message.content.upper():
                 await message.channel.send('名称:Ryzen 7 5800X \nマイクロアーキテクチャ:Zen3 \nソケット名:SocketAM4  \nコア数/スレッド数:8/16  \nベース:3.8GHz  \nブースト時:4.7GHz')
                 return
@@ -2011,7 +2039,74 @@ async def on_message(message):
                 await message.channel.send('名称:Ryzen 7 1700 \nマイクロアーキテクチャ:Zen \nソケット名:SocketAM4  \nコア数/スレッド数:8/16  \nベース:3.0GHz  \nブースト時:3.7GHz')
                 return
 
-            
+            #Ryzen 5
+            #4th generation
+            if 'RYZEN5' in message.content.upper() and '5600X.' in message.content.upper() or ' 100-000000065 ' in message.content.upper():
+                await message.channel.send('名称:Ryzen 5 5600X \nマイクロアーキテクチャ:Zen3 \nソケット名:SocketAM4  \nコア数/スレッド数:6/12  \nベース:3.7GHz  \nブースト時:4.6GHz')
+                return
+            #3rd generation
+            if 'RYZEN5' in message.content.upper() and '3600XT.' in message.content.upper() or ' 100-100000281 ' in message.content.upper():
+                await message.channel.send('名称:Ryzen 5 3600XT \nマイクロアーキテクチャ:Zen2 \nソケット名:SocketAM4  \nコア数/スレッド数:6/12  \nベース:3.8GHz  \nブースト時:4.5GHz')
+                return
+            if 'RYZEN5' in message.content.upper() and '3600X.' in message.content.upper() or ' 100-000000022 ' in message.content.upper():
+                await message.channel.send('名称:Ryzen 5 3600X \nマイクロアーキテクチャ:Zen2 \nソケット名:SocketAM4  \nコア数/スレッド数:6/12  \nベース:3.8GHz  \nブースト時:4.4GHz')
+                return
+            if 'RYZEN5' in message.content.upper() and '3600.' in message.content.upper() or ' 100-000000031 ' in message.content.upper():
+                await message.channel.send('名称:Ryzen 5 3600 \nマイクロアーキテクチャ:Zen2 \nソケット名:SocketAM4  \nコア数/スレッド数:6/12  \nベース:3.6GHz  \nブースト時:4.2GHz')
+                return
+            if 'RYZEN5' in message.content.upper() and '3500.' in message.content.upper() or ' 100-000000050 ' in message.content.upper():
+                await message.channel.send('名称:Ryzen 5 3500 \nマイクロアーキテクチャ:Zen2 \nソケット名:SocketAM4  \nコア数/スレッド数:6/6  \nベース:3.6GHz  \nブースト時:4.1GHz')
+                return
+            if 'RYZEN5' in message.content.upper() and '3500X.' in message.content.upper() or ' 100-100000158 ' in message.content.upper():
+                await message.channel.send('名称:Ryzen 5 3500X \nマイクロアーキテクチャ:Zen2 \nソケット名:SocketAM4  \nコア数/スレッド数:6/6  \nベース:3.6GHz  \nブースト時:4.1GHz')
+                return
+            #2nd generation
+            if 'RYZEN5' in message.content.upper() and '2600X.' in message.content.upper() or ' YD260XBCM6IAF ' in message.content.upper():
+                await message.channel.send('名称:Ryzen 5 2600X \nマイクロアーキテクチャ:Zen+ \nソケット名:SocketAM4  \nコア数/スレッド数:6/12  \nベース:3.6GHz  \nブースト時:4.2GHz')
+                return
+            if 'RYZEN5' in message.content.upper() and '2600.' in message.content.upper() or ' YD2600BBM6IAF ' in message.content.upper():
+                await message.channel.send('名称:Ryzen 5 2600 \nマイクロアーキテクチャ:Zen+ \nソケット名:SocketAM4  \nコア数/スレッド数:6/12  \nベース:3.4GHz  \nブースト時:3.9GHz')
+                return
+            if 'RYZEN5' in message.content.upper() and '2600E.' in message.content.upper() or ' YD260EBHM6IAF ' in message.content.upper():
+                await message.channel.send('名称:Ryzen 5 2600E \nマイクロアーキテクチャ:Zen+ \nソケット名:SocketAM4  \nコア数/スレッド数:6/12  \nベース:3.1GHz  \nブースト時:4.0GHz')
+                return
+            #1600AFはZen+なのでここにいます。入力時は$RYZEN5 1600AF.　です。ちなみに通常版(Zen)は$Ryzen5 1600.です。
+            if 'RYZEN5' in message.content.upper() and '1600AF.' in message.content.upper() or ' YD1600BBM6IAF ' in message.content.upper():
+                await message.channel.send('名称:Ryzen 5 1600(AF) \nマイクロアーキテクチャ:Zen+ \nソケット名:SocketAM4  \nコア数/スレッド数:6/12  \nベース:3.2GHz  \nブースト時:3.6GHz')
+                return
+            if 'RYZEN5' in message.content.upper() and '2500X.' in message.content.upper() or ' YD250XBBM4KAF ' in message.content.upper():
+                await message.channel.send('名称:Ryzen 5 2500X \nマイクロアーキテクチャ:Zen+ \nソケット名:SocketAM4  \nコア数/スレッド数:4/8  \nベース:3.6GHz  \nブースト時:4.0GHz')
+                return
+            #1st generation
+            if 'RYZEN5' in message.content.upper() and '1600X.' in message.content.upper() or ' YD160XBCM6IAE ' in message.content.upper():
+                await message.channel.send('名称:Ryzen 5 1600X \nマイクロアーキテクチャ:Zen \nソケット名:SocketAM4  \nコア数/スレッド数:6/12  \nベース:3.6GHz  \nブースト時:4.0GHz')
+                return
+            #ふつうの1600(AE) OPNの末尾がAEです
+            if 'RYZEN5' in message.content.upper() and '1600.' in message.content.upper() or ' YD1600BBM6IAE ' in message.content.upper():
+                await message.channel.send('名称:Ryzen 5 1600 \nマイクロアーキテクチャ:Zen \nソケット名:SocketAM4  \nコア数/スレッド数:6/12  \nベース:3.2GHz  \nブースト時:3.6GHz')
+                return
+            if 'RYZEN5' in message.content.upper() and '1500X.' in message.content.upper() or ' YD150XBBM4GAE ' in message.content.upper():
+                await message.channel.send('名称:Ryzen 5 1500X \nマイクロアーキテクチャ:Zen \nソケット名:SocketAM4  \nコア数/スレッド数:4/8  \nベース:3.5GHz  \nブースト時:3.7GHz')
+                return
+            if 'RYZEN5' in message.content.upper() and '1400.' in message.content.upper() or ' YD1400BBM4KAE ' in message.content.upper():
+                await message.channel.send('名称:Ryzen 5 1400 \nマイクロアーキテクチャ:Zen \nソケット名:SocketAM4  \nコア数/スレッド数:4/8  \nベース:3.2GHz  \nブースト時:3.4GHz')
+                return
+            #Ryzen5 APU
+            #2nd generation(codename:Picasso)
+            if 'RYZEN5' in message.content.upper() and '3400G.' in message.content.upper() or ' YD3400C5M4MFH ' in message.content.upper():
+                await message.channel.send('名称:Ryzen 5 3400G with Radeon RX Vega 11 Graphics \nマイクロアーキテクチャ:Zen+ \nソケット名:SocketAM4  \nコア数/スレッド数:4/8  \nベース:3.7GHz  \nブースト時:4.2GHz')
+                return
+            if 'RYZEN5' in message.content.upper() and '3400GE.' in message.content.upper() or ' YD3400C6M4MFH ' in message.content.upper():
+                await message.channel.send('名称:Ryzen 5 3400GE with Radeon RX Vega 11 Graphics \nマイクロアーキテクチャ:Zen+ \nソケット名:SocketAM4  \nコア数/スレッド数:4/8  \nベース:3.3GHz  \nブースト時:4.0GHz')
+                return
+            #1st generation (codename:Raven Ridge)
+            if 'RYZEN5' in message.content.upper() and '2400G.' in message.content.upper() or ' YD2400C5M4MFB ' in message.content.upper():
+                await message.channel.send('名称:Ryzen 5 2400G with Radeon RX Vega 11 Graphics \nマイクロアーキテクチャ:Zen \nソケット名:SocketAM4  \nコア数/スレッド数:4/8  \nベース:3.6GHz  \nブースト時:3.9GHz')
+                return
+            if 'RYZEN5' in message.content.upper() and '2400GE.' in message.content.upper() or ' YD2400C6M4MFB ' in message.content.upper():
+                await message.channel.send('名称:Ryzen 5 2400GE with Radeon RX Vega 11 Graphics \nマイクロアーキテクチャ:Zen \nソケット名:SocketAM4  \nコア数/スレッド数:4/8  \nベース:3.2GHz  \nブースト時:3.8GHz')
+                return
+
 
 
 
