@@ -2249,7 +2249,7 @@ async def tweet(ctx,*args):
                     
 
 @bot.command()   
-async def reply(ctx , arg1):
+async def reply(ctx , *args):
 
     consumer_key="8DJbuI9dUTBW9TObrPdAKKHfJ"
     consumer_secret="Be5E7hM3xI3KRJMlwGFgvuxb3Lp0GJH9ZUKz4C6GtEDKBzl2O3"
@@ -2260,22 +2260,53 @@ async def reply(ctx , arg1):
     api = tweepy.API(auth)
     
     l = ["katmai_","yt_rPGA988","kuromochisan","LGA1366daisuki","aiueokakimochi","Siraisi_Ch","IFG250455","Osatu_R_LFA10","kuromochisan","Truebe__"]
-    if arg1 == "random":
-        idname = random.choice(l)
-    elif arg1 == "list":
-        await ctx.send('Replyできるユーザー : ["katmai_","yt_rPGA988","kuromochisan","LGA1366daisuki","aiueokakimochi","Siraisi_Ch","IFG250455","Osatu_R_LFA10","kuromochisan","Truebe__"]')
-        return
+    if len(args)<1:
+        await ctx.send("構文：$reply ['random'もしくは ツイートへのリンク] [ツイートテキスト]")
+        
     else:
-        if arg1 in l:
-            idname = arg1
-        else:
-            await ctx.send('そのIDには送れません。作成者にリストに追加してもらってください。')
+        
+        
+        if args[0] == "random":
+            idname = random.choice(l)
+            if len(args) > 2:
+                
+                texts = ["やぁ！","くぁｗせｄｒｆｔｇｙふじこｌｐ","なんかdiscoで命令されたのでリプしてみよーっと！俺は悪くない！","ぷーぷ","︎︎"]
+                reply_text = random.choice(texts)
+            else:
+                reply_text = args[1]
+        elif args[0] == "list":
+            await ctx.send('randomコマンドでReplyできるユーザー : ["katmai_","yt_rPGA988","kuromochisan","LGA1366daisuki","aiueokakimochi","Siraisi_Ch","IFG250455","Osatu_R_LFA10","kuromochisan","Truebe__"]')
             return
         
-    texts = ["やぁ！","くぁｗせｄｒｆｔｇｙふじこｌｐ","なんかdiscoで命令されたのでリプしてみよーっと！俺は悪くない！","ぷーぷ","︎︎"]
-    reply_text = random.choice(texts)
 
-    
+        
+    ###########################  リンク貼られた
+        if "twitter.com" in args[0]:
+            tmp = args[0]
+            if "?s=" in args[0]:
+                pos = args[0].find('?s')
+                tmp = args[0][:pos]
+            motolink = tmp.replace(' ', '')
+            link = motolink[-19:]
+            pos = motolink.find('.com/')
+            idname00 = motolink[pos:-27]
+            idname = idname00[5:]
+            reply_text = args[1]
+            tweet_rep = "@" + idname + " " + reply_text
+            api.update_status(status=tweet_rep,in_reply_to_status_id=link)
+            await ctx.send('---@%sにリプを飛ばしました。---'%(idname))
+            await ctx.send(tweet_rep)
+            return
+
+    ###########################　ユーザー指定
+
+
+        
+        #未実装いえーーーーーいｗｗｗｗｗｗｗ
+
+
+        
+    ###########################リンク時以外の、共通処理
     results = api.user_timeline(screen_name=idname, count=1,exclude_replies="true",include_rts="false")
 
     for result in results:
