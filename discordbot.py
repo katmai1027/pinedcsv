@@ -1975,6 +1975,96 @@ async def on_message(message):
 
 
 
+            ###########################################################
+
+
+            if 'XEON' in message.content.upper() and 'X5698.' in message.content.upper() or ' SLC32 ' in message.content.upper():
+                await message.channel.send('名称:Xeon X5698 \nマイクロアーキテクチャ:Westmere-EP \nソケット名:LGA1366  \nコア数/スレッド数:2/4  \nベース:4.4GHz  \nブースト時:4.53GHz')
+                return
+            if 'XEON' in message.content.upper() and 'E5603.' in message.content.upper() or ' SLC2F ' in message.content.upper():
+                await message.channel.send('名称:Xeon E5603 \nマイクロアーキテクチャ:Westmere-EP \nソケット名:LGA1366  \nコア数/スレッド数:4/8  \nベース:1.6GHz  \nブースト時:1.60GHz')
+                return
+            if 'XEON' in message.content.upper() and 'E5606.' in message.content.upper() or ' SLC2N ' in message.content.upper():
+                await message.channel.send('名称:Xeon E5606 \nマイクロアーキテクチャ:Westmere-EP \nソケット名:LGA1366  \nコア数/スレッド数:4/8  \nベース:2.13GHz  \nブースト時:2.13GHz')
+                return
+            if 'XEON' in message.content.upper() and 'E5607.' in message.content.upper() or ' SLBZ9 ' in message.content.upper():
+                await message.channel.send('名称:Xeon E5607 \nマイクロアーキテクチャ:Westmere-EP \nソケット名:LGA1366  \nコア数/スレッド数:4/8  \nベース:2.27GHz  \nブースト時:2.27GHz')
+                return
+            if 'XEON' in message.content.upper() and 'E5620.' in message.content.upper() or ' SLBV4 ' in message.content.upper():
+                await message.channel.send('名称:Xeon E5620 \nマイクロアーキテクチャ:Westmere-EP \nソケット名:LGA1366  \nコア数/スレッド数:4/8  \nベース:2.4GHz  \nブースト時:2.67GHz')
+                return
+            if 'XEON' in message.content.upper() and 'E5630.' in message.content.upper() or ' SLBVB ' in message.content.upper():
+                await message.channel.send('名称:Xeon E5630 \nマイクロアーキテクチャ:Westmere-EP \nソケット名:LGA1366  \nコア数/スレッド数:4/8  \nベース:2.53GHz  \nブースト時:2.80GHz')
+                return
+            if 'XEON' in message.content.upper() and 'E5640.' in message.content.upper() or ' SLBVC ' in message.content.upper():
+                await message.channel.send('名称:Xeon E5640 \nマイクロアーキテクチャ:Westmere-EP \nソケット名:LGA1366  \nコア数/スレッド数:4/8  \nベース:2.67GHz  \nブースト時:2.94GHz')
+                return
+            if 'XEON' in message.content.upper() and 'X5647.' in message.content.upper() or ' SLBZ7 ' in message.content.upper():
+                await message.channel.send('名称:Xeon X5647 \nマイクロアーキテクチャ:Westmere-EP \nソケット名:LGA1366  \nコア数/スレッド数:4/8  \nベース:2.93GHz  \nブースト時:3.20GHz')
+                return
+            if 'XEON' in message.content.upper() and 'X5667.' in message.content.upper() or ' SLBVA ' in message.content.upper():
+                await message.channel.send('名称:Xeon X5667 \nマイクロアーキテクチャ:Westmere-EP \nソケット名:LGA1366  \nコア数/スレッド数:4/8  \nベース:3.07GHz  \nブースト時:3.47GHz')
+                return
+            if 'XEON' in message.content.upper() and 'X5672.' in message.content.upper() or ' SLBYK ' in message.content.upper():
+                await message.channel.send('名称:Xeon X5672 \nマイクロアーキテクチャ:Westmere-EP \nソケット名:LGA1366  \nコア数/スレッド数:4/8  \nベース:3.2GHz  \nブースト時:3.60GHz')
+                return
+            if 'XEON' in message.content.upper() and 'X5677.' in message.content.upper() or ' SLBV9 ' in message.content.upper():
+                await message.channel.send('名称:Xeon X5677 \nマイクロアーキテクチャ:Westmere-EP \nソケット名:LGA1366  \nコア数/スレッド数:4/8  \nベース:3.47GHz  \nブースト時:3.74GHz')
+                return
+            if 'XEON' in message.content.upper() and 'X5687.' in message.content.upper() or ' SLBVY ' in message.content.upper():
+                await message.channel.send('名称:Xeon X5687 \nマイクロアーキテクチャ:Westmere-EP \nソケット名:LGA1366  \nコア数/スレッド数:4/8  \nベース:3.6GHz  \nブースト時:3.87GHz')
+                return
+            if 'XEON' in message.content.upper() and 'L5609.' in message.content.upper() or ' SLBVJ ' in message.content.upper():
+                await message.channel.send('名称:Xeon L5609 \nマイクロアーキテクチャ:Westmere-EP \nソケット名:LGA1366  \nコア数/スレッド数:4/8  \nベース:1.87GHz  \nブースト時:1.87GHz')
+                return
+            if 'XEON' in message.content.upper() and 'L5618.' in message.content.upper() or ' SLBX3 ' in message.content.upper():
+                await message.channel.send('名称:Xeon L5618 \nマイクロアーキテクチャ:Westmere-EP \nソケット名:LGA1366  \nコア数/スレッド数:4/8  \nベース:1.87GHz  \nブースト時:2.27GHz')
+                return
+            if 'XEON' in message.content.upper() and 'L5630.' in message.content.upper() or ' SLBVD ' in message.content.upper():
+                await message.channel.send('名称:Xeon L5630 \nマイクロアーキテクチャ:Westmere-EP \nソケット名:LGA1366  \nコア数/スレッド数:4/8  \nベース:2.13GHz  \nブースト時:2.40GHz')
+                return
+            if 'XEON' in message.content.upper() and 'E5645.' in message.content.upper() or ' SLBWZ ' in message.content.upper():
+                await message.channel.send('名称:Xeon E5645 \nマイクロアーキテクチャ:Westmere-EP \nソケット名:LGA1366  \nコア数/スレッド数:6/12  \nベース:2.4GHz  \nブースト時:2.67GHz')
+                return
+            if 'XEON' in message.content.upper() and 'E5649.' in message.content.upper() or ' SLBZ8 ' in message.content.upper():
+                await message.channel.send('名称:Xeon E5649 \nマイクロアーキテクチャ:Westmere-EP \nソケット名:LGA1366  \nコア数/スレッド数:6/12  \nベース:2.53GHz  \nブースト時:2.93GHz')
+                return
+            if 'XEON' in message.content.upper() and 'X5650.' in message.content.upper() or ' SLBV3 ' in message.content.upper():
+                await message.channel.send('名称:Xeon X5650 \nマイクロアーキテクチャ:Westmere-EP \nソケット名:LGA1366  \nコア数/スレッド数:6/12  \nベース:2.67GHz  \nブースト時:3.07GHz')
+                return
+            if 'XEON' in message.content.upper() and 'X5660.' in message.content.upper() or ' SLBV6 ' in message.content.upper():
+                await message.channel.send('名称:Xeon X5660 \nマイクロアーキテクチャ:Westmere-EP \nソケット名:LGA1366  \nコア数/スレッド数:6/12  \nベース:2.8GHz  \nブースト時:3.20GHz')
+                return
+            if 'XEON' in message.content.upper() and 'X5670.' in message.content.upper() or ' SLBV7 ' in message.content.upper():
+                await message.channel.send('名称:Xeon X5670 \nマイクロアーキテクチャ:Westmere-EP \nソケット名:LGA1366  \nコア数/スレッド数:6/12  \nベース:2.93GHz  \nブースト時:3.33GHz')
+                return
+            if 'XEON' in message.content.upper() and 'X5675.' in message.content.upper() or ' SLBYL ' in message.content.upper():
+                await message.channel.send('名称:Xeon X5675 \nマイクロアーキテクチャ:Westmere-EP \nソケット名:LGA1366  \nコア数/スレッド数:6/12  \nベース:3.07GHz  \nブースト時:3.47GHz')
+                return
+            if 'XEON' in message.content.upper() and 'X5679.' in message.content.upper() or ' SLC2E ' in message.content.upper():
+                await message.channel.send('名称:Xeon X5679 \nマイクロアーキテクチャ:Westmere-EP \nソケット名:LGA1366  \nコア数/スレッド数:6/12  \nベース:3.2GHz  \nブースト時:3.47GHz')
+                return
+            if 'XEON' in message.content.upper() and 'X5680.' in message.content.upper() or ' SLBV5 ' in message.content.upper():
+                await message.channel.send('名称:Xeon X5680 \nマイクロアーキテクチャ:Westmere-EP \nソケット名:LGA1366  \nコア数/スレッド数:6/12  \nベース:3.33GHz  \nブースト時:3.60GHz')
+                return
+            if 'XEON' in message.content.upper() and 'X5690.' in message.content.upper() or ' SLBVX ' in message.content.upper():
+                await message.channel.send('名称:Xeon X5690 \nマイクロアーキテクチャ:Westmere-EP \nソケット名:LGA1366  \nコア数/スレッド数:6/12  \nベース:3.47GHz  \nブースト時:3.74GHz')
+                return
+            if 'XEON' in message.content.upper() and 'L5638.' in message.content.upper() or ' SLBWY ' in message.content.upper():
+                await message.channel.send('名称:Xeon L5638 \nマイクロアーキテクチャ:Westmere-EP \nソケット名:LGA1366  \nコア数/スレッド数:6/12  \nベース:2GHz  \nブースト時:2.40GHz')
+                return
+            if 'XEON' in message.content.upper() and 'L5639.' in message.content.upper() or ' SLBZJ ' in message.content.upper():
+                await message.channel.send('名称:Xeon L5639 \nマイクロアーキテクチャ:Westmere-EP \nソケット名:LGA1366  \nコア数/スレッド数:6/12  \nベース:2.13GHz  \nブースト時:2.66GHz')
+                return
+            if 'XEON' in message.content.upper() and 'L5640.' in message.content.upper() or ' SLBV8 ' in message.content.upper():
+                await message.channel.send('名称:Xeon L5640 \nマイクロアーキテクチャ:Westmere-EP \nソケット名:LGA1366  \nコア数/スレッド数:6/12  \nベース:2.27GHz  \nブースト時:2.80GHz')
+                return
+            if 'XEON' in message.content.upper() and 'L5645.' in message.content.upper() or ' SLBVW ' in message.content.upper():
+                await message.channel.send('名称:Xeon L5645 \nマイクロアーキテクチャ:Westmere-EP \nソケット名:LGA1366  \nコア数/スレッド数:6/12  \nベース:2.4GHz  \nブースト時:2.93GHz')
+                return
+            if 'XEON' in message.content.upper() and 'L5645.' in message.content.upper() or ' SLBVW ' in message.content.upper():
+                await message.channel.send('名称:Xeon L5645 \nマイクロアーキテクチャ:Westmere-EP \nソケット名:LGA1366  \nコア数/スレッド数:6/12  \nベース:2.4GHz  \nブースト時:2.93GHz')
+                return
 
             ################A####M#####D###################################
             #AMD
@@ -2161,6 +2251,22 @@ async def rt(ctx):
             else:
                 pass
     await ctx.send("%s件の返信をRTしました" % rt)
+
+
+@bot.command()
+async def kinopi(ctx):
+    consumer_key="8DJbuI9dUTBW9TObrPdAKKHfJ"
+    consumer_secret="Be5E7hM3xI3KRJMlwGFgvuxb3Lp0GJH9ZUKz4C6GtEDKBzl2O3"
+    token="1142721964911448069-LmvD4qv58swY0waZmqAzBHj8rAxlB4"
+    token_secret="yNO79K47d0MjzYzMqYTP54PPATIPt7EhEsYiX1ssHQG7D"
+    auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+    auth.set_access_token(token, token_secret)
+    api = tweepy.API(auth)
+    api.update_status('#木のぴのちんこビンビン')
+    await ctx.message.delete()
+    await ctx.send('---ツイートしました---\n')
+    await ctx.send(arg1)
+
 
 @bot.command()
 
