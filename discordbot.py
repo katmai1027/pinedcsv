@@ -1,5 +1,6 @@
 import csv
 import discord
+import janome
 import json
 import linecache
 import math
@@ -16,6 +17,9 @@ import urllib.request
 
 from discord.ext import commands
 from urllib.request import urlopen
+from janome.tokenizer import Tokenizer
+
+t = Tokenizer()
 
 bot = commands.Bot(command_prefix='$')
 file = 'test1.csv'
@@ -688,6 +692,155 @@ async def on_message(message):
                 return
             if '10700TE.' in message.content.upper() or 'unknown' in message.content:
                 await message.channel.send('名称:i7-10700TE   \nマイクロアーキテクチャ:Comet Lake \nソケット名:LGA1200  \nコア数/スレッド数:8/16  \nベース:2GHz\nTB時:4.4GHz')
+                return
+            #Comet Lake-S 10850K
+            if 'I9' in message.content.upper() and '10850K.' in message.content.upper() or ' SRK51 ' in message.content.upper():
+                await message.channel.send('名称:Core i9-10850K \nマイクロアーキテクチャ:Comet Lake \nソケット名:LGA1200  \nコア数/スレッド数:10/20  \nベース:3.6GHz  \nブースト時:5.2GHz')
+                return
+            #Comet Lake-H i7
+            if 'I7' in message.content.upper() and '10750H.' in message.content.upper() or ' SRH8Q ' in message.content.upper():
+                await message.channel.send('名称:Core i7-10750H \nマイクロアーキテクチャ:Comet Lake \nソケット名:BGA1440  \nコア数/スレッド数:6/12  \nベース:2.6GHz  \nブースト時:5.0GHz')
+                return
+            if 'I7' in message.content.upper() and '10875H.' in message.content.upper() or ' SRJ8F ' in message.content.upper():
+                await message.channel.send('名称:Core i7-10875H \nマイクロアーキテクチャ:Comet Lake \nソケット名:BGA1440  \nコア数/スレッド数:8/16  \nベース:2.3GHz  \nブースト時:5.1GHz')
+                return
+            if 'I7' in message.content.upper() and '10850H.' in message.content.upper() or ' SRH8P ' in message.content.upper():
+                await message.channel.send('名称:Core i7-10850H \nマイクロアーキテクチャ:Comet Lake \nソケット名:BGA1440  \nコア数/スレッド数:6/12  \nベース:2.7GHz  \nブースト時:5.1GHz')
+                return
+            #10thGen Comet Lake-U(Y) i7
+            if 'I7' in message.content.upper() and '10810U.' in message.content.upper() or ' SRGP1 ' in message.content.upper() or' SRJ7Q ':
+                await message.channel.send('名称:Core i7-10810U \nマイクロアーキテクチャ:Comet Lake \nソケット名:BGA1528  \nコア数/スレッド数:6/12  \nベース:1.1GHz  \nブースト時:4.9GHz')
+                return
+            if 'I7' in message.content.upper() and '10710U.' in message.content.upper() or ' SRGP2 ' in message.content.upper():
+                await message.channel.send('名称:Core i7-10710U \nマイクロアーキテクチャ:Comet Lake \nソケット名:BGA1528  \nコア数/スレッド数:6/12  \nベース:1.1GHz  \nブースト時:4.7GHz')
+                return
+            if 'I7' in message.content.upper() and '10610U.' in message.content.upper() or ' SRGKV ' in message.content.upper() or' SRJ7R ':
+                await message.channel.send('名称:Core i7-10610U \nマイクロアーキテクチャ:Comet Lake \nソケット名:BGA1528  \nコア数/スレッド数:4/8  \nベース:1.8GHz  \nブースト時:4.9GHz')
+                return
+            if 'I7' in message.content.upper() and '10510U.' in message.content.upper() or ' SRGKW ' in message.content.upper():
+                await message.channel.send('名称:Core i7-10510U \nマイクロアーキテクチャ:Comet Lake \nソケット名:BGA1528  \nコア数/スレッド数:4/8  \nベース:1.8GHz  \nブースト時:4.9GHz')
+                return
+            if 'I7' in message.content.upper() and '10510Y.' in message.content.upper() or ' SRGSC ' in message.content.upper():
+                await message.channel.send('名称:Core i7-10510Y \nマイクロアーキテクチャ:Comet Lake \nソケット名:BGA1377  \nコア数/スレッド数:4/8  \nベース:1.2GHz  \nブースト時:4.5GHz')
+                return
+            #10thGen Ice Lake-U(Y) i7
+            if 'I7' in message.content.upper() and '1068NG7.' in message.content.upper() or ' SRG0U ' in message.content.upper():
+                await message.channel.send('名称:Core i7-1068NG7 \nマイクロアーキテクチャ:Ice Lake \nソケット名:BGA1344  \nコア数/スレッド数:4/8  \nベース:2.3GHz  \nブースト時:4.1GHz')
+                return
+            if 'I7' in message.content.upper() and '1068G7.' in message.content.upper() or ' NOTFOUND00 ' in message.content.upper():
+                await message.channel.send('名称:Core i7-1068G7 \nマイクロアーキテクチャ:Ice Lake \nソケット名:BGA1526  \nコア数/スレッド数:4/8  \nベース:2.3GHz  \nブースト時:4.1GHz')
+                return
+            if 'I7' in message.content.upper() and '1065G7.' in message.content.upper() or ' SRG0N ' in message.content.upper():
+                await message.channel.send('名称:Core i7-1065G7 \nマイクロアーキテクチャ:Ice Lake \nソケット名:BGA1526  \nコア数/スレッド数:4/8  \nベース:1.3GHz  \nブースト時:3.9GHz')
+                return
+            if 'I7' in message.content.upper() and '1060G7.' in message.content.upper() or ' NOTFOUND01 ' in message.content.upper():
+                await message.channel.send('名称:Core i7-1060G7 \nマイクロアーキテクチャ:Ice Lake \nソケット名:BGA1377  \nコア数/スレッド数:4/8  \nベース:1.0GHz  \nブースト時:3.8GHz')
+                return
+            #Coffee Lake Reflesh-H i7
+            if 'I7' in message.content.upper() and '9750H.' in message.content.upper() or ' SRF6U ' in message.content.upper() or' SRFCP ' in message.content.upper():
+                await message.channel.send('名称:Core i7-9750H \nマイクロアーキテクチャ:Coffee Lake \nソケット名:BGA1440  \nコア数/スレッド数:6/12  \nベース:2.6GHz  \nブースト時:4.5GHz')
+                return
+            if 'I7' in message.content.upper() and '9850H.' in message.content.upper() or ' SRFCN ' in message.content.upper():
+                await message.channel.send('名称:Core i7-9850H \nマイクロアーキテクチャ:Coffee Lake \nソケット名:BGA1440  \nコア数/スレッド数:6/12  \nベース:2.6GHz  \nブースト時:4.6GHz')
+                return
+            if 'I7' in message.content.upper() and '9850HL.' in message.content.upper() or ' SRFEH ' in message.content.upper():
+                await message.channel.send('名称:Core i7-9850HL \nマイクロアーキテクチャ:Coffee Lake \nソケット名:BGA1440  \nコア数/スレッド数:6/12  \nベース:1.9GHz  \nブースト時:4.1GHz')
+                return
+            if 'I7' in message.content.upper() and '9850HE.' in message.content.upper() or ' SRFED ' in message.content.upper():
+                await message.channel.send('名称:Core i7-9850HE \nマイクロアーキテクチャ:Coffee Lake \nソケット名:BGA1440  \nコア数/スレッド数:6/12  \nベース:2.7GHz  \nブースト時:4.4GHz')
+                return
+            if 'I7' in message.content.upper() and '9750HF.' in message.content.upper() or ' SRG1T ' in message.content.upper():
+                await message.channel.send('名称:Core i7-9750HF \nマイクロアーキテクチャ:Coffee Lake \nソケット名:BGA1440  \nコア数/スレッド数:6/12  \nベース:2.6GHz  \nブースト時:4.5GHz')
+                return
+            #8thGen Coffee Lake-H(B) i7
+            if 'I7' in message.content.upper() and '8850H.' in message.content.upper() or ' SR3YZ ' in message.content.upper():
+                await message.channel.send('名称:Core i7-8850H \nマイクロアーキテクチャ:Coffee Lake \nソケット名:BGA1440  \nコア数/スレッド数:6/12  \nベース:2.6GHz  \nブースト時:4.3GHz')
+                return
+            if 'I7' in message.content.upper() and '8750H.' in message.content.upper() or ' SR3YY ' in message.content.upper():
+                await message.channel.send('名称:Core i7-8750H \nマイクロアーキテクチャ:Coffee Lake \nソケット名:BGA1440  \nコア数/スレッド数:6/12  \nベース:2.2GHz  \nブースト時:4.1GHz')
+                return
+            #i7-8700Bはおそらくi7-8700をBGA1440化したものになるのかなぁ。
+            if 'I7' in message.content.upper() and '8700B.' in message.content.upper() or ' SRCX2 ' in message.content.upper():
+                await message.channel.send('名称:Core i7-8700B \nマイクロアーキテクチャ:Coffee Lake \nソケット名:BGA1440  \nコア数/スレッド数:6/12  \nベース:3.2GHz  \nブースト時:4.6GHz')
+                return
+            #8thGen Kaby Lake-G(中身はKaby Lake-Hのi7とRadeon RX Vega M GHまたはM GLを搭載)
+            if 'I7' in message.content.upper() and '8809G.' in message.content.upper() or ' SR3RL ' in message.content.upper():
+                await message.channel.send('名称:Core i7-8809G \nマイクロアーキテクチャ:Kaby Lake \nソケット名:BGA2270  \nコア数/スレッド数:4/8  \nベース:3.1GHz  \nブースト時:4.2GHz')
+                return
+            if 'I7' in message.content.upper() and '8709G.' in message.content.upper() or ' SR3RN ' in message.content.upper():
+                await message.channel.send('名称:Core i7-8709G \nマイクロアーキテクチャ:Kaby Lake \nソケット名:BGA2270  \nコア数/スレッド数:4/8  \nベース:3.1GHz  \nブースト時:4.1GHz')
+                return
+            if 'I7' in message.content.upper() and '8706G.' in message.content.upper() or ' SR3RJ ' in message.content.upper() or' SRCXS ' in message.content.upper():
+                await message.channel.send('名称:Core i7-8706G \nマイクロアーキテクチャ:Kaby Lake \nソケット名:BGA2270  \nコア数/スレッド数:4/8  \nベース:3.1GHz  \nブースト時:4.2GHz')
+                return
+            if 'I7' in message.content.upper() and '8705G.' in message.content.upper() or ' SR3RK ' in message.content.upper():
+                await message.channel.send('名称:Core i7-8705G \nマイクロアーキテクチャ:Kaby Lake \nソケット名:BGA2270  \nコア数/スレッド数:4/8  \nベース:3.1GHz  \nブースト時:4.1GHz')
+                return
+            #8thGen Coffee Lake-U i7
+            if 'I7' in message.content.upper() and '8569U.' in message.content.upper() or ' SREYZ ' in message.content.upper():
+                await message.channel.send('名称:Core i7-8569U \nマイクロアーキテクチャ:Coffee Lake \nソケット名:BGA1528  \nコア数/スレッド数:4/8  \nベース:2.8GHz  \nブースト時:4.7GHz')
+                return
+            if 'I7' in message.content.upper() and '8559U.' in message.content.upper() or ' SRCK5 ' in message.content.upper():
+                await message.channel.send('名称:Core i7-8559U \nマイクロアーキテクチャ:Coffee Lake \nソケット名:BGA1528  \nコア数/スレッド数:4/8  \nベース:2.7GHz  \nブースト時:4.5GHz')
+                return
+            if 'I7' in message.content.upper() and '8557U.' in message.content.upper() or ' SREZ1 ' in message.content.upper():
+                await message.channel.send('名称:Core i7-8557U \nマイクロアーキテクチャ:Coffee Lake \nソケット名:BGA1528  \nコア数/スレッド数:4/8  \nベース:1.7GHz  \nブースト時:4.5GHz')
+                return
+            #8thGen Whiskey Lake-U i7
+            if 'I7' in message.content.upper() and '8665U.' in message.content.upper() or ' SRF9W ' in message.content.upper():
+                await message.channel.send('名称:Core i7-8665U \nマイクロアーキテクチャ:Whiskey Lake \nソケット名:BGA1528  \nコア数/スレッド数:4/8  \nベース:1.9GHz  \nブースト時:4.8GHz')
+                return
+            if 'I7' in message.content.upper() and '8665UE.' in message.content.upper() or ' SRFDS ' in message.content.upper():
+                await message.channel.send('名称:Core i7-8665UE \nマイクロアーキテクチャ:Whiskey Lake \nソケット名:BGA1528  \nコア数/スレッド数:4/8  \nベース:1.7GHz  \nブースト時:4.4GHz')
+                return
+            if 'I7' in message.content.upper() and '8565U.' in message.content.upper() or ' SRFFW ' in message.content.upper() or ' SREJP ' in message.content.upper():
+                await message.channel.send('名称:Core i7-8565U \nマイクロアーキテクチャ:Whiskey Lake \nソケット名:BGA1528  \nコア数/スレッド数:4/8  \nベース:1.8GHz  \nブースト時:4.6GHz')
+                return
+            #7.5thGen Kaby Lake-R i7
+            if 'I7' in message.content.upper() and '8650U.' in message.content.upper() or ' SR3L8 ' in message.content.upper():
+                await message.channel.send('名称:Core i7-8650U \nマイクロアーキテクチャ:Kaby Lake \nソケット名:BGA1356  \nコア数/スレッド数:4/8  \nベース:1.9GHz  \nブースト時:4.2GHz')
+                return
+            if 'I7' in message.content.upper() and '8550U.' in message.content.upper() or ' SR3LC ' in message.content.upper():
+                await message.channel.send('名称:Core i7-8550U \nマイクロアーキテクチャ:Kaby Lake \nソケット名:BGA1356  \nコア数/スレッド数:4/8  \nベース:1.8GHz  \nブースト時:4.0GHz')
+                return
+            #Amber Lake-Y i7
+            if 'I7' in message.content.upper() and '8510Y.' in message.content.upper() or ' SREKN ' in message.content.upper():
+                await message.channel.send('名称:Core i7-8510Y \nマイクロアーキテクチャ:Amber Lake \nソケット名:BGA1515  \nコア数/スレッド数:2/4  \nベース:1.8GHz  \nブースト時:4.3GHz')
+                return
+            if 'I7' in message.content.upper() and '8500Y.' in message.content.upper() or ' SRD21 ' in message.content.upper():
+                await message.channel.send('名称:Core i7-8500Y \nマイクロアーキテクチャ:Amber Lake \nソケット名:BGA1515  \nコア数/スレッド数:2/4  \nベース:1.5GHz  \nブースト時:4.2GHz')
+                return
+            #7thGen Kaby Lake-H i7(HQ&HK)
+            if 'I7' in message.content.upper() and '7920HQ.' in message.content.upper() or ' SR32L ' in message.content.upper():
+                await message.channel.send('名称:Core i7-7920HQ \nマイクロアーキテクチャ:Kaby Lake \nソケット名:BGA1440  \nコア数/スレッド数:4/8  \nベース:3.1GHz  \nブースト時:4.1GHz')
+                return
+            if 'I7' in message.content.upper() and '7820HQ.' in message.content.upper() or ' SR32N ' in message.content.upper():
+                await message.channel.send('名称:Core i7-7820HQ \nマイクロアーキテクチャ:Kaby Lake \nソケット名:BGA1440  \nコア数/スレッド数:4/8  \nベース:2.9GHz  \nブースト時:3.9GHz')
+                return
+            if 'I7' in message.content.upper() and '7820HK.' in message.content.upper() or ' SR32P ' in message.content.upper():
+                await message.channel.send('名称:Core i7-7820HK \nマイクロアーキテクチャ:Kaby Lake \nソケット名:BGA1440  \nコア数/スレッド数:4/8  \nベース:2.9GHz  \nブースト時:3.9GHz')
+                return
+            if 'I7' in message.content.upper() and '7820EQ.' in message.content.upper() or ' SR34S ' in message.content.upper():
+                await message.channel.send('名称:Core i7-7820EQ \nマイクロアーキテクチャ:Kaby Lake \nソケット名:BGA1440  \nコア数/スレッド数:4/8  \nベース:3.0GHz  \nブースト時:3.7GHz')
+                return
+            if 'I7' in message.content.upper() and '7700HQ.' in message.content.upper() or ' SR32Q ' in message.content.upper():
+                await message.channel.send('名称:Core i7-7700HQ \nマイクロアーキテクチャ:Kaby Lake \nソケット名:BGA1440  \nコア数/スレッド数:4/8  \nベース:2.8GHz  \nブースト時:3.8GHz')
+                return
+            #7thGen Kaby Lake-U i7
+            if 'I7' in message.content.upper() and '7660U.' in message.content.upper() or ' SR368 ' in message.content.upper():
+                await message.channel.send('名称:Core i7-7660U \nマイクロアーキテクチャ:Kaby Lake \nソケット名:BGA1356  \nコア数/スレッド数:2/4  \nベース:2.5GHz  \nブースト時:4.0GHz')
+                return
+            if 'I7' in message.content.upper() and '7600U.' in message.content.upper() or ' SR33Z ' in message.content.upper():
+                await message.channel.send('名称:Core i7-7600U \nマイクロアーキテクチャ:Kaby Lake \nソケット名:BGA1356  \nコア数/スレッド数:2/4  \nベース:2.8GHz  \nブースト時:3.9GHz')
+                return
+            if 'I7' in message.content.upper() and '7567U.' in message.content.upper() or ' SR367 ' in message.content.upper():
+                await message.channel.send('名称:Core i7-7567U \nマイクロアーキテクチャ:Kaby Lake \nソケット名:BGA1356  \nコア数/スレッド数:2/4  \nベース:3.5GHz  \nブースト時:4.0GHz')
+                return
+            if 'I7' in message.content.upper() and '7560U.' in message.content.upper() or ' SR366 ' in message.content.upper():
+                await message.channel.send('名称:Core i7-7560U \nマイクロアーキテクチャ:Kaby Lake \nソケット名:BGA1356  \nコア数/スレッド数:2/4  \nベース:2.4GHz  \nブースト時:3.8GHz')
+                return
+            if 'I7' in message.content.upper() and '7500U.' in message.content.upper() or ' SR341 ' in message.content.upper() or' SR2VM ' in message.content.upper() or' SR2ZV ' in message.content.upper():
+                await message.channel.send('名称:Core i7-7500U \nマイクロアーキテクチャ:Kaby Lake \nソケット名:BGA1356  \nコア数/スレッド数:2/4  \nベース:2.7GHz  \nブースト時3.5GHz')
                 return
             
 ###########ここからi5です#############
@@ -2265,7 +2418,7 @@ async def kinopi(ctx):
     api.update_status('#木のぴのちんこビンビン')
     await ctx.message.delete()
     await ctx.send('---ツイートしました---\n')
-    await ctx.send(arg1)
+    await ctx.send("#木のぴのちんこビンビン")
 
 
 @bot.command()
@@ -2353,6 +2506,33 @@ async def tweet(ctx,*args):
                     await ctx.send(args[2])
                     await ctx.send(file=discord.File('image.png'))
                     
+@bot.command()   
+async def paku(ctx):
+
+    consumer_key="8DJbuI9dUTBW9TObrPdAKKHfJ"
+    consumer_secret="Be5E7hM3xI3KRJMlwGFgvuxb3Lp0GJH9ZUKz4C6GtEDKBzl2O3"
+    token="1142721964911448069-LmvD4qv58swY0waZmqAzBHj8rAxlB4"
+    token_secret="yNO79K47d0MjzYzMqYTP54PPATIPt7EhEsYiX1ssHQG7D"
+    auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+    auth.set_access_token(token, token_secret)
+    api = tweepy.API(auth)
+    pakutw = []#特定の１ユーザーから取得したツイートをここに入れておき、このなかから後でランダムでひとつ選ぶ
+    
+    l = ["katmai_","yt_rPGA988","Okakimochi_PC","LGA4677","IFG250455","Osatu_R_LFA10","Truebe__","FirefoxGecko","@Renoir4700U","@Nekosaka_miho_V"]
+    idname = random.choice(l)
+    
+    results = api.user_timeline(screen_name=idname, count=40)
+
+    for result in results:
+        if not "@" in result.text and not "http" in result.text :
+            pakutw.append(result.text)
+            sleep(0.01)
+    print(pakutw)
+    tweet_text = random.choice(pakutw)
+    
+    api.update_status(tweet_text)#ツイート
+    await ctx.send('@%sのツイートをパクりました。'%(idname))
+
 
 @bot.command()   
 async def reply(ctx , *args):
@@ -2365,7 +2545,7 @@ async def reply(ctx , *args):
     auth.set_access_token(token, token_secret)
     api = tweepy.API(auth)
     
-    l = ["katmai_","yt_rPGA988","kuromochisan","LGA1366daisuki","aiueokakimochi","Siraisi_Ch","IFG250455","Osatu_R_LFA10","kuromochisan","Truebe__"]
+    l = ["katmai_","yt_rPGA988","Okakimochi_PC","LGA4677","IFG250455","Osatu_R_LFA10","Truebe__","FirefoxGecko","@Renoir4700U","@Nekosaka_miho_V"]
     if len(args)<1:
         await ctx.send("構文：$reply ['random'もしくは ツイートへのリンク] [ツイートテキスト]")
         
@@ -2381,7 +2561,7 @@ async def reply(ctx , *args):
             else:
                 reply_text = args[1]
         elif args[0] == "list":
-            await ctx.send('randomコマンドでReplyできるユーザー : ["katmai_","yt_rPGA988","kuromochisan","LGA1366daisuki","aiueokakimochi","Siraisi_Ch","IFG250455","Osatu_R_LFA10","kuromochisan","Truebe__"]')
+            await ctx.send('randomコマンドでReplyできるユーザー : ["katmai_","yt_rPGA988","Okakimochi_PC","LGA4677","IFG250455","Osatu_R_LFA10","Truebe__","FirefoxGecko","@Renoir4700U","@Nekosaka_miho_V"]')
             return
         
 
@@ -2483,5 +2663,250 @@ async def img(ctx):
     print("save")
     await ctx.send(file=discord.File('image.png'))
     return
+
+
+@bot.command()
+async def change(ctx,arg1):
+    tokens = t.tokenize(arg1)
+    word = []
+
+    for token in tokens:
+        part_of_speech = token.part_of_speech.split(',')[0]
+        if part_of_speech == u'名詞':
+            word.append(token.surface)
+    max=len(word)
+    #await ctx.send(word)
+    if max <= 1:
+        #エラー
+        await ctx.send("error")
+        return
+    else:
+        if max == 2:
+            newworda = arg1.replace(word[0],"qwasfasfsa")
+            newwordb = newworda.replace(word[1],word[0])
+            newwordc = newwordb.replace("qwasfasfsa",word[1])
+        else:
+            numb = max-1
+            many1= random.randint(1, numb)
+            many2= random.randint(1, numb)
+            while many1==many2:
+                many2= random.randint(1, numb)
+        
+            newworda = arg1.replace(word[many1],"qwasfasfsa")
+            newwordb = newworda.replace(word[many2],word[many1])
+            newwordc = newwordb.replace("qwasfasfsa",word[many2])
+    await ctx.send(newwordc)
+
+
     
+############################################################################################
+############################################################################################
+#######################################　　　省略版　　　###################################
+############################################################################################
+############################################################################################
+
+
+    
+@bot.command()
+async def ch(ctx,arg1):
+    tokens = t.tokenize(arg1)
+    word = []
+
+    for token in tokens:
+        part_of_speech = token.part_of_speech.split(',')[0]
+        if part_of_speech == u'名詞':
+            word.append(token.surface)
+    max=len(word)
+    #await ctx.send(word)
+    if max <= 1:
+        #エラー
+        await ctx.send("error")
+        return
+    else:
+        if max == 2:
+            newworda = arg1.replace(word[0],"qwasfasfsa")
+            newwordb = newworda.replace(word[1],word[0])
+            newwordc = newwordb.replace("qwasfasfsa",word[1])
+        else:
+            numb = max-1
+            many1= random.randint(1, numb)
+            many2= random.randint(1, numb)
+            while many1==many2:
+                many2= random.randint(1, numb)
+        
+            newworda = arg1.replace(word[many1],"qwasfasfsa")
+            newwordb = newworda.replace(word[many2],word[many1])
+            newwordc = newwordb.replace("qwasfasfsa",word[many2])
+    await ctx.send(newwordc)
+@bot.command()   
+async def re(ctx , *args):
+
+    consumer_key="8DJbuI9dUTBW9TObrPdAKKHfJ"
+    consumer_secret="Be5E7hM3xI3KRJMlwGFgvuxb3Lp0GJH9ZUKz4C6GtEDKBzl2O3"
+    token="1142721964911448069-LmvD4qv58swY0waZmqAzBHj8rAxlB4"
+    token_secret="yNO79K47d0MjzYzMqYTP54PPATIPt7EhEsYiX1ssHQG7D"
+    auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+    auth.set_access_token(token, token_secret)
+    api = tweepy.API(auth)
+    
+    l = ["katmai_","yt_rPGA988","Okakimochi_PC","LGA4677","IFG250455","Osatu_R_LFA10","Truebe__","FirefoxGecko","@Renoir4700U","@Nekosaka_miho_V"]
+    if len(args)<1:
+        await ctx.send("構文：$reply ['random'もしくは ツイートへのリンク] [ツイートテキスト]")
+        
+    else:
+        
+        
+        if args[0] == "random":
+            idname = random.choice(l)
+            if len(args) > 2:
+                
+                texts = ["やぁ！","くぁｗせｄｒｆｔｇｙふじこｌｐ","なんかdiscoで命令されたのでリプしてみよーっと！俺は悪くない！","ぷーぷ","︎︎"]
+                reply_text = random.choice(texts)
+            else:
+                reply_text = args[1]
+        elif args[0] == "list":
+            await ctx.send('randomコマンドでReplyできるユーザー : ["katmai_","yt_rPGA988","Okakimochi_PC","LGA4677","IFG250455","Osatu_R_LFA10","Truebe__","FirefoxGecko","@Renoir4700U","@Nekosaka_miho_V"]')
+            return
+        
+
+        
+    ###########################  リンク貼られた
+        if "twitter.com" in args[0]:
+            tmp = args[0]
+            if "?s=" in args[0]:
+                pos = args[0].find('?s')
+                tmp = args[0][:pos]
+            motolink = tmp.replace(' ', '')
+            link = motolink[-19:]
+            pos = motolink.find('.com/')
+            idname00 = motolink[pos:-27]
+            idname = idname00[5:]
+            reply_text = args[1]
+            tweet_rep = "@" + idname + " " + reply_text
+            api.update_status(status=tweet_rep,in_reply_to_status_id=link)
+            await ctx.send('---@%sにリプを飛ばしました。---'%(idname))
+            await ctx.send(tweet_rep)
+            return
+
+    ###########################　ユーザー指定
+
+
+        
+        #未実装いえーーーーーいｗｗｗｗｗｗｗ
+
+
+        
+    ###########################リンク時以外の、共通処理
+    results = api.user_timeline(screen_name=idname, count=1,exclude_replies="true",include_rts="false")
+
+    for result in results:
+        if result.id not in id_list:
+            rep_id = result.id
+            tweet_rep = "@" + idname + " " + reply_text
+            api.update_status(status=tweet_rep,in_reply_to_status_id=rep_id)
+            id_list.append(result.id)
+            if len(id_list) > 40:
+                del id_list[0]
+            await ctx.send('@%sにリプを飛ばしました。'%(idname))
+        else:
+            await ctx.send('@%sの最新ツイートはすでにリプ済みです。'%(idname))
+
+@bot.command()
+async def ki(ctx):
+    consumer_key="8DJbuI9dUTBW9TObrPdAKKHfJ"
+    consumer_secret="Be5E7hM3xI3KRJMlwGFgvuxb3Lp0GJH9ZUKz4C6GtEDKBzl2O3"
+    token="1142721964911448069-LmvD4qv58swY0waZmqAzBHj8rAxlB4"
+    token_secret="yNO79K47d0MjzYzMqYTP54PPATIPt7EhEsYiX1ssHQG7D"
+    auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+    auth.set_access_token(token, token_secret)
+    api = tweepy.API(auth)
+    api.update_status('#木のぴのちんこビンビン')
+    await ctx.message.delete()
+    await ctx.send('---ツイートしました---\n')
+    await ctx.send("#木のぴのちんこビンビン")
+    
+@bot.command()
+async def cu(ctx,arg1,arg2):
+    await ctx.send('%s、まじ%s！！！！%sはガチで%s！！！普通の%sを超えしエクストリームハイパー%s！！！スペシャルスーパーゴールデン%s！！！' % (arg1,arg2,arg1,arg2,arg2,arg2,arg2,))
+
+@bot.command()
+async def sl(ctx,arg1):
+    await ctx.send('こんばんわ～:night_with_stars:%sちゃんは、もう寝ちゃったかな:question:\n今日は、一日忙しくて、連絡できなかったヨ:cry:ごめんな:cry:\n明日も忙しいから、早く寝ないとネ(^^;):sweat_drops:\nじゃあ%sちゃんも、体調気をつけてね(^-)\nおやすみ～:sleeping::zzz:' % (arg1,arg1))
+
+
+@bot.command()
+async def tw(ctx,*args):
+    consumer_key="8DJbuI9dUTBW9TObrPdAKKHfJ"
+    consumer_secret="Be5E7hM3xI3KRJMlwGFgvuxb3Lp0GJH9ZUKz4C6GtEDKBzl2O3"
+    token="1142721964911448069-LmvD4qv58swY0waZmqAzBHj8rAxlB4"
+    token_secret="yNO79K47d0MjzYzMqYTP54PPATIPt7EhEsYiX1ssHQG7D"
+    auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+    auth.set_access_token(token, token_secret)
+
+    api = tweepy.API(auth)
+    
+    if len(args)<1:
+        await ctx.send("構文：$tweet オプション 文章\n\n＜オプション＞\n-i →画像をツイート\n-d →あなたのコマンドを削除\n\n**文章に空白を含む場合には必ず''で囲むこと**")
+        
+    else:
+        
+        if len(args) ==1:
+            arg1 = args[0]
+            if arg1.upper() == ("-I" or "IMG"):  #画像だけついーと。。。$tweet -i(画像も添付)-------1
+                imgname = ctx.message.attachments[0].filename
+                imglink = ctx.message.attachments[0].url
+                print(imglink)
+                download_img(ctx.message.attachments[0].url, "image.png")
+                print("save")
+                api.update_with_media(filename='image.png')        
+                await ctx.send('---ツイートしました---\n')
+                await ctx.send(file=discord.File('image.png'))
+                return
+            else:#文字だけついーと。。。$tweet 文字-----------------1
+                api.update_status(arg1)
+                await ctx.send('---ツイートしました---\n')
+                await ctx.send(arg1)
+            
+            
+        if len(args) ==2:
+            if args[0].upper() == ("-I" or "IMG"):
+                imgname = ctx.message.attachments[0].filename
+                imglink = ctx.message.attachments[0].url
+                download_img(ctx.message.attachments[0].url, "image.png")
+
+                if args[1].upper()=="-D":#画像つい後、削除。。。$tweet -i -d(画像も添付)---------2
+                    await ctx.message.delete()
+                    api.update_with_media(filename='image.png')        
+                    await ctx.send('---ツイートしました---\n')
+                    await ctx.send(file=discord.File('image.png'))                    
+                else:#文字付き画像つい。。。$tweet -i 文字（画像も添付-------2
+                
+                    api.update_with_media(status= args[1],filename='image.png')    #ここのstatus=arg[2]で、付属する文章指定ｲﾋｰ    
+                    await ctx.send('---ツイートしました---\n')
+                    await ctx.send(args[1])
+                    await ctx.send(file=discord.File('image.png'))
+                
+            
+            if args[0].upper() == "-D":#文字つい後、削除。。。$tweet -d 文字--------------2
+                await ctx.message.delete()
+
+                api.update_status(args[1])
+                await ctx.send('---ツイートしました---\n')
+                await ctx.send(args[1])
+
+        if len(args)==3:
+            l = ["-d","-D","-i","-I","img","IMG"]
+            if args[0] in l:
+                if args[1] in l:
+                    imgname = ctx.message.attachments[0].filename
+                    imglink = ctx.message.attachments[0].url
+                    download_img(ctx.message.attachments[0].url, "image.png")
+                    await ctx.message.delete()
+
+                    api.update_with_media(status= args[2],filename='image.png')    #ここのstatus=arg[2]で、付属する文章指定ｲﾋｰ    
+                    await ctx.send('---ツイートしました---\n')
+                    await ctx.send(args[2])
+                    await ctx.send(file=discord.File('image.png'))
+       
+
 bot.run(TOKEN)
