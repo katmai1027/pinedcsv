@@ -708,13 +708,13 @@ async def on_message(message):
                 await message.channel.send('名称:Core i7-10850H \nマイクロアーキテクチャ:Comet Lake \nソケット名:BGA1440  \nコア数/スレッド数:6/12  \nベース:2.7GHz  \nブースト時:5.1GHz')
                 return
             #10thGen Comet Lake-U(Y) i7
-            if 'I7' in message.content.upper() and '10810U.' in message.content.upper() or ' SRGP1 ' in message.content.upper() or' SRJ7Q' in message.content.upper():
+            if 'I7' in message.content.upper() and '10810U.' in message.content.upper() or ' SRGP1 ' in message.content.upper() or' SRJ7Q 'in message.content.upper():
                 await message.channel.send('名称:Core i7-10810U \nマイクロアーキテクチャ:Comet Lake \nソケット名:BGA1528  \nコア数/スレッド数:6/12  \nベース:1.1GHz  \nブースト時:4.9GHz')
                 return
             if 'I7' in message.content.upper() and '10710U.' in message.content.upper() or ' SRGP2 ' in message.content.upper():
                 await message.channel.send('名称:Core i7-10710U \nマイクロアーキテクチャ:Comet Lake \nソケット名:BGA1528  \nコア数/スレッド数:6/12  \nベース:1.1GHz  \nブースト時:4.7GHz')
                 return
-            if 'I7' in message.content.upper() and '10610U.' in message.content.upper() or ' SRGKV ' in message.content.upper() or' SRJ7R' in message.content.upper():
+            if 'I7' in message.content.upper() and '10610U.' in message.content.upper() or ' SRGKV ' in message.content.upper() or' SRJ7R 'in message.content.upper():
                 await message.channel.send('名称:Core i7-10610U \nマイクロアーキテクチャ:Comet Lake \nソケット名:BGA1528  \nコア数/スレッド数:4/8  \nベース:1.8GHz  \nブースト時:4.9GHz')
                 return
             if 'I7' in message.content.upper() and '10510U.' in message.content.upper() or ' SRGKW ' in message.content.upper():
@@ -2545,7 +2545,7 @@ async def reply(ctx , *args):
     auth.set_access_token(token, token_secret)
     api = tweepy.API(auth)
     
-    l = ["katmai_","yt_rPGA988","Okakimochi_PC","LGA4677","IFG250455","Osatu_R_LFA10","Truebe__","FirefoxGecko","@Renoir4700U","@Nekosaka_miho_V"]
+    l = ["katmai_","yt_rPGA988","Okakimochi_PC","LGA4677","IFG250455","Osatu_R_LFA10","Truebe__","FirefoxGecko","Renoir4700U","Nekosaka_miho_V"]
     if len(args)<1:
         await ctx.send("構文：$reply ['random'もしくは ツイートへのリンク] [ツイートテキスト]")
         
@@ -2561,7 +2561,7 @@ async def reply(ctx , *args):
             else:
                 reply_text = args[1]
         elif args[0] == "list":
-            await ctx.send('randomコマンドでReplyできるユーザー : ["katmai_","yt_rPGA988","Okakimochi_PC","LGA4677","IFG250455","Osatu_R_LFA10","Truebe__","FirefoxGecko","@Renoir4700U","@Nekosaka_miho_V"]')
+            await ctx.send('randomコマンドでReplyできるユーザー : ["katmai_","yt_rPGA988","Okakimochi_PC","LGA4677","IFG250455","Osatu_R_LFA10","Truebe__","FirefoxGecko","Renoir4700U","Nekosaka_miho_V"]')
             return
         
 
@@ -2749,7 +2749,7 @@ async def re(ctx , *args):
     auth.set_access_token(token, token_secret)
     api = tweepy.API(auth)
     
-    l = ["katmai_","yt_rPGA988","Okakimochi_PC","LGA4677","IFG250455","Osatu_R_LFA10","Truebe__","FirefoxGecko","@Renoir4700U","@Nekosaka_miho_V"]
+    l = ["katmai_","yt_rPGA988","Okakimochi_PC","LGA4677","IFG250455","Osatu_R_LFA10","Truebe__","FirefoxGecko","Renoir4700U","Nekosaka_miho_V"]
     if len(args)<1:
         await ctx.send("構文：$reply ['random'もしくは ツイートへのリンク] [ツイートテキスト]")
         
@@ -2765,7 +2765,7 @@ async def re(ctx , *args):
             else:
                 reply_text = args[1]
         elif args[0] == "list":
-            await ctx.send('randomコマンドでReplyできるユーザー : ["katmai_","yt_rPGA988","Okakimochi_PC","LGA4677","IFG250455","Osatu_R_LFA10","Truebe__","FirefoxGecko","@Renoir4700U","@Nekosaka_miho_V"]')
+            await ctx.send('randomコマンドでReplyできるユーザー : ["katmai_","yt_rPGA988","Okakimochi_PC","LGA4677","IFG250455","Osatu_R_LFA10","Truebe__","FirefoxGecko","Renoir4700U","Nekosaka_miho_V"]')
             return
         
 
