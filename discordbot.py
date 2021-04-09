@@ -208,12 +208,12 @@ async def on_message(message):
             return
 
         
-        if 'クソ' in message.content or 'くそ' in message.content or '糞' in message.content or 'poop' in message.content or 'うんち' in message.content or 'うんこ' in message.content or 'んんこ' in message.content or 'ウンチ' in message.content or 'ゆゆうた' in message.content or 'ウンコ' in message.content or '💩' in message.content:
+        """if 'クソ' in message.content or 'くそ' in message.content or '糞' in message.content or 'poop' in message.content or 'うんち' in message.content or 'うんこ' in message.content or 'んんこ' in message.content or 'ウンチ' in message.content or 'ゆゆうた' in message.content or 'ウンコ' in message.content or '💩' in message.content:
             await message.channel.send("（っ’-‘)╮ =͟͟͞:poop:ﾌﾞｫﾝ")
 
         if 'ｸｿ' in message.content or 'ぅんち' in message.content or 'ぅんこ' in message.content or 'ｳﾝﾁ' in message.content or 'ｳﾝｺ' in message.content or 'うンこ' in message.content or 'ウんこ'  in message.content or 'ウんち' in message.content or 'Poop' in message.content or 'POOP' in message.content or '唐沢貴洋' in message.content:
             await message.channel.send("（っ’-‘)╮ =͟͟͞:poop:ﾌﾞｫﾝ")
-            
+           """ 
         if 'うるせ' in message.content or 'うるさい' in message.content or '黙れ' in message.content or 'だまれ' in message.content:
             await message.channel.send("お前のほうがうるさい！")
             return
@@ -260,7 +260,7 @@ async def on_message(message):
             return
         if '草' in message.content and '余談' not in message.content and 'めんど'not in message.content and 'たくさん'not in message.content or 'くさ' in message.content and '余談' not in message.content and 'めんど'not in message.content and 'たくさん'not in message.content or 'ｸｯｻ' in message.content and '余談' not in message.content and 'めんど'not in message.content and 'たくさん'not in message.content or 'kusa' in message.content and '余談' not in message.content and 'めんど'not in message.content and 'たくさん'not in message.content or 'ｸｻ' in message.content and '余談' not in message.content and 'めんど'not in message.content and 'たくさん'not in message.content:
             await message.channel.send('~~ 草 ~~ \n余談ですが草を生やしたように面白うございますので草を生やさせていただきます候')
-            return
+            
         if '勉強' in message.content:
             await message.channel.send('勉強？！俺、大っ嫌い！！')
             return
@@ -311,6 +311,44 @@ async def on_message(message):
         if '1000円' in message.content or '1k' in message.content:
             await message.channel.send(file=discord.File('pic/bird/illuminatiparrot.gif'))
             return
+
+
+        if 'クソ' in message.content or 'くそ' in message.content or '糞' in message.content or 'ぷーぷ' in message.content or 'うんち' in message.content or 'うんこ' in message.content or 'んんこ' in message.content or 'ウンチ' in message.content or 'ゆゆうた' in message.content or 'ウンコ' in message.content or '💩' in message.content or'ｸｿ' in message.content or 'ぅんち' in message.content or 'ぅんこ' in message.content or 'ｳﾝﾁ' in message.content or 'ｳﾝｺ' in message.content or 'うンこ' in message.content or 'ウんこ'  in message.content or 'ウんち' in message.content or 'Poop' in message.content or 'POOP' in message.content.upper or'貴沢唐洋' in message.content:
+            s = message.content.upper()
+            bird00=(s.count('クソ'))
+            bird01=(s.count('くそ'))
+            bird02=(s.count('糞'))
+            bird03=(s.count('poop'))
+            bird04=(s.count('うんち'))
+            bird05=(s.count('うんこ'))
+            bird06=(s.count('んんこ'))
+            bird07=(s.count('ウンチ'))
+            bird08=(s.count('ゆゆうた'))
+            bird09=(s.count('ｳﾝﾁ'))
+            bird10=(s.count('ｳﾝｺ'))
+
+            bird11=(s.count('ウンコ'))
+            bird12=(s.count('ぅんち'))
+            bird13=(s.count('ぅんこ'))
+            bird14=(s.count('poop'))
+            bird15=(s.count('POOP'))
+            bird16=(s.count('Poop'))
+            bird17=(s.count('ぷーぷ'))
+            bird18=(s.count('ﾌﾟｰﾌﾟ'))
+            bird19=(s.count('ｸｿ'))
+
+
+
+            birdcount=(bird00+bird01+bird02+bird03+bird04+bird05+bird06+bird07+bird08+bird09+bird10+bird11+bird12+bird13+bird14+bird15+bird16+bird17+bird18+bird19)
+
+
+            if birdcount > 30:
+                birdcount = 30
+
+            for i in range(birdcount):
+                    await message.channel.send("（っ’-‘)╮ =͟͟͞:poop:ﾌﾞｫﾝ")
+
+            return
         if 'bird' in message.content or '鳥' in message.content or 'TINTIN' in message.content.upper() or 'OPPAI' in message.content.upper() or 'ちんちん' in message.content or 'おっぱい' in message.content or 'とり' in message.content or 'トリ' in message.content or '🐦' in message.content or '🦢' in message.content or '🐓' in message.content or '🐤' in message.content or '🐣' in message.content or '🐥' in message.content or '🦆' in message.content or '🦅' in message.content or '🦉' in message.content or '🐔' in message.content or '🐧' in message.content or '🦇' in message.content:
             
             s = message.content.upper()
@@ -349,7 +387,7 @@ async def on_message(message):
                 numb = random.randint(0, 19)
                 birdfile = 'pic/bird/%s.gif'% (numb)
                 await message.channel.send(file=discord.File(birdfile))
-    
+            return
 ##################################################################################
 
         
