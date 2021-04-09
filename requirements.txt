@@ -1,4 +1,4 @@
 discord.py
 tweepy
-pya3rt
 janome
+pya3rt
