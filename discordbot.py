@@ -313,7 +313,8 @@ async def on_message(message):
             return
 
 
-        if 'クソ' in message.content or 'くそ' in message.content or '糞' in message.content or 'ぷーぷ' in message.content or 'うんち' in message.content or 'うんこ' in message.content or 'んんこ' in message.content or 'ウンチ' in message.content or 'ゆゆうた' in message.content or 'ウンコ' in message.content or '💩' in message.content or'ｸｿ' in message.content or 'ぅんち' in message.content or 'ぅんこ' in message.content or 'ｳﾝﾁ' in message.content or 'ｳﾝｺ' in message.content or 'うンこ' in message.content or 'ウんこ'  in message.content or 'ウんち' in message.content or 'Poop' in message.content or 'POOP' in message.content.upper or'貴沢唐洋' in message.content:
+        if 'クソ' in message.content or 'くそ' in message.content or '糞' in message.content or 'ぷーぷ' in message.content or 'うんち' in message.content or 'うんこ' in message.content or 'んんこ' in message.content or 'ウンチ' in message.content or 'ゆゆうた' in message.content or 'ウンコ' in message.content or '💩' in message.content or'ｸｿ' in message.content or 'ぅんち' in message.content or 'ぅんこ' in message.content or 'ｳﾝﾁ' in message.content or 'ｳﾝｺ' in message.content or 'うンこ' in message.content or 'ウんこ'  in message.content or 'ウんち' in message.content or 'poop' in message.content or 'POOP' in message.content or '唐沢唐洋' in message.content:
+            #if 'クソ' in message.content:
             s = message.content.upper()
             bird00=(s.count('クソ'))
             bird01=(s.count('くそ'))
@@ -334,7 +335,7 @@ async def on_message(message):
             bird15=(s.count('POOP'))
             bird16=(s.count('Poop'))
             bird17=(s.count('ぷーぷ'))
-            bird18=(s.count('ﾌﾟｰﾌﾟ'))
+            bird18=(s.count('💩'))
             bird19=(s.count('ｸｿ'))
 
 
