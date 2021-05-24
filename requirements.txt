@@ -2,3 +2,4 @@ discord.py
 tweepy
 janome
 pya3rt
+time
