@@ -21,15 +21,14 @@ from janome.tokenizer import Tokenizer
 
 t = Tokenizer()
 
-bot = commands.Bot(command_prefix='$')
+bot = commands.Bot(command_prefix='$',help_command=None)
 file = 'test1.csv'
 TOKEN = 'NzA4ODYxOTYzMjE1Njk5OTg4.Xrdhig.d2znvPl9wMhogr1Logsb6BBH0SQ'
 pad = 0
 client = discord.Client()
 id_list = []
 rt_list = []
-saythree = "やぁ！"
-saytwo = "こんにちわんこそば"
+
 sayone = "鯖ァーンァンァンァン"
 """
 def cpuinfo(info):
@@ -41,6 +40,10 @@ def cpuinfo(info):
     print("名称:%s\nアーキテクチャ:%s\nソケット:%s\nコア/スレッド:%s\nクロック(-TB時):%s"% (cpunum[1],cpunum[2],cpunum[3],cpunum[4],cpunum[5]))
     f.close()
 """
+def doubutu_get():
+    #await fetch_channel(710810602313875516)
+    aaaaa = ctx.messages.fetch(channel='710810602313875516')
+    print(aaaaa)
 def send_message(message):
     apikey = "DZZ6wBltwl6lIsGarfN5BzqXp8vpOjOS"
     client = pya3rt.TalkClient(apikey)
@@ -60,7 +63,7 @@ def download_img(url, file_name):
     except urllib.error.URLError as e:
         print(e)
 
-            
+        
 @bot.event
 async def on_ready():
     
@@ -69,6 +72,10 @@ async def on_ready():
 
 
 
+@bot.command()
+async def help(ctx):
+###############################################################################
+    return
 
 
     
@@ -83,7 +90,7 @@ async def on_message(message):
     guild = None
     guild = message.guild
     if guild is None:
-        await message.channel.send('❌Cannnot run the command in DM')
+        await message.channel.send('❌DMで遊ぼうってのか？おいゴルァ')
         return
 
     if '$' not in message.content:
@@ -121,7 +128,10 @@ async def on_message(message):
             return
         if message.content == "ぱおん":     
             await message.add_reaction('🐘')
-            return    
+            return
+        if '木のぴ' in message.content or 'きのぴ' in message.content:     
+            await message.add_reaction('🥴')
+            return 
         if 'botの説明書' in message.content:
             await message.channel.send('-<<鯖ァーンwww bot 説明書>>-\n\n反応するワード(一部)\nおはよ/おやすみ/あ/しねかぶった/ぶっ壊す/f**k/買った/ァーン/ンーァ/ぴえん/びえん/ひえん/ヴィーン/クソ/うるせぇ/ェーン/うっきー/ゴルァ/とり/おはまんこ/\n\nコマンド\n$CPU型番を書く/$S-specを書く/$poop モノor人/$god モノor人/$custom モノor人 任意の言葉 $tweet オプション[-i/-d] ツイート内容/$reply ID(@不要)/$rt')
         
@@ -652,7 +662,7 @@ async def on_message(message):
 
 
             if '7700.' in message.content.upper() or 'SR338' in message.content.upper():
-                await message.channel.send('名称:i7-7700   \nマイクロアーキテクチャ:Kaby Lake \nソケット名:LGA1151  \nコア数/スレッド数:4/8  \nベース:G3.6Hz\nTB時:4.2GHz')
+                await message.channel.send('名称:i7-7700   \nマイクロアーキテクチャ:Kaby Lake \nソケット名:LGA1151  \nコア数/スレッド数:4/8  \nベース:3.6GHz\nTB時:4.2GHz')
                 return
             if '7700K.' in message.content.upper() or 'SR33A' in message.content.upper():
                 await message.channel.send('名称:i7-7700K   \nマイクロアーキテクチャ:Kaby Lake \nソケット名:LGA1151  \nコア数/スレッド数:4/8  \nベース:4.2GHz\nTB時:4.GHz')
@@ -1885,7 +1895,7 @@ async def on_message(message):
                 await message.channel.send('名称:Celeron D 341   \nマイクロアーキテクチャ:NetBurst(Prescott) \nソケット名:LGA775  \nコア数/スレッド数:1/1  \nベース:2.93GHz')
                 return
             if 'eleron' in message.content and '346.' in message.content or 'SL7TY' in message.content or 'SL8HD' in message.content or 'SL9BR' in message.content:
-                await message.channel.send('名称:Celeron D 341   \nマイクロアーキテクチャ:NetBurst(Prescott) \nソケット名:LGA775  \nコア数/スレッド数:1/1  \nベース:3.06GHz')
+                await message.channel.send('名称:Celeron D 346   \nマイクロアーキテクチャ:NetBurst(Prescott) \nソケット名:LGA775  \nコア数/スレッド数:1/1  \nベース:3.06GHz')
                 return
             if 'eleron' in message.content and '351.' in message.content or 'SL7TZ' in message.content or 'SL8HF' in message.content or 'SL9BS' in message.content:
                 await message.channel.send('名称:Celeron D 351   \nマイクロアーキテクチャ:NetBurst(Prescott) \nソケット名:LGA775  \nコア数/スレッド数:1/1  \nベース:3.2GHz')
@@ -2555,9 +2565,9 @@ async def paku(ctx):
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(token, token_secret)
     api = tweepy.API(auth)
-    pakutw = []#特定の１ユーザーから取得したツイートをここに入れておき、このなかから後でランダムでひとつ選ぶ
+    """pakutw = []#特定の１ユーザーから取得したツイートをここに入れておき、このなかから後でランダムでひとつ選ぶ
     
-    l = ["katmai_","yt_rPGA988","Okakimochi_PC","LGA4677","IFG250455","Osatu_R_LFA10","Truebe__","FirefoxGecko","Renoir4700U","Nekosaka_miho_V"]
+    l = ["yt_rPGA988","S_PC1_","LGA4094","IFG250455","Osatu_R_LFA10","Truebe__","yakidare","Renoir4700U","Xx_ketu_puri_xX","aiueokakimochi"]
     idname = random.choice(l)
     
     results = api.user_timeline(screen_name=idname, count=40)
@@ -2570,9 +2580,42 @@ async def paku(ctx):
     tweet_text = random.choice(pakutw)
     
     api.update_status(tweet_text)#ツイート
-    await ctx.send('@%sのツイートをパクりました。'%(idname))
+    await ctx.send('@%sのツイートをパクりました。'%(idname))"""
+    #この上のやつは、TLからのパクツイ
 
-
+    mes_id=[]
+    cnt=0
+    chid_old = ctx.channel.id
+    ctx.channel.id = "710810602313875516"
+    #aaaaa = await ctx.channel.history(limit = 10).flatten()
+    async for message in ctx.channel.history(limit=1000):
+        if cnt>50:
+            break
+        elif message.channel.id=="710810602313875516":
+            if not (message.author.bot or message.content.startswith("$")or message.content.startswith("?")or message.content.startswith("草") or message.content.startswith("http") or message.content=="" or message.author.id=="716977523941965824"):
+                mes_id.append(message.content)
+                cnt=cnt+1
+            else:
+                pass
+        else:
+            pass
+        
+    
+    tweet_text = random.choice(mes_id)
+    ctx.channel.id=chid_old
+    try:
+        
+        api.update_status(tweet_text)
+        await ctx.send('---ツイートしました---')
+        await ctx.send(tweet_text)
+        return
+    except:
+        tweet_text = random.choice(mes_id)
+        api.update_status(tweet_text)
+        await ctx.send('---ツイートしました---')
+        await ctx.send(tweet_text)
+        return
+    
 @bot.command()   
 async def reply(ctx , *args):
 
@@ -2584,7 +2627,7 @@ async def reply(ctx , *args):
     auth.set_access_token(token, token_secret)
     api = tweepy.API(auth)
     
-    l = ["katmai_","yt_rPGA988","Okakimochi_PC","LGA4677","IFG250455","Osatu_R_LFA10","Truebe__","FirefoxGecko","Renoir4700U","Nekosaka_miho_V"]
+    l = ["yt_rPGA988","S_PC1_","LGA4094","IFG250455","Osatu_R_LFA10","Truebe__","yakidare","Renoir4700U","Xx_ketu_puri_xX","aiueokakimochi"]
     if len(args)<1:
         await ctx.send("構文：$reply ['random'もしくは ツイートへのリンク] [ツイートテキスト]")
         
@@ -2600,7 +2643,7 @@ async def reply(ctx , *args):
             else:
                 reply_text = args[1]
         elif args[0] == "list":
-            await ctx.send('randomコマンドでReplyできるユーザー : ["katmai_","yt_rPGA988","Okakimochi_PC","LGA4677","IFG250455","Osatu_R_LFA10","Truebe__","FirefoxGecko","Renoir4700U","Nekosaka_miho_V"]')
+            await ctx.send('listにありません。')
             return
         
 
@@ -2736,7 +2779,14 @@ async def change(ctx,arg1):
             newwordc = newwordb.replace("qwasfasfsa",word[many2])
     await ctx.send(newwordc)
 
-
+@bot.command()
+async def youtube(ctx):
+        num = random.randint(0, 1)
+        if num == 0:
+            await ctx.send('<#823538646954147860>')
+        else:
+            await ctx.send('<#823538647151542285>')
+        return
     
 ############################################################################################
 ############################################################################################
@@ -2788,7 +2838,7 @@ async def re(ctx , *args):
     auth.set_access_token(token, token_secret)
     api = tweepy.API(auth)
     
-    l = ["katmai_","yt_rPGA988","Okakimochi_PC","LGA4677","IFG250455","Osatu_R_LFA10","Truebe__","FirefoxGecko","Renoir4700U","Nekosaka_miho_V"]
+    l = ["yt_rPGA988","S_PC1_","LGA4094","IFG250455","Osatu_R_LFA10","Truebe__","yakidare","Renoir4700U","Xx_ketu_puri_xX","aiueokakimochi"]
     if len(args)<1:
         await ctx.send("構文：$reply ['random'もしくは ツイートへのリンク] [ツイートテキスト]")
         
@@ -2804,7 +2854,7 @@ async def re(ctx , *args):
             else:
                 reply_text = args[1]
         elif args[0] == "list":
-            await ctx.send('randomコマンドでReplyできるユーザー : ["katmai_","yt_rPGA988","Okakimochi_PC","LGA4677","IFG250455","Osatu_R_LFA10","Truebe__","FirefoxGecko","Renoir4700U","Nekosaka_miho_V"]')
+            await ctx.send('listにありません。')
             return
         
 
@@ -2871,6 +2921,7 @@ async def cu(ctx,arg1,arg2):
 @bot.command()
 async def sl(ctx,arg1):
     await ctx.send('こんばんわ～:night_with_stars:%sちゃんは、もう寝ちゃったかな:question:\n今日は、一日忙しくて、連絡できなかったヨ:cry:ごめんな:cry:\n明日も忙しいから、早く寝ないとネ(^^;):sweat_drops:\nじゃあ%sちゃんも、体調気をつけてね(^-)\nおやすみ～:sleeping::zzz:' % (arg1,arg1))
+
 
 
 @bot.command()
@@ -2947,5 +2998,15 @@ async def tw(ctx,*args):
                     await ctx.send(args[2])
                     await ctx.send(file=discord.File('image.png'))
        
+@bot.command()
+async def yo(ctx):
+
+
+    num = random.randint(0, 1)
+    if num == 0:
+        await ctx.send('<#823538646954147860>')
+    else:
+        await ctx.send('<#823538647151542285>')
+    return
 
 bot.run(TOKEN)
