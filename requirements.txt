@@ -3,4 +3,3 @@ tweepy
 janome
 pya3rt
 numpy
-random
