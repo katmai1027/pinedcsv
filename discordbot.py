@@ -1,5 +1,6 @@
 import csv
 import discord
+import datetime
 import janome
 import json
 import linecache
@@ -25,10 +26,11 @@ bot = commands.Bot(command_prefix='$',help_command=None)
 file = 'test1.csv'
 TOKEN = 'NzA4ODYxOTYzMjE1Njk5OTg4.Xrdhig.d2znvPl9wMhogr1Logsb6BBH0SQ'
 pad = 0
+
 client = discord.Client()
 id_list = []
 rt_list = []
-
+ptime=[]
 sayone = "鯖ァーンァンァンァン"
 """
 def cpuinfo(info):
@@ -66,7 +68,6 @@ def download_img(url, file_name):
         
 @bot.event
 async def on_ready():
-    
     print('ログインしました')
 
 
@@ -2583,18 +2584,61 @@ async def paku(ctx):
     await ctx.send('@%sのツイートをパクりました。'%(idname))"""
     #この上のやつは、TLからのパクツイ
 
-    mes_id=[]
-    cnt=0
+    mes_id=[]#50個選んだ一覧。あとでこのなかからランダムで一つ選ばれる
+    cnt=0#有効なメッセージ数
     chid_old = ctx.channel.id
-    ctx.channel.id = "710810602313875516"
-    #aaaaa = await ctx.channel.history(limit = 10).flatten()
+    ctx.channel.id = "710810602313875516"#動物園に指定
+    #ここから回数制限の処理
+    
+    dt_now = datetime.datetime.now()
+    minute = float(dt_now.strftime('%M'))
+    hour = float(dt_now.strftime('%H'))
+    day = float(dt_now.strftime('%d'))
+    try:
+        print(ptime[0])
+        print("try")
+    except:
+        
+        ptime.append(0)
+        ptime.append(0)
+        ptime.append(0)
+        ptime.append(0)
+        
+        print("except")
+    whenis = 0
+    whenis=hour*(day+100)+day+25
+    if whenis == ptime[0]:
+        if minute > ptime[1]+ 10:#１０分経ったなら
+            
+            ptime[1]=minute#時間(minute)
+            ptime[2]=0#回数
+            print("if")
+        elif minute <= ptime[1] + 10:#１０分経ってないなら
+            ptime[2]=ptime[2]+1#回数を１増やす
+            print("elif")
+    else:
+        ptime[1]=0#時間
+        ptime[2]=0#回数
+        print("else")
+
+
+    ptime[0]=whenis
+    if ptime[2] > 1:
+        ctx.channel.id=chid_old
+        await ctx.send('制限回数を超えました。最大10分、実行ができません。')
+        return
+    
+    #ここまで
+    
     async for message in ctx.channel.history(limit=1000):
-        if cnt>50:
+        
+        if cnt>20:
             break
         elif message.channel.id=="710810602313875516":
             if not (message.author.bot or message.content.startswith("$")or message.content.startswith("?")or message.content.startswith("草") or message.content.startswith("http") or message.content=="" or message.author.id=="716977523941965824"):
                 mes_id.append(message.content)
                 cnt=cnt+1
+                time.sleep(0.01)
             else:
                 pass
         else:
@@ -2784,10 +2828,31 @@ async def youtube(ctx):
         num = random.randint(0, 1)
         if num == 0:
             await ctx.send('<#823538646954147860>')
-        else:
+        elif num ==1:
             await ctx.send('<#823538647151542285>')
         return
-    
+
+
+
+@bot.command()
+async def pin(ctx):
+    if ctx.message.reference is not None:
+        if ctx.message.reference.cached_message is None:
+            # Fetching the message
+            channel = bot.get_channel(ctx.message.reference.channel_id)
+            content = ctx.message.reference.resolved
+            msg = await channel.fetch_message(ctx.message.reference.message_id)
+
+        else:
+            msg = ctx.message.reference.cached_message
+    print(channel)
+    print(content.content)
+
+
+
+
+
+
 ############################################################################################
 ############################################################################################
 #######################################　　　省略版　　　###################################
