@@ -1,6 +1,0 @@
-discord.py
-tweepy
-janome
-pya3rt
-numpy
-datetime
